@@ -69,6 +69,17 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    'safari-packages': SafariPackage;
+    destinations: Destination;
+    'team-members': TeamMember;
+    testimonials: Testimonial;
+    'safari-enquiries': SafariEnquiry;
+    'journal-posts': JournalPost;
+    pages: Page;
+    'gallery-images': GalleryImage;
+    bookings: Booking;
+    availability: Availability;
+    seasons: Season;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -78,17 +89,56 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    'safari-packages': SafariPackagesSelect<false> | SafariPackagesSelect<true>;
+    destinations: DestinationsSelect<false> | DestinationsSelect<true>;
+    'team-members': TeamMembersSelect<false> | TeamMembersSelect<true>;
+    testimonials: TestimonialsSelect<false> | TestimonialsSelect<true>;
+    'safari-enquiries': SafariEnquiriesSelect<false> | SafariEnquiriesSelect<true>;
+    'journal-posts': JournalPostsSelect<false> | JournalPostsSelect<true>;
+    pages: PagesSelect<false> | PagesSelect<true>;
+    'gallery-images': GalleryImagesSelect<false> | GalleryImagesSelect<true>;
+    bookings: BookingsSelect<false> | BookingsSelect<true>;
+    availability: AvailabilitySelect<false> | AvailabilitySelect<true>;
+    seasons: SeasonsSelect<false> | SeasonsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
   };
   db: {
-    defaultIDType: string;
+    defaultIDType: number;
   };
   fallbackLocale: null;
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    settings: Setting;
+    homepage: Homepage;
+    'about-page': AboutPage;
+    'contact-page': ContactPage;
+    'safaris-page': SafarisPage;
+    'destinations-page': DestinationsPage;
+    'conservation-page': ConservationPage;
+    'plan-your-safari-page': PlanYourSafariPage;
+    'when-to-visit-page': WhenToVisitPage;
+    'what-to-expect-page': WhatToExpectPage;
+    'gallery-page': GalleryPage;
+    'journal-page': JournalPage;
+    'faq-page': FaqPage;
+  };
+  globalsSelect: {
+    settings: SettingsSelect<false> | SettingsSelect<true>;
+    homepage: HomepageSelect<false> | HomepageSelect<true>;
+    'about-page': AboutPageSelect<false> | AboutPageSelect<true>;
+    'contact-page': ContactPageSelect<false> | ContactPageSelect<true>;
+    'safaris-page': SafarisPageSelect<false> | SafarisPageSelect<true>;
+    'destinations-page': DestinationsPageSelect<false> | DestinationsPageSelect<true>;
+    'conservation-page': ConservationPageSelect<false> | ConservationPageSelect<true>;
+    'plan-your-safari-page': PlanYourSafariPageSelect<false> | PlanYourSafariPageSelect<true>;
+    'when-to-visit-page': WhenToVisitPageSelect<false> | WhenToVisitPageSelect<true>;
+    'what-to-expect-page': WhatToExpectPageSelect<false> | WhatToExpectPageSelect<true>;
+    'gallery-page': GalleryPageSelect<false> | GalleryPageSelect<true>;
+    'journal-page': JournalPageSelect<false> | JournalPageSelect<true>;
+    'faq-page': FaqPageSelect<false> | FaqPageSelect<true>;
+  };
   locale: null;
   widgets: {
     collections: CollectionsWidget;
@@ -122,7 +172,7 @@ export interface UserAuthOperations {
  * via the `definition` "users".
  */
 export interface User {
-  id: string;
+  id: number;
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -147,7 +197,7 @@ export interface User {
  * via the `definition` "media".
  */
 export interface Media {
-  id: string;
+  id: number;
   alt: string;
   updatedAt: string;
   createdAt: string;
@@ -163,10 +213,481 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "safari-packages".
+ */
+export interface SafariPackage {
+  id: number;
+  title: string;
+  slug: string;
+  status?: ('draft' | 'published') | null;
+  featured?: boolean | null;
+  tagline?: string | null;
+  heroImage: number | Media;
+  duration?: string | null;
+  groupSize?: string | null;
+  priceFrom?: number | null;
+  currency?: ('USD' | 'EUR' | 'GBP' | 'KES') | null;
+  category?:
+    | (
+        | 'Classic Safari'
+        | 'Luxury Safari'
+        | 'Adventure Safari'
+        | 'Family Safari'
+        | 'Photography Safari'
+        | 'Honeymoon Safari'
+      )
+    | null;
+  difficulty?: ('Easy' | 'Moderate' | 'Challenging') | null;
+  bestSeason?: string | null;
+  destinations?: (number | Destination)[] | null;
+  /**
+   * Describe the lodges/camps included
+   */
+  accommodation?: string | null;
+  description?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  itinerary?:
+    | {
+        day: number;
+        title: string;
+        description?: string | null;
+        image?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  included?:
+    | {
+        item: string;
+        id?: string | null;
+      }[]
+    | null;
+  excluded?:
+    | {
+        item: string;
+        id?: string | null;
+      }[]
+    | null;
+  highlights?:
+    | {
+        highlight: string;
+        id?: string | null;
+      }[]
+    | null;
+  gallery?:
+    | {
+        image: number | Media;
+        caption?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+  };
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "destinations".
+ */
+export interface Destination {
+  id: number;
+  name: string;
+  slug: string;
+  featured?: boolean | null;
+  tagline?: string | null;
+  country?: ('Kenya' | 'Tanzania' | 'Uganda' | 'Rwanda') | null;
+  heroImage: number | Media;
+  summary?: string | null;
+  body?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  bestTimeToVisit?: string | null;
+  location?: string | null;
+  wildlife?:
+    | {
+        animal: string;
+        description?: string | null;
+        image?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  gallery?:
+    | {
+        image: number | Media;
+        caption?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  relatedPackages?: (number | SafariPackage)[] | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+  };
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "team-members".
+ */
+export interface TeamMember {
+  id: number;
+  name: string;
+  role?: string | null;
+  bio?: string | null;
+  portrait?: (number | null) | Media;
+  speciality?: string | null;
+  yearsExperience?: number | null;
+  languages?:
+    | {
+        language: string;
+        id?: string | null;
+      }[]
+    | null;
+  certifications?:
+    | {
+        certification: string;
+        id?: string | null;
+      }[]
+    | null;
+  featured?: boolean | null;
+  order?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "testimonials".
+ */
+export interface Testimonial {
+  id: number;
+  quote: string;
+  guestName: string;
+  guestCountry?: string | null;
+  tripType?: string | null;
+  tripDate?: string | null;
+  rating?: number | null;
+  safari?: (number | null) | SafariPackage;
+  featured?: boolean | null;
+  guestImage?: (number | null) | Media;
+  status?: ('pending' | 'approved' | 'rejected') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "safari-enquiries".
+ */
+export interface SafariEnquiry {
+  id: number;
+  name: string;
+  email: string;
+  phone?: string | null;
+  country?: string | null;
+  travelDates?: string | null;
+  numberOfGuests?: number | null;
+  interestedPackages?: (number | SafariPackage)[] | null;
+  budget?: ('Under $3,000' | '$3,000-$5,000' | '$5,000-$10,000' | '$10,000-$20,000' | '$20,000+') | null;
+  specialRequests?: string | null;
+  howDidYouHear?:
+    | ('Google' | 'Instagram' | 'Facebook' | 'Friend/Referral' | 'Travel Agent' | 'Magazine' | 'TripAdvisor' | 'Other')
+    | null;
+  honeypot?: string | null;
+  status?: ('new' | 'contacted' | 'quoted' | 'booked' | 'completed' | 'lost') | null;
+  /**
+   * Internal team notes — not visible to guest
+   */
+  internalNotes?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "journal-posts".
+ */
+export interface JournalPost {
+  id: number;
+  title: string;
+  slug: string;
+  summary: string;
+  heroImage: number | Media;
+  body: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  category: 'Wildlife' | 'Travel Tips' | 'Conservation' | 'Behind the Scenes' | 'Guest Stories';
+  author?: (number | null) | User;
+  publishedAt?: string | null;
+  /**
+   * Minutes
+   */
+  readTime?: number | null;
+  featured?: boolean | null;
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+  };
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages".
+ */
+export interface Page {
+  id: number;
+  title: string;
+  slug: string;
+  body: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  meta?: {
+    title?: string | null;
+    description?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+  };
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery-images".
+ */
+export interface GalleryImage {
+  id: number;
+  image: number | Media;
+  caption?: string | null;
+  category: 'Wildlife' | 'Landscapes' | 'Camps' | 'Guests' | 'Vehicles';
+  location?: string | null;
+  photographer?: string | null;
+  featured?: boolean | null;
+  order?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bookings".
+ */
+export interface Booking {
+  id: number;
+  bookingRef: string;
+  status?:
+    | ('enquiry' | 'quoted' | 'deposit-paid' | 'confirmed' | 'in-progress' | 'completed' | 'cancelled' | 'refunded')
+    | null;
+  assignedTo?: (number | null) | User;
+  source?: ('website' | 'whatsapp' | 'email' | 'referral' | 'agent') | null;
+  guestName: string;
+  guestEmail: string;
+  guestPhone?: string | null;
+  guestCountry?: string | null;
+  passportName?: string | null;
+  dietaryRequirements?: string | null;
+  medicalConditions?: string | null;
+  safari: number | SafariPackage;
+  destination?: (number | null) | Destination;
+  startDate: string;
+  endDate: string;
+  numberOfAdults: number;
+  numberOfChildren?: number | null;
+  childrenAges?:
+    | {
+        age?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  accommodation?: ('Standard' | 'Luxury' | 'Ultra-Luxury') | null;
+  extras?:
+    | {
+        extra?:
+          | (
+              | 'Hot Air Balloon'
+              | 'Photography Guide'
+              | 'Private Vehicle'
+              | 'Bush Dinner'
+              | 'Spa Treatment'
+              | 'Walking Safari'
+              | 'Night Drive'
+              | 'Cultural Visit'
+            )
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  basePrice?: number | null;
+  extrasTotal?: number | null;
+  discount?: number | null;
+  discountReason?: string | null;
+  totalPrice?: number | null;
+  currency?: ('USD' | 'EUR' | 'GBP' | 'KES') | null;
+  depositAmount?: number | null;
+  depositPaid?: boolean | null;
+  depositReference?: string | null;
+  balanceDue?: string | null;
+  balancePaidDate?: string | null;
+  balanceReference?: string | null;
+  paymentMethod?: ('Bank Transfer' | 'Card' | 'PayPal') | null;
+  invoiceSent?: boolean | null;
+  receiptSent?: boolean | null;
+  timeline?:
+    | {
+        date: string;
+        event: string;
+        note?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  documents?:
+    | {
+        document: number | Media;
+        label?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  specialRequests?: string | null;
+  internalNotes?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "availability".
+ */
+export interface Availability {
+  id: number;
+  safari: number | SafariPackage;
+  date: string;
+  spotsTotal: number;
+  spotsBooked?: number | null;
+  status?: ('available' | 'limited' | 'full' | 'blocked') | null;
+  /**
+   * Override base price for this date (leave empty for default)
+   */
+  priceOverride?: number | null;
+  notes?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "seasons".
+ */
+export interface Season {
+  id: number;
+  name: string;
+  year: number;
+  startDate: string;
+  endDate: string;
+  /**
+   * 1.0 = base, 1.5 = peak (+50%), 0.8 = low (-20%)
+   */
+  priceMultiplier: number;
+  description?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
-  id: string;
+  id: number;
   key: string;
   data:
     | {
@@ -183,20 +704,64 @@ export interface PayloadKv {
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
-  id: string;
+  id: number;
   document?:
     | ({
         relationTo: 'users';
-        value: string | User;
+        value: number | User;
       } | null)
     | ({
         relationTo: 'media';
-        value: string | Media;
+        value: number | Media;
+      } | null)
+    | ({
+        relationTo: 'safari-packages';
+        value: number | SafariPackage;
+      } | null)
+    | ({
+        relationTo: 'destinations';
+        value: number | Destination;
+      } | null)
+    | ({
+        relationTo: 'team-members';
+        value: number | TeamMember;
+      } | null)
+    | ({
+        relationTo: 'testimonials';
+        value: number | Testimonial;
+      } | null)
+    | ({
+        relationTo: 'safari-enquiries';
+        value: number | SafariEnquiry;
+      } | null)
+    | ({
+        relationTo: 'journal-posts';
+        value: number | JournalPost;
+      } | null)
+    | ({
+        relationTo: 'pages';
+        value: number | Page;
+      } | null)
+    | ({
+        relationTo: 'gallery-images';
+        value: number | GalleryImage;
+      } | null)
+    | ({
+        relationTo: 'bookings';
+        value: number | Booking;
+      } | null)
+    | ({
+        relationTo: 'availability';
+        value: number | Availability;
+      } | null)
+    | ({
+        relationTo: 'seasons';
+        value: number | Season;
       } | null);
   globalSlug?: string | null;
   user: {
     relationTo: 'users';
-    value: string | User;
+    value: number | User;
   };
   updatedAt: string;
   createdAt: string;
@@ -206,10 +771,10 @@ export interface PayloadLockedDocument {
  * via the `definition` "payload-preferences".
  */
 export interface PayloadPreference {
-  id: string;
+  id: number;
   user: {
     relationTo: 'users';
-    value: string | User;
+    value: number | User;
   };
   key?: string | null;
   value?:
@@ -229,7 +794,7 @@ export interface PayloadPreference {
  * via the `definition` "payload-migrations".
  */
 export interface PayloadMigration {
-  id: string;
+  id: number;
   name?: string | null;
   batch?: number | null;
   updatedAt: string;
@@ -277,6 +842,339 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "safari-packages_select".
+ */
+export interface SafariPackagesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  status?: T;
+  featured?: T;
+  tagline?: T;
+  heroImage?: T;
+  duration?: T;
+  groupSize?: T;
+  priceFrom?: T;
+  currency?: T;
+  category?: T;
+  difficulty?: T;
+  bestSeason?: T;
+  destinations?: T;
+  accommodation?: T;
+  description?: T;
+  itinerary?:
+    | T
+    | {
+        day?: T;
+        title?: T;
+        description?: T;
+        image?: T;
+        id?: T;
+      };
+  included?:
+    | T
+    | {
+        item?: T;
+        id?: T;
+      };
+  excluded?:
+    | T
+    | {
+        item?: T;
+        id?: T;
+      };
+  highlights?:
+    | T
+    | {
+        highlight?: T;
+        id?: T;
+      };
+  gallery?:
+    | T
+    | {
+        image?: T;
+        caption?: T;
+        id?: T;
+      };
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "destinations_select".
+ */
+export interface DestinationsSelect<T extends boolean = true> {
+  name?: T;
+  slug?: T;
+  featured?: T;
+  tagline?: T;
+  country?: T;
+  heroImage?: T;
+  summary?: T;
+  body?: T;
+  bestTimeToVisit?: T;
+  location?: T;
+  wildlife?:
+    | T
+    | {
+        animal?: T;
+        description?: T;
+        image?: T;
+        id?: T;
+      };
+  gallery?:
+    | T
+    | {
+        image?: T;
+        caption?: T;
+        id?: T;
+      };
+  relatedPackages?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "team-members_select".
+ */
+export interface TeamMembersSelect<T extends boolean = true> {
+  name?: T;
+  role?: T;
+  bio?: T;
+  portrait?: T;
+  speciality?: T;
+  yearsExperience?: T;
+  languages?:
+    | T
+    | {
+        language?: T;
+        id?: T;
+      };
+  certifications?:
+    | T
+    | {
+        certification?: T;
+        id?: T;
+      };
+  featured?: T;
+  order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "testimonials_select".
+ */
+export interface TestimonialsSelect<T extends boolean = true> {
+  quote?: T;
+  guestName?: T;
+  guestCountry?: T;
+  tripType?: T;
+  tripDate?: T;
+  rating?: T;
+  safari?: T;
+  featured?: T;
+  guestImage?: T;
+  status?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "safari-enquiries_select".
+ */
+export interface SafariEnquiriesSelect<T extends boolean = true> {
+  name?: T;
+  email?: T;
+  phone?: T;
+  country?: T;
+  travelDates?: T;
+  numberOfGuests?: T;
+  interestedPackages?: T;
+  budget?: T;
+  specialRequests?: T;
+  howDidYouHear?: T;
+  honeypot?: T;
+  status?: T;
+  internalNotes?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "journal-posts_select".
+ */
+export interface JournalPostsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  summary?: T;
+  heroImage?: T;
+  body?: T;
+  category?: T;
+  author?: T;
+  publishedAt?: T;
+  readTime?: T;
+  featured?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages_select".
+ */
+export interface PagesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  body?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        image?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery-images_select".
+ */
+export interface GalleryImagesSelect<T extends boolean = true> {
+  image?: T;
+  caption?: T;
+  category?: T;
+  location?: T;
+  photographer?: T;
+  featured?: T;
+  order?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "bookings_select".
+ */
+export interface BookingsSelect<T extends boolean = true> {
+  bookingRef?: T;
+  status?: T;
+  assignedTo?: T;
+  source?: T;
+  guestName?: T;
+  guestEmail?: T;
+  guestPhone?: T;
+  guestCountry?: T;
+  passportName?: T;
+  dietaryRequirements?: T;
+  medicalConditions?: T;
+  safari?: T;
+  destination?: T;
+  startDate?: T;
+  endDate?: T;
+  numberOfAdults?: T;
+  numberOfChildren?: T;
+  childrenAges?:
+    | T
+    | {
+        age?: T;
+        id?: T;
+      };
+  accommodation?: T;
+  extras?:
+    | T
+    | {
+        extra?: T;
+        id?: T;
+      };
+  basePrice?: T;
+  extrasTotal?: T;
+  discount?: T;
+  discountReason?: T;
+  totalPrice?: T;
+  currency?: T;
+  depositAmount?: T;
+  depositPaid?: T;
+  depositReference?: T;
+  balanceDue?: T;
+  balancePaidDate?: T;
+  balanceReference?: T;
+  paymentMethod?: T;
+  invoiceSent?: T;
+  receiptSent?: T;
+  timeline?:
+    | T
+    | {
+        date?: T;
+        event?: T;
+        note?: T;
+        id?: T;
+      };
+  documents?:
+    | T
+    | {
+        document?: T;
+        label?: T;
+        id?: T;
+      };
+  specialRequests?: T;
+  internalNotes?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "availability_select".
+ */
+export interface AvailabilitySelect<T extends boolean = true> {
+  safari?: T;
+  date?: T;
+  spotsTotal?: T;
+  spotsBooked?: T;
+  status?: T;
+  priceOverride?: T;
+  notes?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "seasons_select".
+ */
+export interface SeasonsSelect<T extends boolean = true> {
+  name?: T;
+  year?: T;
+  startDate?: T;
+  endDate?: T;
+  priceMultiplier?: T;
+  description?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv_select".
  */
 export interface PayloadKvSelect<T extends boolean = true> {
@@ -314,6 +1212,882 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "settings".
+ */
+export interface Setting {
+  id: number;
+  companyName: string;
+  tagline?: string | null;
+  logo?: (number | null) | Media;
+  favicon?: (number | null) | Media;
+  phone?: string | null;
+  whatsAppNumber?: string | null;
+  email?: string | null;
+  officeAddress?: string | null;
+  navigation?:
+    | {
+        label: string;
+        href: string;
+        id?: string | null;
+      }[]
+    | null;
+  mobileCtaText?: string | null;
+  mobileCtaLink?: string | null;
+  heroHeadline?: string | null;
+  heroSubheadline?: string | null;
+  socialLinks?: {
+    instagram?: string | null;
+    facebook?: string | null;
+    youtube?: string | null;
+    tripAdvisor?: string | null;
+  };
+  footerTagline?: string | null;
+  conservationStatement?: string | null;
+  footerColumns?:
+    | {
+        heading: string;
+        links?:
+          | {
+              label: string;
+              href: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  defaultMetaTitle?: string | null;
+  defaultMetaDescription?: string | null;
+  openGraphImage?: (number | null) | Media;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "homepage".
+ */
+export interface Homepage {
+  id: number;
+  headline?: string | null;
+  subheadline?: string | null;
+  backgroundImage?: (number | null) | Media;
+  ctaText?: string | null;
+  ctaLink?: string | null;
+  statement?: string | null;
+  philosophyHeadline?: string | null;
+  philosophyBody?: string | null;
+  philosophyImage?: (number | null) | Media;
+  stats?:
+    | {
+        value?: string | null;
+        label?: string | null;
+        suffix?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  experiencesHeadline?: string | null;
+  experiencesSubheadline?: string | null;
+  wildlifeHeadline?: string | null;
+  animals?:
+    | {
+        name?: string | null;
+        image?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  lodgeHeadline?: string | null;
+  lodgeBody?: string | null;
+  lodgeImage?: (number | null) | Media;
+  processHeadline?: string | null;
+  steps?:
+    | {
+        number?: number | null;
+        title?: string | null;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  conservationHeadline?: string | null;
+  conservationBody?: string | null;
+  conservationStat?: string | null;
+  conservationImage?: (number | null) | Media;
+  closingHeadline?: string | null;
+  closingBody?: string | null;
+  closingCtaText?: string | null;
+  closingCtaLink?: string | null;
+  quote?: string | null;
+  attribution?: string | null;
+  images?:
+    | {
+        image?: (number | null) | Media;
+        alt?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "about-page".
+ */
+export interface AboutPage {
+  id: number;
+  heroHeadline?: string | null;
+  heroSubheadline?: string | null;
+  heroImage?: (number | null) | Media;
+  storyHeadline?: string | null;
+  storyBody?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  founderImage?: (number | null) | Media;
+  values?:
+    | {
+        title: string;
+        description?: string | null;
+        icon?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  events?:
+    | {
+        year: string;
+        event: string;
+        id?: string | null;
+      }[]
+    | null;
+  awards?:
+    | {
+        name: string;
+        year?: string | null;
+        image?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  ctaHeadline?: string | null;
+  ctaBody?: string | null;
+  ctaText?: string | null;
+  ctaLink?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact-page".
+ */
+export interface ContactPage {
+  id: number;
+  headline?: string | null;
+  subheadline?: string | null;
+  image?: (number | null) | Media;
+  formHeadline?: string | null;
+  formSubheadline?: string | null;
+  successMessage?: string | null;
+  sidebarHeadline?: string | null;
+  sidebarBody?: string | null;
+  trustSignals?:
+    | {
+        title: string;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  ctaHeadline?: string | null;
+  ctaBody?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "safaris-page".
+ */
+export interface SafarisPage {
+  id: number;
+  hero?: {
+    headline?: string | null;
+    subheadline?: string | null;
+    image?: (number | null) | Media;
+  };
+  emptyStateText?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "destinations-page".
+ */
+export interface DestinationsPage {
+  id: number;
+  hero?: {
+    headline?: string | null;
+    subheadline?: string | null;
+    image?: (number | null) | Media;
+  };
+  introText?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "conservation-page".
+ */
+export interface ConservationPage {
+  id: number;
+  headline?: string | null;
+  subheadline?: string | null;
+  image?: (number | null) | Media;
+  missionHeadline?: string | null;
+  body?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  stats?:
+    | {
+        value?: string | null;
+        label?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  partnerships?:
+    | {
+        name?: string | null;
+        description?: string | null;
+        url?: string | null;
+        logo?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  ctaHeadline?: string | null;
+  ctaBody?: string | null;
+  ctaText?: string | null;
+  ctaLink?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "plan-your-safari-page".
+ */
+export interface PlanYourSafariPage {
+  id: number;
+  hero?: {
+    headline?: string | null;
+    subheadline?: string | null;
+    image?: (number | null) | Media;
+  };
+  steps?:
+    | {
+        number?: number | null;
+        title?: string | null;
+        description?: string | null;
+        image?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  travelStyles?:
+    | {
+        name?: string | null;
+        description?: string | null;
+        image?: (number | null) | Media;
+        priceRange?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  cta?: {
+    headline?: string | null;
+    ctaText?: string | null;
+    ctaLink?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "when-to-visit-page".
+ */
+export interface WhenToVisitPage {
+  id: number;
+  hero?: {
+    headline?: string | null;
+    subheadline?: string | null;
+    image?: (number | null) | Media;
+  };
+  intro?: string | null;
+  months?:
+    | {
+        month?: string | null;
+        weather?: string | null;
+        wildlife?: string | null;
+        crowds?: string | null;
+        rating?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  seasons?:
+    | {
+        name?: string | null;
+        months?: string | null;
+        description?: string | null;
+        highlights?: string | null;
+        image?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "what-to-expect-page".
+ */
+export interface WhatToExpectPage {
+  id: number;
+  hero?: {
+    headline?: string | null;
+    subheadline?: string | null;
+    image?: (number | null) | Media;
+  };
+  sections?:
+    | {
+        title?: string | null;
+        body?: string | null;
+        image?: (number | null) | Media;
+        id?: string | null;
+      }[]
+    | null;
+  packingList?:
+    | {
+        category?: string | null;
+        items?:
+          | {
+              item?: string | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  dayOnSafari?:
+    | {
+        time?: string | null;
+        activity?: string | null;
+        description?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery-page".
+ */
+export interface GalleryPage {
+  id: number;
+  headline?: string | null;
+  subheadline?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "journal-page".
+ */
+export interface JournalPage {
+  id: number;
+  hero?: {
+    headline?: string | null;
+    subheadline?: string | null;
+    image?: (number | null) | Media;
+  };
+  featuredPostHeadline?: string | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faq-page".
+ */
+export interface FaqPage {
+  id: number;
+  hero?: {
+    headline?: string | null;
+    subheadline?: string | null;
+  };
+  categories?:
+    | {
+        name: string;
+        questions?:
+          | {
+              question: string;
+              answer: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "settings_select".
+ */
+export interface SettingsSelect<T extends boolean = true> {
+  companyName?: T;
+  tagline?: T;
+  logo?: T;
+  favicon?: T;
+  phone?: T;
+  whatsAppNumber?: T;
+  email?: T;
+  officeAddress?: T;
+  navigation?:
+    | T
+    | {
+        label?: T;
+        href?: T;
+        id?: T;
+      };
+  mobileCtaText?: T;
+  mobileCtaLink?: T;
+  heroHeadline?: T;
+  heroSubheadline?: T;
+  socialLinks?:
+    | T
+    | {
+        instagram?: T;
+        facebook?: T;
+        youtube?: T;
+        tripAdvisor?: T;
+      };
+  footerTagline?: T;
+  conservationStatement?: T;
+  footerColumns?:
+    | T
+    | {
+        heading?: T;
+        links?:
+          | T
+          | {
+              label?: T;
+              href?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  defaultMetaTitle?: T;
+  defaultMetaDescription?: T;
+  openGraphImage?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "homepage_select".
+ */
+export interface HomepageSelect<T extends boolean = true> {
+  headline?: T;
+  subheadline?: T;
+  backgroundImage?: T;
+  ctaText?: T;
+  ctaLink?: T;
+  statement?: T;
+  philosophyHeadline?: T;
+  philosophyBody?: T;
+  philosophyImage?: T;
+  stats?:
+    | T
+    | {
+        value?: T;
+        label?: T;
+        suffix?: T;
+        id?: T;
+      };
+  experiencesHeadline?: T;
+  experiencesSubheadline?: T;
+  wildlifeHeadline?: T;
+  animals?:
+    | T
+    | {
+        name?: T;
+        image?: T;
+        id?: T;
+      };
+  lodgeHeadline?: T;
+  lodgeBody?: T;
+  lodgeImage?: T;
+  processHeadline?: T;
+  steps?:
+    | T
+    | {
+        number?: T;
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  conservationHeadline?: T;
+  conservationBody?: T;
+  conservationStat?: T;
+  conservationImage?: T;
+  closingHeadline?: T;
+  closingBody?: T;
+  closingCtaText?: T;
+  closingCtaLink?: T;
+  quote?: T;
+  attribution?: T;
+  images?:
+    | T
+    | {
+        image?: T;
+        alt?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "about-page_select".
+ */
+export interface AboutPageSelect<T extends boolean = true> {
+  heroHeadline?: T;
+  heroSubheadline?: T;
+  heroImage?: T;
+  storyHeadline?: T;
+  storyBody?: T;
+  founderImage?: T;
+  values?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        icon?: T;
+        id?: T;
+      };
+  events?:
+    | T
+    | {
+        year?: T;
+        event?: T;
+        id?: T;
+      };
+  awards?:
+    | T
+    | {
+        name?: T;
+        year?: T;
+        image?: T;
+        id?: T;
+      };
+  ctaHeadline?: T;
+  ctaBody?: T;
+  ctaText?: T;
+  ctaLink?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "contact-page_select".
+ */
+export interface ContactPageSelect<T extends boolean = true> {
+  headline?: T;
+  subheadline?: T;
+  image?: T;
+  formHeadline?: T;
+  formSubheadline?: T;
+  successMessage?: T;
+  sidebarHeadline?: T;
+  sidebarBody?: T;
+  trustSignals?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        id?: T;
+      };
+  ctaHeadline?: T;
+  ctaBody?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "safaris-page_select".
+ */
+export interface SafarisPageSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        headline?: T;
+        subheadline?: T;
+        image?: T;
+      };
+  emptyStateText?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "destinations-page_select".
+ */
+export interface DestinationsPageSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        headline?: T;
+        subheadline?: T;
+        image?: T;
+      };
+  introText?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "conservation-page_select".
+ */
+export interface ConservationPageSelect<T extends boolean = true> {
+  headline?: T;
+  subheadline?: T;
+  image?: T;
+  missionHeadline?: T;
+  body?: T;
+  stats?:
+    | T
+    | {
+        value?: T;
+        label?: T;
+        id?: T;
+      };
+  partnerships?:
+    | T
+    | {
+        name?: T;
+        description?: T;
+        url?: T;
+        logo?: T;
+        id?: T;
+      };
+  ctaHeadline?: T;
+  ctaBody?: T;
+  ctaText?: T;
+  ctaLink?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "plan-your-safari-page_select".
+ */
+export interface PlanYourSafariPageSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        headline?: T;
+        subheadline?: T;
+        image?: T;
+      };
+  steps?:
+    | T
+    | {
+        number?: T;
+        title?: T;
+        description?: T;
+        image?: T;
+        id?: T;
+      };
+  travelStyles?:
+    | T
+    | {
+        name?: T;
+        description?: T;
+        image?: T;
+        priceRange?: T;
+        id?: T;
+      };
+  cta?:
+    | T
+    | {
+        headline?: T;
+        ctaText?: T;
+        ctaLink?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "when-to-visit-page_select".
+ */
+export interface WhenToVisitPageSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        headline?: T;
+        subheadline?: T;
+        image?: T;
+      };
+  intro?: T;
+  months?:
+    | T
+    | {
+        month?: T;
+        weather?: T;
+        wildlife?: T;
+        crowds?: T;
+        rating?: T;
+        id?: T;
+      };
+  seasons?:
+    | T
+    | {
+        name?: T;
+        months?: T;
+        description?: T;
+        highlights?: T;
+        image?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "what-to-expect-page_select".
+ */
+export interface WhatToExpectPageSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        headline?: T;
+        subheadline?: T;
+        image?: T;
+      };
+  sections?:
+    | T
+    | {
+        title?: T;
+        body?: T;
+        image?: T;
+        id?: T;
+      };
+  packingList?:
+    | T
+    | {
+        category?: T;
+        items?:
+          | T
+          | {
+              item?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  dayOnSafari?:
+    | T
+    | {
+        time?: T;
+        activity?: T;
+        description?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery-page_select".
+ */
+export interface GalleryPageSelect<T extends boolean = true> {
+  headline?: T;
+  subheadline?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "journal-page_select".
+ */
+export interface JournalPageSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        headline?: T;
+        subheadline?: T;
+        image?: T;
+      };
+  featuredPostHeadline?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faq-page_select".
+ */
+export interface FaqPageSelect<T extends boolean = true> {
+  hero?:
+    | T
+    | {
+        headline?: T;
+        subheadline?: T;
+      };
+  categories?:
+    | T
+    | {
+        name?: T;
+        questions?:
+          | T
+          | {
+              question?: T;
+              answer?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
