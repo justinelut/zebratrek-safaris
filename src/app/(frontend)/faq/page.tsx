@@ -11,8 +11,23 @@ export async function generateMetadata() {
 export default async function FAQPage() {
   const page = await getFAQPage()
 
+  // Build FAQ JSON-LD schema for Google rich results
+  const allQuestions = (page.categories || []).flatMap((cat) => cat.questions || [])
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: allQuestions.map((q) => ({
+      '@type': 'Question',
+      name: q.question,
+      acceptedAnswer: { '@type': 'Answer', text: q.answer },
+    })),
+  }
+
   return (
     <>
+      {allQuestions.length > 0 && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      )}
       <section className="section-pad">
         <div className="container-narrow text-center">
           <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-light" style={{ fontFamily: 'var(--font-display)' }}>{page.hero?.headline || 'Frequently Asked Questions'}</h1>

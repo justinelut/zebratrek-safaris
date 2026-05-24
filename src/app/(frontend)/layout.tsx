@@ -8,6 +8,7 @@ import { SmoothScroll } from '@/components/SmoothScroll'
 import { WhatsAppButton } from '@/components/WhatsAppButton'
 import { ScrollProgress } from '@/components/ScrollProgress'
 import { PageReveal } from '@/components/PageReveal'
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import { CookieConsent } from '@/components/CookieConsent'
 import { BackToTop } from '@/components/BackToTop'
 import { getSiteSettings } from '@/lib/queries'
@@ -32,9 +33,56 @@ const dmSans = DM_Sans({
 
 export async function generateMetadata() {
   const settings = await getSiteSettings()
+  const siteUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://zebratrek.com'
+  const title = settings.defaultMetaTitle || 'ZebraTrek Safaris — Luxury African Safari Experiences'
+  const description = settings.defaultMetaDescription || "Intimate wildlife encounters across East Africa's most pristine wilderness."
+
   return {
-    title: settings.defaultMetaTitle || 'ZebraTrek Safaris — Luxury African Safari Experiences',
-    description: settings.defaultMetaDescription || "Intimate wildlife encounters across East Africa's most pristine wilderness.",
+    metadataBase: new URL(siteUrl),
+    title: { default: title, template: '%s — ZebraTrek Safaris' },
+    description,
+    applicationName: 'ZebraTrek Safaris',
+    authors: [{ name: 'ZebraTrek Safaris' }],
+    generator: 'Next.js',
+    keywords: ['African safari', 'Kenya safari', 'luxury safari', 'Masai Mara', 'Serengeti', 'Amboseli', 'Tanzania safari', 'Bwindi gorillas', 'East Africa wildlife', 'safari packages'],
+    referrer: 'origin-when-cross-origin',
+    creator: 'ZebraTrek Safaris',
+    publisher: 'ZebraTrek Safaris',
+    formatDetection: { email: false, address: false, telephone: false },
+    alternates: { canonical: '/' },
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      url: siteUrl,
+      title,
+      description,
+      siteName: settings.companyName || 'ZebraTrek Safaris',
+      images: [{ url: `${siteUrl}/api/og`, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${siteUrl}/api/og`],
+      creator: '@zebratrek',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true, follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+        'max-video-preview': -1,
+      },
+    },
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+      other: {
+        'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION || '',
+      },
+    },
+    category: 'travel',
   }
 }
 
@@ -96,6 +144,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </CurrencyProvider>
         </ThemeProvider>
       </body>
+      {process.env.NEXT_PUBLIC_GTM_ID && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />}
+      {process.env.NEXT_PUBLIC_GA_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />}
     </html>
   )
 }

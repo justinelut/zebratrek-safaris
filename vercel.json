@@ -1,0 +1,31 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "nextjs",
+  "buildCommand": "pnpm build",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "regions": ["fra1"],
+  "crons": [],
+  "redirects": [
+    { "source": "/safari", "destination": "/safaris", "permanent": true },
+    { "source": "/destination", "destination": "/destinations", "permanent": true },
+    { "source": "/blog", "destination": "/journal", "permanent": true },
+    { "source": "/blog/:slug", "destination": "/journal/:slug", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/sitemap_index.xml", "destination": "/sitemap.xml" }
+  ],
+  "headers": [
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
+      ]
+    }
+  ]
+}
