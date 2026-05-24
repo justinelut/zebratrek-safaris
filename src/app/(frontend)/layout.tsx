@@ -33,7 +33,7 @@ const dmSans = DM_Sans({
 
 export async function generateMetadata() {
   const settings = await getSiteSettings()
-  const siteUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://zebratrek.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://zebratreksafaris.com'
   const title = settings.defaultMetaTitle || 'ZebraTrek Safaris — Luxury African Safari Experiences'
   const description = settings.defaultMetaDescription || "Intimate wildlife encounters across East Africa's most pristine wilderness."
 
@@ -88,6 +88,9 @@ export async function generateMetadata() {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const settings = await getSiteSettings()
+  const gaId = process.env.NEXT_PUBLIC_GA_ID
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID
+  const siteUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://zebratreksafaris.com'
 
   const navLinks = (settings.navigation || []).map((item) => ({
     href: item.href,
@@ -105,23 +108,40 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     officeAddress: settings.officeAddress || '',
   }
 
+  const social = settings.socialLinks || {}
+  const sameAs = [social.instagram, social.facebook, social.youtube, social.tripAdvisor].filter(Boolean)
+
+  const orgJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': ['Organization', 'TravelAgency', 'LocalBusiness'],
+    '@id': `${siteUrl}#organization`,
+    name: settings.companyName || 'ZebraTrek Safaris',
+    legalName: settings.companyName || 'ZebraTrek Safaris',
+    description: settings.defaultMetaDescription || '',
+    url: siteUrl,
+    logo: { '@type': 'ImageObject', url: `${siteUrl}/api/og`, width: 1200, height: 630 },
+    image: `${siteUrl}/api/og`,
+    telephone: settings.phone || undefined,
+    email: settings.email || undefined,
+    address: settings.officeAddress
+      ? {
+          '@type': 'PostalAddress',
+          streetAddress: settings.officeAddress,
+          addressLocality: 'Nairobi',
+          addressCountry: 'KE',
+        }
+      : undefined,
+    areaServed: ['Kenya', 'Tanzania', 'Uganda', 'Rwanda'],
+    priceRange: '$$$',
+    sameAs,
+  }
+
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'TravelAgency',
-              name: settings.companyName,
-              description: settings.defaultMetaDescription || '',
-              url: process.env.NEXT_PUBLIC_SERVER_URL || '',
-              telephone: settings.phone || undefined,
-              email: settings.email || undefined,
-              address: settings.officeAddress ? { '@type': 'PostalAddress', addressLocality: settings.officeAddress } : undefined,
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
         <ThemeProvider>
           <CurrencyProvider>
@@ -144,8 +164,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </CurrencyProvider>
         </ThemeProvider>
       </body>
-      {process.env.NEXT_PUBLIC_GTM_ID && <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />}
-      {process.env.NEXT_PUBLIC_GA_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />}
+      {gtmId && <GoogleTagManager gtmId={gtmId} />}
+      {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   )
 }

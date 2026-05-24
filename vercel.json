@@ -4,7 +4,6 @@
   "buildCommand": "pnpm build",
   "installCommand": "pnpm install --frozen-lockfile",
   "regions": ["fra1"],
-  "crons": [],
   "redirects": [
     { "source": "/safari", "destination": "/safaris", "permanent": true },
     { "source": "/destination", "destination": "/destinations", "permanent": true },
@@ -16,14 +15,47 @@
   ],
   "headers": [
     {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.(js|css|woff2|woff|ttf|ico|svg|png|jpg|jpeg|webp|avif)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "CDN-Cache-Control", "value": "max-age=31536000" }
+      ]
+    },
+    {
+      "source": "/_next/static/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" },
+        { "key": "CDN-Cache-Control", "value": "max-age=31536000" }
+      ]
+    },
+    {
+      "source": "/_next/image(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400" },
+        { "key": "CDN-Cache-Control", "value": "max-age=604800" }
+      ]
+    },
+    {
       "source": "/sitemap.xml",
       "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=3600" },
+        { "key": "CDN-Cache-Control", "value": "max-age=86400" },
         { "key": "Content-Type", "value": "application/xml; charset=utf-8" }
       ]
     },
     {
       "source": "/robots.txt",
       "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, s-maxage=604800" },
+        { "key": "CDN-Cache-Control", "value": "max-age=604800" },
         { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
       ]
     }
