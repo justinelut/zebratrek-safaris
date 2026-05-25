@@ -2,6 +2,7 @@ import { vercelPostgresAdapter } from '@payloadcms/db-vercel-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { seoPlugin } from '@payloadcms/plugin-seo'
 import { resendAdapter } from '@payloadcms/email-resend'
+import { s3Storage } from '@payloadcms/storage-s3'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -71,5 +72,22 @@ export default buildConfig({
       generateTitle: ({ doc }: any) => `${doc?.title || doc?.name || ''} — ZebraTrek Safaris`,
       generateDescription: ({ doc }: any) => doc?.summary || doc?.tagline || '',
     }),
+    ...(process.env.S3_BUCKET && process.env.S3_ACCESS_KEY_ID
+      ? [
+          s3Storage({
+            collections: { media: { prefix: 'media' } },
+            bucket: process.env.S3_BUCKET,
+            config: {
+              endpoint: process.env.S3_ENDPOINT!,
+              region: process.env.S3_REGION || 'auto',
+              credentials: {
+                accessKeyId: process.env.S3_ACCESS_KEY_ID!,
+                secretAccessKey: process.env.S3_SECRET_ACCESS_KEY!,
+              },
+              forcePathStyle: true,
+            },
+          }),
+        ]
+      : []),
   ],
 })
