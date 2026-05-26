@@ -1,43 +1,51 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ivory: #FAFAF7;
-  --color-cream: #F0EDE6;
-  --color-sand: #D4CFC4;
-  --color-stone: #A89E8E;
-  --color-earth: #6B7B6B;
-  --color-charcoal: #1A2E1A;
-  --color-night: #0C1A0C;
-  --color-deep: #0C1A0C;
-  --color-forest: #142014;
-  --color-moss: #2D5A27;
-  --color-sage: #3A7233;
-  --color-gold: #C4883A;
-  --color-gold-light: #D49A4C;
-  --color-copper: #8B2A2A;
+  /* Official ZebraTrek brand palette */
+  --color-cream: #eff3cf;
+  --color-cream-pale: #F5EDD0;
+  --color-ebony: #1A1208;
+  --color-charcoal: #2C2416;
+  --color-gold: #B8860B;
+  --color-gold-light: #D4A843;
+  --color-stone: #C4B89A;
+  --color-warm-mid: #6B5A3A;
+  --color-sage: #4A5240;
+  --color-rust: #8B3E1F;
+  /* Aliases (legacy code paths) */
+  --color-ivory: #eff3cf;
+  --color-night: #1A1208;
+  --color-deep: #1A1208;
+  --color-sand: #C4B89A;
+  --color-earth: #6B5A3A;
+  --color-forest: #2C2416;
+  --color-moss: #4A5240;
+  --color-copper: #8B3E1F;
   --font-display: "Playfair Display", serif;
   --font-body: "DM Sans", sans-serif;
 }
 
 :root {
-  --bg: #FAFAF7;
-  --bg-alt: #F0EDE6;
-  --fg: #1A2E1A;
-  --fg-muted: #6B7B6B;
-  --border: #D4CFC4;
-  --accent: #2D5A27;
-  --accent-hover: #3A7233;
-  --accent-warm: #C4883A;
-  --accent-warm-hover: #D49A4C;
+  /* Light: Ebony on Cream */
+  --bg: #eff3cf;
+  --bg-alt: #F5EDD0;
+  --fg: #1A1208;
+  --fg-muted: #6B5A3A;
+  --border: #C4B89A;
+  --accent: #B8860B;
+  --accent-hover: #D4A843;
+  --accent-warm: #B8860B;
+  --accent-warm-hover: #D4A843;
 }
 
 .dark {
-  --bg: #0C1A0C;
-  --bg-alt: #142014;
-  --fg: #F0EDE6;
-  --fg-muted: #7A9470;
-  --border: #2A3D2A;
-  --accent: #C4883A;
+  /* Dark: Gold on Ebony */
+  --bg: #1A1208;
+  --bg-alt: #2C2416;
+  --fg: #eff3cf;
+  --fg-muted: #C4B89A;
+  --border: #4A5240;
+  --accent: #D4A843;
   --accent-hover: #D49A4C;
 }
 

@@ -12,6 +12,7 @@ import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import { CookieConsent } from '@/components/CookieConsent'
 import { BackToTop } from '@/components/BackToTop'
 import { getSiteSettings } from '@/lib/queries'
+import { getImageUrl } from '@/lib/media'
 import './globals.css'
 
 export const dynamic = 'force-dynamic'
@@ -102,10 +103,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     tagline: settings.footerTagline || '',
     conservationStatement: settings.conservationStatement || '',
     columns: settings.footerColumns || [],
-    socialLinks: settings.socialLinks || {},
-    email: settings.email || '',
+    socialLinks: settings.socialLinks || {},    email: settings.email || '',
     phone: settings.phone || '',
     officeAddress: settings.officeAddress || '',
+    logoDark: getImageUrl((settings as any).logoDark || (settings as any).logo) || null,
   }
 
   const social = settings.socialLinks || {}
@@ -146,7 +147,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <ThemeProvider>
           <CurrencyProvider>
           <SmoothScroll>
-          <PageReveal />
+          <PageReveal logo={getImageUrl((settings as any).logoIcon || (settings as any).logo)} companyName={settings.companyName} />
           <a href="#main-content" className="skip-link">Skip to content</a>
           <ScrollProgress />
           <Header
@@ -154,6 +155,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             navLinks={navLinks}
             ctaText={settings.mobileCtaText || 'Plan your safari'}
             ctaLink={settings.mobileCtaLink || '/contact'}
+            logoLight={getImageUrl((settings as any).logo) || null}
+            logoDark={getImageUrl((settings as any).logoDark || (settings as any).logo) || null}
+            logoIcon={getImageUrl((settings as any).logoIcon) || null}
           />
           <main id="main-content">{children}</main>
           <Footer {...footerData} />

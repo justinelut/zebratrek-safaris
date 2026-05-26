@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Menu, Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
@@ -11,9 +12,12 @@ type Props = {
   navLinks: { href: string; label: string }[]
   ctaText: string
   ctaLink: string
+  logoLight?: string | null  // for light bg (scrolled): full color logo
+  logoDark?: string | null   // for dark/transparent (hero): full color or inverted
+  logoIcon?: string | null   // small icon for mobile sheet
 }
 
-export function Header({ companyName, navLinks, ctaText, ctaLink }: Props) {
+export function Header({ companyName, navLinks, ctaText, ctaLink, logoLight, logoDark, logoIcon }: Props) {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
@@ -28,6 +32,7 @@ export function Header({ companyName, navLinks, ctaText, ctaLink }: Props) {
 
   const textColor = scrolled ? 'text-[var(--fg)]' : 'text-ivory'
   const textMuted = scrolled ? 'text-[var(--fg-muted)]' : 'text-ivory/80'
+  const activeLogo = scrolled ? logoLight : (logoDark || logoLight)
 
   return (
     <>
@@ -40,10 +45,27 @@ export function Header({ companyName, navLinks, ctaText, ctaLink }: Props) {
         <div className="container-wide flex items-center justify-between py-5">
           <Link
             href="/"
-            className={`text-[1.5rem] font-light tracking-[0.02em] transition-colors duration-300 ${textColor}`}
-            style={{ fontFamily: 'var(--font-display)' }}
+            className="flex items-center gap-2 transition-colors duration-300"
+            aria-label={companyName}
           >
-            {companyName}
+            {activeLogo ? (
+              <Image
+                src={activeLogo}
+                alt={companyName}
+                width={180}
+                height={48}
+                priority
+                className="h-10 w-auto"
+                style={{ filter: scrolled ? 'none' : 'drop-shadow(0 2px 8px rgba(0,0,0,0.4))' }}
+              />
+            ) : (
+              <span
+                className={`text-[1.5rem] font-light tracking-[0.02em] ${textColor}`}
+                style={{ fontFamily: 'var(--font-display)' }}
+              >
+                {companyName}
+              </span>
+            )}
           </Link>
 
           <nav className="hidden lg:flex items-center gap-10">
@@ -81,9 +103,13 @@ export function Header({ companyName, navLinks, ctaText, ctaLink }: Props) {
       <Sheet open={open} onOpenChange={setOpen}>
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between border-b px-6 py-5" style={{ borderColor: 'var(--border)' }}>
-            <span className="text-[1.2rem] font-light" style={{ fontFamily: 'var(--font-display)', color: 'var(--fg)' }}>
-              {companyName}
-            </span>
+            {logoLight ? (
+              <Image src={logoLight} alt={companyName} width={140} height={36} className="h-9 w-auto" />
+            ) : (
+              <span className="text-[1.2rem] font-light" style={{ fontFamily: 'var(--font-display)', color: 'var(--fg)' }}>
+                {companyName}
+              </span>
+            )}
             <SheetClose className="opacity-60 hover:opacity-100 transition-opacity" />
           </div>
 

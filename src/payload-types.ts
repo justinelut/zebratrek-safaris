@@ -1223,7 +1223,22 @@ export interface Setting {
   id: number;
   companyName: string;
   tagline?: string | null;
+  /**
+   * Primary full-color logo (used by default — light backgrounds)
+   */
   logo?: (number | null) | Media;
+  /**
+   * Logo for dark backgrounds (gold/cream variant)
+   */
+  logoDark?: (number | null) | Media;
+  /**
+   * Compact icon (mobile, small spaces, page reveal)
+   */
+  logoIcon?: (number | null) | Media;
+  /**
+   * Decorative brand pattern (optional)
+   */
+  brandPattern?: (number | null) | Media;
   favicon?: (number | null) | Media;
   phone?: string | null;
   whatsAppNumber?: string | null;
@@ -1666,6 +1681,9 @@ export interface SettingsSelect<T extends boolean = true> {
   companyName?: T;
   tagline?: T;
   logo?: T;
+  logoDark?: T;
+  logoIcon?: T;
+  brandPattern?: T;
   favicon?: T;
   phone?: T;
   whatsAppNumber?: T;

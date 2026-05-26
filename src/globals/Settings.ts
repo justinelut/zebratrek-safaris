@@ -12,7 +12,10 @@ export const Settings: GlobalConfig = {
           fields: [
             { name: 'companyName', type: 'text', defaultValue: 'ZebraTrek Safaris', required: true },
             { name: 'tagline', type: 'text', defaultValue: 'Where Every Trail Tells a Story' },
-            { name: 'logo', type: 'upload', relationTo: 'media' },
+            { name: 'logo', type: 'upload', relationTo: 'media', admin: { description: 'Primary full-color logo (used by default — light backgrounds)' } },
+            { name: 'logoDark', type: 'upload', relationTo: 'media', admin: { description: 'Logo for dark backgrounds (gold/cream variant)' } },
+            { name: 'logoIcon', type: 'upload', relationTo: 'media', admin: { description: 'Compact icon (mobile, small spaces, page reveal)' } },
+            { name: 'brandPattern', type: 'upload', relationTo: 'media', admin: { description: 'Decorative brand pattern (optional)' } },
             { name: 'favicon', type: 'upload', relationTo: 'media' },
           ],
         },

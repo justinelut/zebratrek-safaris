@@ -48,3 +48,6 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# Brand source files (huge, kept out of repo)
+/brand/

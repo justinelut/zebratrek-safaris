@@ -70,6 +70,10 @@ async function seed() {
     ['people/guide.jpg', 'Safari guide with binoculars'],
     ['people/guests-safari.jpg', 'Guests on safari vehicle'],
     ['people/founder.jpg', 'Founder portrait'],
+    // Brand assets — logos, icons, pattern
+    ['brand/logo-full-color.png', 'ZebraTrek Safaris full color logo'],
+    ['brand/logo-full-black.png', 'ZebraTrek Safaris full black logo'],
+    ['brand/social-icon.png', 'ZebraTrek Safaris zebra icon'],
   ]
   for (const [file, alt] of uploads) {
     const id = await uploadImage(payload, file, alt)
@@ -83,6 +87,10 @@ async function seed() {
     data: {
       companyName: 'ZebraTrek Safaris',
       tagline: 'Where Every Trail Tells a Story',
+      logo: images['brand/logo-full-color.png'] || null,
+      logoDark: images['brand/logo-full-color.png'] || null,
+      logoIcon: images['brand/social-icon.png'] || null,
+      favicon: images['brand/social-icon.png'] || null,
       email: 'hello@zebratreksafaris.com',
       phone: '+254 712 345 678',
       whatsAppNumber: '+254712345678',

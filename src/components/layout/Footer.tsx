@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 type Props = {
   companyName: string
@@ -9,17 +10,22 @@ type Props = {
   email: string
   phone: string
   officeAddress: string
+  logoDark?: string | null
 }
 
-export function Footer({ companyName, tagline, conservationStatement, columns, email, phone, officeAddress }: Props) {
+export function Footer({ companyName, tagline, conservationStatement, columns, email, phone, officeAddress, logoDark }: Props) {
   return (
     <footer className="bg-deep text-ivory/70">
       <div className="container-wide py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
           <div className="md:col-span-4">
-            <p className="text-ivory text-[2rem] font-light" style={{ fontFamily: 'var(--font-display)' }}>
-              {companyName}
-            </p>
+            {logoDark ? (
+              <Image src={logoDark} alt={companyName} width={220} height={64} className="h-14 w-auto" />
+            ) : (
+              <p className="text-ivory text-[2rem] font-light" style={{ fontFamily: 'var(--font-display)' }}>
+                {companyName}
+              </p>
+            )}
             {tagline && (
               <p className="mt-4 text-[0.85rem] font-light leading-relaxed max-w-sm text-ivory/50">
                 {tagline}
