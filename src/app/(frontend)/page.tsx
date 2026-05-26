@@ -51,7 +51,7 @@ export default async function HomePage() {
         safaris={safaris.docs}
       />
       <PullQuote quote={homepage.quote || ''} attribution={homepage.attribution || ''} />
-      <WildlifeGrid headline={homepage.wildlifeHeadline || ''} animals={homepage.animals as any || []} />
+      <WildlifeGrid headline={homepage.wildlifeHeadline || ''} intro={(homepage as any).wildlifeIntro || ''} animals={homepage.animals as any || []} />
       <Lodge
         headline={homepage.lodgeHeadline || ''}
         body={homepage.lodgeBody || ''}

@@ -53,12 +53,44 @@ export const Homepage: GlobalConfig = {
           label: 'Wildlife',
           fields: [
             { name: 'wildlifeHeadline', type: 'text' },
+            { name: 'wildlifeIntro', type: 'textarea', admin: { description: 'Short paragraph above the grid (optional)' } },
             {
               name: 'animals',
               type: 'array',
+              admin: { description: 'Edit, reorder, add, or remove animal cards. Click cards link to safaris filtered by this animal, or a custom URL.' },
               fields: [
-                { name: 'name', type: 'text' },
-                { name: 'image', type: 'upload', relationTo: 'media' },
+                { name: 'name', type: 'text', required: true },
+                { name: 'scientificName', type: 'text', admin: { description: 'e.g. Panthera leo (optional, shown subtly)' } },
+                { name: 'description', type: 'textarea', admin: { description: 'Short caption shown on hover/expanded card (max ~160 chars)' } },
+                {
+                  name: 'images',
+                  type: 'array',
+                  minRows: 1,
+                  admin: { description: 'First image is used on the card; full set used on hover/detail view' },
+                  fields: [
+                    { name: 'image', type: 'upload', relationTo: 'media', required: true },
+                  ],
+                },
+                {
+                  name: 'linkType',
+                  type: 'select',
+                  defaultValue: 'safaris',
+                  admin: { description: 'Where the card click leads' },
+                  options: [
+                    { label: 'No link (display only)', value: 'none' },
+                    { label: 'Filtered safaris', value: 'safaris' },
+                    { label: 'Filtered destinations', value: 'destinations' },
+                    { label: 'Custom URL', value: 'custom' },
+                  ],
+                },
+                {
+                  name: 'customUrl',
+                  type: 'text',
+                  admin: {
+                    description: 'Used only when Link Type = Custom URL',
+                    condition: (_: any, siblingData: any) => siblingData?.linkType === 'custom',
+                  },
+                },
               ],
             },
           ],

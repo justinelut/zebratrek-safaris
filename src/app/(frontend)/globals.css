@@ -198,3 +198,150 @@
 @utility section-pad-lg {
   padding-block: 10rem;
 }
+
+/* ==========================================================
+   Branded Rich Text (Lexical → HTML)
+   Used on: destinations, safaris, journal, about, conservation, dynamic pages
+   ========================================================== */
+.rich-text {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--fg);
+  max-width: 72ch;
+}
+
+.rich-text > * + * { margin-top: 1.25rem; }
+
+.rich-text h1,
+.rich-text h2,
+.rich-text h3,
+.rich-text h4,
+.rich-text h5,
+.rich-text h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--fg);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+}
+.rich-text h1 { font-size: clamp(1.9rem, 3.2vw, 2.6rem); font-weight: 500; }
+.rich-text h2 { font-size: clamp(1.55rem, 2.6vw, 2rem); font-weight: 500; margin-top: 2.75rem; }
+.rich-text h3 { font-size: clamp(1.25rem, 2vw, 1.55rem); font-weight: 600; margin-top: 2rem; }
+.rich-text h4 { font-size: 1.15rem; font-weight: 600; margin-top: 1.75rem; }
+.rich-text h5 { font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+.rich-text h6 { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--fg-muted); }
+
+.rich-text > h1:first-child,
+.rich-text > h2:first-child,
+.rich-text > h3:first-child { margin-top: 0; }
+
+.rich-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--fg);
+  font-weight: 300;
+}
+
+.rich-text strong, .rich-text b {
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.rich-text em, .rich-text i { font-style: italic; }
+
+.rich-text s, .rich-text del { text-decoration: line-through; opacity: 0.6; }
+
+.rich-text code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.rich-text a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 0.2s;
+}
+.rich-text a:hover { color: var(--accent-hover); }
+
+.rich-text ul,
+.rich-text ol {
+  padding-left: 1.6rem;
+  list-style-position: outside;
+}
+.rich-text ul { list-style-type: disc; }
+.rich-text ol { list-style-type: decimal; }
+.rich-text ul ul { list-style-type: circle; }
+.rich-text ul ul ul { list-style-type: square; }
+
+.rich-text li {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  padding-left: 0.25rem;
+}
+.rich-text li::marker { color: var(--accent); }
+
+.rich-text blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 0.5rem 1.5rem;
+  margin: 2rem 0;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--fg);
+  background: var(--bg-alt);
+}
+.rich-text blockquote p { font-size: inherit; line-height: inherit; font-weight: inherit; }
+
+.rich-text hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3rem auto;
+  width: 60%;
+}
+
+.rich-text img {
+  border-radius: 4px;
+  margin: 2rem 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.rich-text table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.rich-text th,
+.rich-text td {
+  border: 1px solid var(--border);
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+}
+.rich-text th {
+  background: var(--bg-alt);
+  font-weight: 600;
+}
+
+.rich-text pre {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.rich-text pre code { background: transparent; border: 0; padding: 0; }

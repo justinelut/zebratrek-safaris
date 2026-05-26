@@ -7,7 +7,7 @@ type Props = { content: SerializedEditorState | null | undefined; className?: st
 
 export function RichText({ content, className = '' }: Props) {
   if (!content?.root?.children?.length) return null
-  return <div className={`prose prose-lg max-w-none ${className}`}>{renderNodes(content.root.children)}</div>
+  return <div className={`rich-text ${className}`}>{renderNodes(content.root.children)}</div>
 }
 
 function renderNodes(nodes: SerializedLexicalNode[]): React.ReactNode[] {

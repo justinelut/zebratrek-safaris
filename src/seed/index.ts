@@ -162,15 +162,73 @@ async function seed() {
       experiencesHeadline: 'Crafted Experiences',
       experiencesSubheadline: 'Each safari is designed around the season, the migration, and your curiosity.',
       wildlifeHeadline: 'The Big Five and Beyond',
+      wildlifeIntro:
+        'East Africa is home to some of the most charismatic wildlife on earth. From iconic predators to gentle giants, every animal tells a story of survival, migration, and the wild rhythms of the savanna.',
       animals: [
-        { name: 'Lion', image: images['wildlife/lion.jpg'] },
-        { name: 'Elephant', image: images['wildlife/elephant.jpg'] },
-        { name: 'Leopard', image: images['wildlife/leopard.jpg'] },
-        { name: 'Buffalo', image: images['wildlife/buffalo.jpg'] },
-        { name: 'Rhino', image: images['wildlife/rhino.jpg'] },
-        { name: 'Cheetah', image: images['wildlife/cheetah.jpg'] },
-        { name: 'Giraffe', image: images['wildlife/giraffe.jpg'] },
-        { name: 'Zebra', image: images['wildlife/zebra.jpg'] },
+        {
+          name: 'Lion',
+          scientificName: 'Panthera leo',
+          description:
+            'Africa\'s apex predator. Watch prides at dawn and listen for the territorial roar that carries 8km across the plains.',
+          images: [{ image: images['wildlife/lion.jpg'] }],
+          linkType: 'safaris',
+        },
+        {
+          name: 'Elephant',
+          scientificName: 'Loxodonta africana',
+          description:
+            'The world\'s largest land mammal. Amboseli holds some of the most magnificent tuskers left on the continent.',
+          images: [{ image: images['wildlife/elephant.jpg'] }],
+          linkType: 'destinations',
+        },
+        {
+          name: 'Leopard',
+          scientificName: 'Panthera pardus',
+          description:
+            'Solitary, secretive, and stunningly beautiful. The Mara and Samburu offer your best chance to spot one in the wild.',
+          images: [{ image: images['wildlife/leopard.jpg'] }],
+          linkType: 'safaris',
+        },
+        {
+          name: 'Buffalo',
+          scientificName: 'Syncerus caffer',
+          description:
+            'Hardy and unpredictable, the Cape buffalo is one of Africa\'s most respected and resilient herd animals.',
+          images: [{ image: images['wildlife/buffalo.jpg'] }],
+          linkType: 'safaris',
+        },
+        {
+          name: 'Rhino',
+          scientificName: 'Diceros bicornis',
+          description:
+            'A conservation triumph in progress. Ol Pejeta and Lewa protect Kenya\'s rebounding black and white rhino populations.',
+          images: [{ image: images['wildlife/rhino.jpg'] }],
+          linkType: 'destinations',
+        },
+        {
+          name: 'Cheetah',
+          scientificName: 'Acinonyx jubatus',
+          description:
+            'The fastest land animal on earth. Catch a hunt at full sprint across the open Mara plains.',
+          images: [{ image: images['wildlife/cheetah.jpg'] }],
+          linkType: 'safaris',
+        },
+        {
+          name: 'Giraffe',
+          scientificName: 'Giraffa camelopardalis',
+          description:
+            'Tallest creature on the savanna. Three subspecies inhabit East Africa — the reticulated being the most striking.',
+          images: [{ image: images['wildlife/giraffe.jpg'] }],
+          linkType: 'safaris',
+        },
+        {
+          name: 'Zebra',
+          scientificName: 'Equus quagga',
+          description:
+            'Each pattern is unique as a fingerprint. Watch hundreds of thousands cross the Mara River during the Great Migration.',
+          images: [{ image: images['wildlife/zebra.jpg'] }],
+          linkType: 'safaris',
+        },
       ],
       lodgeHeadline: 'Where Comfort Meets the Wild',
       lodgeBody: "Our partner lodges and tented camps sit at the intersection of luxury and wilderness. Fall asleep to the sounds of the bush. Wake to coffee on your private deck overlooking the savanna.",

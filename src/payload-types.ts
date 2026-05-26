@@ -1308,10 +1308,41 @@ export interface Homepage {
   experiencesHeadline?: string | null;
   experiencesSubheadline?: string | null;
   wildlifeHeadline?: string | null;
+  /**
+   * Short paragraph above the grid (optional)
+   */
+  wildlifeIntro?: string | null;
+  /**
+   * Edit, reorder, add, or remove animal cards. Click cards link to safaris filtered by this animal, or a custom URL.
+   */
   animals?:
     | {
-        name?: string | null;
-        image?: (number | null) | Media;
+        name: string;
+        /**
+         * e.g. Panthera leo (optional, shown subtly)
+         */
+        scientificName?: string | null;
+        /**
+         * Short caption shown on hover/expanded card (max ~160 chars)
+         */
+        description?: string | null;
+        /**
+         * First image is used on the card; full set used on hover/detail view
+         */
+        images?:
+          | {
+              image: number | Media;
+              id?: string | null;
+            }[]
+          | null;
+        /**
+         * Where the card click leads
+         */
+        linkType?: ('none' | 'safaris' | 'destinations' | 'custom') | null;
+        /**
+         * Used only when Link Type = Custom URL
+         */
+        customUrl?: string | null;
         id?: string | null;
       }[]
     | null;
@@ -1755,11 +1786,21 @@ export interface HomepageSelect<T extends boolean = true> {
   experiencesHeadline?: T;
   experiencesSubheadline?: T;
   wildlifeHeadline?: T;
+  wildlifeIntro?: T;
   animals?:
     | T
     | {
         name?: T;
-        image?: T;
+        scientificName?: T;
+        description?: T;
+        images?:
+          | T
+          | {
+              image?: T;
+              id?: T;
+            };
+        linkType?: T;
+        customUrl?: T;
         id?: T;
       };
   lodgeHeadline?: T;
