@@ -106,7 +106,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     socialLinks: settings.socialLinks || {},    email: settings.email || '',
     phone: settings.phone || '',
     officeAddress: settings.officeAddress || '',
-    logoDark: getImageUrl((settings as any).logoDark || (settings as any).logo) || null,
   }
 
   const social = settings.socialLinks || {}
