@@ -1,4 +1,5 @@
-import { getHomepage, getSafaris, getTestimonials, getDestinations, getTeamMembers } from '@/lib/queries'
+import { getHomepage, getSafaris, getTestimonials, getDestinations, getTeamMembers, getSiteSettings } from '@/lib/queries'
+import { getImageUrl } from '@/lib/media'
 import { Hero } from '@/components/home/Hero'
 import { IntroStatement } from '@/components/home/IntroStatement'
 import { ImageBreak } from '@/components/home/ImageBreak'
@@ -17,15 +18,17 @@ import { ClosingCTA } from '@/components/home/ClosingCTA'
 import { DestinationMarquee } from '@/components/home/DestinationMarquee'
 
 export default async function HomePage() {
-  const [homepage, safaris, testimonials, destinations, team] = await Promise.all([
+  const [homepage, safaris, testimonials, destinations, team, settings] = await Promise.all([
     getHomepage(),
     getSafaris({ featured: true, limit: 3 }),
     getTestimonials({ featured: true, limit: 4 }),
     getDestinations({ featured: true, limit: 4 }),
     getTeamMembers({ featured: true, limit: 3 }),
+    getSiteSettings(),
   ])
 
   const imageBreaks = homepage.images || []
+  const brandPattern = getImageUrl((settings as any).brandPattern) || null
 
   return (
     <>
@@ -76,6 +79,7 @@ export default async function HomePage() {
         body={homepage.closingBody || ''}
         ctaText={homepage.closingCtaText || 'Start Planning'}
         ctaLink={homepage.closingCtaLink || '/contact'}
+        brandPattern={brandPattern}
       />
     </>
   )

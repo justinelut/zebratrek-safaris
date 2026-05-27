@@ -10,12 +10,27 @@ type Props = {
   email: string
   phone: string
   officeAddress: string
+  brandPattern?: string | null
 }
 
-export function Footer({ companyName, tagline, conservationStatement, columns, email, phone, officeAddress }: Props) {
+export function Footer({ companyName, tagline, conservationStatement, columns, email, phone, officeAddress, brandPattern }: Props) {
   return (
-    <footer className="bg-deep text-ivory/70">
-      <div className="container-wide py-20">
+    <footer className="relative bg-deep text-ivory/70 overflow-hidden">
+      {/* Subtle brand pattern background */}
+      {brandPattern && (
+        <div
+          aria-hidden
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: `url(${brandPattern})`,
+            backgroundRepeat: 'repeat',
+            backgroundSize: '420px auto',
+            opacity: 0.06,
+            mixBlendMode: 'screen',
+          }}
+        />
+      )}
+      <div className="container-wide py-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
           <div className="md:col-span-4">
             <Image
