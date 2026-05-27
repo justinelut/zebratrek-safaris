@@ -5,6 +5,8 @@ import config from '@/payload.config'
 import { getImageProps, getImageUrl } from '@/lib/media'
 import { getSiteSettings } from '@/lib/queries'
 import { FadeIn } from '@/components/motion/FadeIn'
+import { StaggerGrid } from '@/components/motion/StaggerGrid'
+import { StaggerItem } from '@/components/motion/StaggerItem'
 import type { Media, Service } from '@/payload-types'
 
 export const metadata = {
@@ -14,113 +16,116 @@ export const metadata = {
 
 async function getServices() {
   const payload = await getPayload({ config })
-  const result = await payload.find({ collection: 'services', sort: 'order', limit: 20 })
+  const result = await payload.find({ collection: 'services', sort: 'order', limit: 50 })
   return result.docs as Service[]
 }
 
+async function getHeroImage() {
+  const payload = await getPayload({ config })
+  // Try to find a hero image — prefer about-hero, fall back to contact-hero, then any landscape
+  for (const slug of ['about-hero.jpg', 'contact-hero.jpg', 'savanna-sunrise.jpg', 'game-drive.jpg']) {
+    const r = await payload.find({ collection: 'media', where: { filename: { contains: slug } }, limit: 1 })
+    if (r.docs[0]) return r.docs[0] as Media
+  }
+  return null
+}
+
 export default async function ServicesPage() {
-  const [services, settings] = await Promise.all([getServices(), getSiteSettings()])
+  const [services, settings, heroMedia] = await Promise.all([getServices(), getSiteSettings(), getHeroImage()])
   const brandPattern = getImageUrl((settings as any).brandPattern)
+  const heroImg = heroMedia ? getImageProps(heroMedia) : null
   const total = services.length.toString().padStart(2, '0')
 
   return (
     <>
-      {/* Hero */}
-      <section className="relative min-h-[55vh] flex items-end pb-20 overflow-hidden bg-[var(--bg)]">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1A1208] via-[#1A1208]/95 to-[#1A1208]" />
-        <div className="mx-auto max-w-[90rem] px-6 md:px-10 relative z-10 w-full pt-44">
-          <FadeIn>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
-              <div>
-                <span className="text-[0.6rem] tracking-[0.3em] uppercase text-[#B8860B] block mb-5">
-                  {total} Services
-                </span>
-                <h1
-                  className="text-[clamp(2.4rem,5vw,4.2rem)] leading-[1.05] text-[var(--fg)]"
-                  style={{ fontFamily: 'var(--font-display)' }}
-                >
-                  Your complete East Africa travel partner
-                </h1>
-              </div>
-              <div className="lg:pb-2">
-                <p className="text-[1rem] text-[var(--fg-muted)] max-w-md leading-relaxed">
-                  Beyond world-class safaris, we handle every detail — from the moment you land to the moment you leave.
-                </p>
-              </div>
-            </div>
-          </FadeIn>
+      {/* Hero with background image — matches destinations pattern */}
+      <section className="relative h-[55vh] min-h-[420px] flex items-end pb-16 overflow-hidden">
+        {heroImg?.src && (
+          <Image src={heroImg.src} alt={heroImg.alt} fill className="object-cover" priority sizes="100vw" />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30" />
+        <div className="container-wide relative z-10 text-ivory">
+          <p className="eyebrow text-ivory/60">{total} Services</p>
+          <h1
+            className="mt-3 text-[clamp(2rem,4vw,3.5rem)] font-light max-w-3xl"
+            style={{ fontFamily: 'var(--font-display)' }}
+          >
+            Your complete East Africa travel partner
+          </h1>
+          <p className="mt-4 text-ivory/75 max-w-xl text-[1rem]">
+            Beyond world-class safaris — from the moment you land to the moment you leave.
+          </p>
         </div>
       </section>
 
-      {/* Magazine-style asymmetric grid */}
-      <section className="py-24 md:py-32 bg-[var(--bg)]">
-        <div className="mx-auto max-w-[90rem] px-6 md:px-10">
-          <div className="space-y-5">
+      {/* Uniform 3-column grid (responsive) */}
+      <section className="section-pad">
+        <div className="container-wide">
+          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, i) => {
               const img = getImageProps(service.image as Media)
               const num = (i + 1).toString().padStart(2, '0')
-              // Alternate: large left / small right, then small left / large right
-              const isLarge = i % 3 === 0
-              const rowStart = Math.floor(i / 3) * 3
-
-              if (i % 3 === 0) {
-                // Start a new row group: large card (2/3) + next card (1/3)
-                const next = services[i + 1]
-                const nextImg = next ? getImageProps(next.image as Media) : null
-                const nextNum = next ? (i + 2).toString().padStart(2, '0') : null
-                return (
-                  <div key={service.id} className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    <ServiceCard
-                      service={service}
-                      img={img}
-                      num={num}
-                      total={total}
-                      className="md:col-span-2 h-[400px] md:h-[480px]"
-                      brandPattern={brandPattern}
-                    />
-                    {next && nextImg && (
-                      <ServiceCard
-                        service={next}
-                        img={nextImg}
-                        num={nextNum!}
-                        total={total}
-                        className="h-[340px] md:h-[480px]"
-                        brandPattern={brandPattern}
+              return (
+                <StaggerItem key={service.id}>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className="group relative block overflow-hidden rounded-sm aspect-[4/5]"
+                  >
+                    {img.src ? (
+                      <Image
+                        src={img.src}
+                        alt={img.alt || service.name}
+                        fill
+                        className="object-cover group-hover:scale-[1.04] transition-transform duration-700"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
+                    ) : brandPattern ? (
+                      <>
+                        <div className="absolute inset-0 bg-[var(--bg-alt)]" />
+                        <Image src={brandPattern} alt="" fill className="object-cover opacity-15" sizes="33vw" />
+                      </>
+                    ) : (
+                      <div className="absolute inset-0 bg-[var(--bg-alt)]" />
                     )}
-                  </div>
-                )
-              } else if (i % 3 === 1) {
-                // Already rendered in the group above
-                return null
-              } else {
-                // Third card in group: full width narrow
-                return (
-                  <div key={service.id} className="grid grid-cols-1 md:grid-cols-3 gap-5">
-                    <ServiceCard
-                      service={service}
-                      img={img}
-                      num={num}
-                      total={total}
-                      className="md:col-span-1 h-[340px] md:h-[380px]"
-                      brandPattern={brandPattern}
-                    />
-                    {/* Empty space for asymmetry */}
-                    <div className="hidden md:block md:col-span-2" />
-                  </div>
-                )
-              }
+
+                    {/* Dark scrim — always dark for image legibility */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/5 group-hover:from-black/90 transition-all duration-500" />
+
+                    {/* Counter */}
+                    <span className="absolute top-5 right-5 text-[0.6rem] tracking-[0.15em] text-ivory/50 z-10">
+                      {num} / {total}
+                    </span>
+
+                    {/* Content — always light text since it's over a dark scrim */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-7 z-10">
+                      <span className="block text-[0.6rem] tracking-[0.25em] text-[var(--accent-warm)] mb-2 font-medium">
+                        {num}
+                      </span>
+                      <h2
+                        className="text-[clamp(1.3rem,2.2vw,1.7rem)] text-ivory leading-tight mb-2"
+                        style={{ fontFamily: 'var(--font-display)' }}
+                      >
+                        {service.name}
+                      </h2>
+                      <div className="h-[1px] w-0 group-hover:w-10 bg-[var(--accent)] transition-all duration-500 mb-3" />
+                      <p className="text-[0.8rem] text-ivory/75 leading-relaxed line-clamp-2 max-w-sm">
+                        {service.shortDescription}
+                      </p>
+                    </div>
+                  </Link>
+                </StaggerItem>
+              )
             })}
-          </div>
+          </StaggerGrid>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-28 bg-[var(--bg)] border-t border-[var(--border)]/30">
-        <div className="mx-auto max-w-3xl px-6 text-center">
+      {/* CTA — themed */}
+      <section className="section-pad bg-[var(--bg-alt)] border-t border-[var(--border)]/30">
+        <div className="container-narrow text-center">
           <FadeIn>
             <h2
-              className="text-[clamp(1.8rem,3.5vw,2.8rem)] text-[var(--fg)] leading-tight"
+              className="text-[clamp(1.8rem,3.5vw,2.8rem)] text-[var(--fg)] leading-tight font-light"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Need something custom?
@@ -130,7 +135,7 @@ export default async function ServicesPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-block mt-10 text-[0.65rem] tracking-[0.25em] uppercase px-12 py-4 border border-[#B8860B] text-[#D4A843] hover:bg-[#B8860B] hover:text-[var(--fg)] transition-all duration-300 rounded-sm"
+              className="inline-block mt-10 text-[0.65rem] tracking-[0.25em] uppercase px-12 py-4 border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-ivory transition-all duration-300 rounded-sm"
             >
               Get a Quote
             </Link>
@@ -138,62 +143,5 @@ export default async function ServicesPage() {
         </div>
       </section>
     </>
-  )
-}
-
-function ServiceCard({
-  service,
-  img,
-  num,
-  total,
-  className = '',
-  brandPattern,
-}: {
-  service: Service
-  img: { src: string; alt: string }
-  num: string
-  total: string
-  className?: string
-  brandPattern: string | null
-}) {
-  return (
-    <Link href={`/services/${service.slug}`} className={`group relative block overflow-hidden rounded-sm ${className}`}>
-      {/* Image */}
-      {img.src ? (
-        <Image
-          src={img.src}
-          alt={img.alt || service.name}
-          fill
-          className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
-          sizes="(max-width: 768px) 100vw, 66vw"
-        />
-      ) : brandPattern ? (
-        <Image src={brandPattern} alt="" fill className="object-cover opacity-20" sizes="66vw" />
-      ) : (
-        <div className="absolute inset-0 bg-[var(--bg-alt)]" />
-      )}
-      {/* Scrim */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#1A1208]/90 via-[#1A1208]/40 to-[#1A1208]/10 group-hover:from-[#1A1208]/95 transition-all duration-500" />
-
-      {/* Counter */}
-      <span className="absolute top-5 right-5 text-[0.6rem] tracking-[0.15em] text-[var(--fg-muted)]/50 z-10">
-        {num} / {total}
-      </span>
-
-      {/* Content */}
-      <div className="absolute bottom-0 left-0 right-0 p-7 z-10">
-        <span className="block text-[0.6rem] tracking-[0.25em] text-[#B8860B] mb-2 font-medium">{num}</span>
-        <h2
-          className="text-[clamp(1.3rem,2.5vw,1.8rem)] text-[var(--fg)] leading-tight mb-2"
-          style={{ fontFamily: 'var(--font-display)' }}
-        >
-          {service.name}
-        </h2>
-        <div className="h-[1px] w-0 group-hover:w-10 bg-[#B8860B] transition-all duration-500 mb-3" />
-        <p className="text-[0.8rem] text-[var(--fg-muted)] leading-relaxed line-clamp-2 max-w-sm">
-          {service.shortDescription}
-        </p>
-      </div>
-    </Link>
   )
 }

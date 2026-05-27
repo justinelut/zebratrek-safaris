@@ -25,7 +25,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease }}
           >
-            <span className="text-[0.65rem] tracking-[0.3em] uppercase text-[#B8860B] block mb-4">
+            <span className="text-[0.65rem] tracking-[0.3em] uppercase text-[var(--accent)] block mb-4">
               {total} Services
             </span>
             <h2
@@ -69,7 +69,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
                 >
                   <Link
                     href={`/services/${s.slug}`}
-                    className="group relative block h-[340px] md:h-[380px] overflow-hidden rounded-sm bg-[var(--bg-alt)] border border-[var(--border)] hover:border-[#B8860B]/50 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(184,134,11,0.12)]"
+                    className="group relative block h-[340px] md:h-[380px] overflow-hidden rounded-sm bg-[var(--bg-alt)] border border-[var(--border)] hover:border-[var(--accent)]/50 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(184,134,11,0.12)]"
                   >
                     {/* Background image */}
                     {imgUrl && (
@@ -82,7 +82,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
                       />
                     )}
                     {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A1208] via-[#1A1208]/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
 
                     {/* Counter top-right */}
                     <span className="absolute top-4 right-4 text-[0.6rem] tracking-[0.15em] text-[var(--fg-muted)]/60 font-medium z-10">
@@ -91,7 +91,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
 
                     {/* Content at bottom */}
                     <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                      <span className="block text-[0.65rem] tracking-[0.2em] text-[#B8860B] mb-2 font-medium">{num}</span>
+                      <span className="block text-[0.65rem] tracking-[0.2em] text-[var(--accent)] mb-2 font-medium">{num}</span>
                       <h3
                         className="text-[1.2rem] md:text-[1.35rem] text-[var(--fg)] leading-tight mb-2"
                         style={{ fontFamily: 'var(--font-display)' }}
@@ -99,7 +99,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
                         {s.name}
                       </h3>
                       {/* Gold underline that animates in on hover */}
-                      <div className="h-[1px] w-0 group-hover:w-12 bg-[#B8860B] transition-all duration-500 mb-3" />
+                      <div className="h-[1px] w-0 group-hover:w-12 bg-[var(--accent)] transition-all duration-500 mb-3" />
                       <p className="text-[0.78rem] text-[var(--fg-muted)] leading-relaxed line-clamp-2 opacity-80">
                         {s.shortDescription}
                       </p>
@@ -113,7 +113,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
           {/* Mobile scroll indicator */}
           <div className="flex md:hidden justify-center mt-4 gap-1">
             {services.slice(0, 5).map((_, i) => (
-              <div key={i} className="w-6 h-[2px] bg-[#4A5240] rounded-full" />
+              <div key={i} className="w-6 h-[2px] bg-[var(--border)] rounded-full" />
             ))}
           </div>
         </div>
@@ -128,7 +128,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
         >
           <Link
             href="/services"
-            className="text-[0.65rem] tracking-[0.25em] uppercase text-[var(--fg-muted)] hover:text-[#D4A843] transition-colors duration-300 border-b border-[var(--border)] hover:border-[#B8860B] pb-1"
+            className="text-[0.65rem] tracking-[0.25em] uppercase text-[var(--fg-muted)] hover:text-[var(--accent-warm)] transition-colors duration-300 border-b border-[var(--border)] hover:border-[var(--accent)] pb-1"
           >
             All Services →
           </Link>

@@ -47,7 +47,7 @@ export default async function ServiceDetailPage({ params }: Params) {
         {img.src && (
           <Image src={img.src} alt={img.alt} fill className="object-cover" priority sizes="100vw" />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1A1208] via-[#1A1208]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
         <div className="mx-auto max-w-[90rem] px-6 md:px-10 relative z-10 w-full">
           <FadeIn>
             <span className="text-[0.6rem] tracking-[0.3em] uppercase text-[var(--fg-muted)]/70 block mb-3">
@@ -82,13 +82,13 @@ export default async function ServiceDetailPage({ params }: Params) {
           <FadeIn delay={0.15} className="space-y-6">
             {service.highlights && service.highlights.length > 0 && (
               <div className="p-7 bg-[var(--bg-alt)] rounded-sm border border-[var(--border)]">
-                <h3 className="text-[0.7rem] tracking-[0.25em] uppercase mb-5 text-[#B8860B] font-medium">
+                <h3 className="text-[0.7rem] tracking-[0.25em] uppercase mb-5 text-[var(--accent)] font-medium">
                   What&apos;s Included
                 </h3>
                 <ul className="space-y-3">
                   {service.highlights.map((h, i) => (
                     <li key={i} className="flex items-start gap-3 text-[0.88rem] leading-relaxed text-[var(--fg)]">
-                      <Check className="w-4 h-4 text-[#D4A843] mt-0.5 shrink-0" />
+                      <Check className="w-4 h-4 text-[var(--accent-warm)] mt-0.5 shrink-0" />
                       <span>{h.text}</span>
                     </li>
                   ))}
@@ -100,7 +100,7 @@ export default async function ServiceDetailPage({ params }: Params) {
               <p className="text-[var(--fg-muted)] text-[0.88rem] mb-5">Interested in this service?</p>
               <Link
                 href={service.ctaLink || '/contact'}
-                className="inline-block w-full text-[0.65rem] tracking-[0.2em] uppercase px-8 py-4 border border-[#B8860B] text-[#D4A843] hover:bg-[#B8860B] hover:text-[var(--fg)] transition-all duration-300 rounded-sm font-medium"
+                className="inline-block w-full text-[0.65rem] tracking-[0.2em] uppercase px-8 py-4 border border-[var(--accent)] text-[var(--accent-warm)] hover:bg-[var(--accent)] hover:text-[var(--fg)] transition-all duration-300 rounded-sm font-medium"
               >
                 {service.ctaText || 'Enquire Now'}
               </Link>
@@ -135,7 +135,7 @@ export default async function ServiceDetailPage({ params }: Params) {
                     ) : (
                       <div className="absolute inset-0 bg-[var(--bg-alt)]" />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A1208]/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
                       <h3
                         className="text-[1.15rem] text-[var(--fg)] leading-tight"
