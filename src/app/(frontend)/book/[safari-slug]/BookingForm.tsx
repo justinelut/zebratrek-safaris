@@ -7,6 +7,7 @@ import { submitBookingRequest } from './actions'
 import { Price } from '@/components/Price'
 import { useCurrency } from '@/components/CurrencyProvider'
 import { convertPrice, formatPrice } from '@/lib/currency'
+import { DatePickerInput } from '@/components/ui/DatePickerInput'
 
 type Props = { safariId: string; safariSlug: string; safariTitle: string; basePrice: number; currency: string; duration: string }
 
@@ -133,11 +134,16 @@ export function BookingForm({ safariId, safariSlug, safariTitle, basePrice, curr
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-[0.7rem] tracking-[0.15em] uppercase mb-2 text-[var(--fg-muted)]">Check-in *</label>
-                  <input type="date" value={form.startDate} min={new Date().toISOString().split('T')[0]} onChange={(e) => update('startDate', e.target.value)} required className="w-full border border-[var(--border)] bg-transparent px-4 py-3.5 text-[0.9rem] rounded-md focus:border-[var(--accent)] outline-none transition-colors" />
+                  <DatePickerInput value={form.startDate} onChange={(d) => update('startDate', d)} placeholder="Choose check-in" />
                 </div>
                 <div>
                   <label className="block text-[0.7rem] tracking-[0.15em] uppercase mb-2 text-[var(--fg-muted)]">Check-out *</label>
-                  <input type="date" value={form.endDate} min={form.startDate || new Date().toISOString().split('T')[0]} onChange={(e) => update('endDate', e.target.value)} required className="w-full border border-[var(--border)] bg-transparent px-4 py-3.5 text-[0.9rem] rounded-md focus:border-[var(--accent)] outline-none transition-colors" />
+                  <DatePickerInput
+                    value={form.endDate}
+                    onChange={(d) => update('endDate', d)}
+                    minDate={form.startDate ? new Date(form.startDate + 'T00:00:00') : undefined}
+                    placeholder="Choose check-out"
+                  />
                 </div>
               </div>
               {nights > 0 && (

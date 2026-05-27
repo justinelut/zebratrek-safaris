@@ -9,10 +9,14 @@ export const Bookings: CollectionConfig = {
     afterChange: [
       async ({ doc, operation, req }) => {
         if (operation === 'create') {
-          const safari = doc.safari && typeof doc.safari === 'object' ? doc.safari : await req.payload.findByID({ collection: 'safari-packages', id: doc.safari })
-          const safariTitle = safari?.title || 'Safari'
-          await sendBookingConfirmation(doc.guestEmail, doc.guestName, doc.bookingRef, safariTitle)
-          await sendBookingNotification({ bookingRef: doc.bookingRef, guestName: doc.guestName, guestEmail: doc.guestEmail, safariTitle, startDate: doc.startDate, endDate: doc.endDate, numberOfAdults: doc.numberOfAdults, accommodation: doc.accommodation })
+          try {
+            const safari = doc.safari && typeof doc.safari === 'object' ? doc.safari : await req.payload.findByID({ collection: 'safari-packages', id: doc.safari, overrideAccess: true })
+            const safariTitle = safari?.title || 'Safari'
+            await sendBookingConfirmation(doc.guestEmail, doc.guestName, doc.bookingRef, safariTitle)
+            await sendBookingNotification({ bookingRef: doc.bookingRef, guestName: doc.guestName, guestEmail: doc.guestEmail, safariTitle, startDate: doc.startDate, endDate: doc.endDate, numberOfAdults: doc.numberOfAdults, accommodation: doc.accommodation })
+          } catch (err) {
+            console.error('Booking afterChange email failed:', err)
+          }
         }
       },
     ],

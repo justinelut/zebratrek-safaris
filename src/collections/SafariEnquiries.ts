@@ -12,8 +12,12 @@ export const SafariEnquiries: CollectionConfig = {
     afterChange: [
       async ({ doc, operation }) => {
         if (operation === 'create') {
-          await sendEnquiryConfirmation(doc.email, doc.name)
-          await sendEnquiryNotification(doc)
+          try {
+            await sendEnquiryConfirmation(doc.email, doc.name)
+            await sendEnquiryNotification(doc)
+          } catch (err) {
+            console.error('Enquiry afterChange email failed:', err)
+          }
         }
       },
     ],

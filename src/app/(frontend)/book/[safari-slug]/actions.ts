@@ -53,8 +53,11 @@ export async function submitBookingRequest(data: BookingData): Promise<{ success
     })
 
     return { success: true, ref }
-  } catch (err) {
+  } catch (err: any) {
     console.error('Booking failed:', err)
-    return { success: false, error: 'Something went wrong. Please try again or contact us directly.' }
+    console.error('Booking error stringified:', JSON.stringify(err, Object.getOwnPropertyNames(err), 2))
+    console.error('Booking error message:', err?.message)
+    console.error('Booking error data:', err?.data)
+    return { success: false, error: err?.message ? `Booking failed: ${err.message}` : 'Something went wrong. Please try again or contact us directly.' }
   }
 }
