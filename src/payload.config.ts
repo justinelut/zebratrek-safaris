@@ -21,6 +21,7 @@ import { GalleryImages } from './collections/GalleryImages'
 import { Bookings } from './collections/Bookings'
 import { Availability } from './collections/Availability'
 import { Seasons } from './collections/Seasons'
+import { Services } from './collections/Services'
 import { Settings } from './globals/Settings'
 import { Homepage } from './globals/Homepage'
 import { AboutPage } from './globals/AboutPage'
@@ -45,7 +46,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, SafariPackages, Destinations, TeamMembers, Testimonials, SafariEnquiries, JournalPosts, Pages, GalleryImages, Bookings, Availability, Seasons],
+  collections: [Users, Media, SafariPackages, Destinations, TeamMembers, Testimonials, SafariEnquiries, JournalPosts, Pages, GalleryImages, Bookings, Availability, Seasons, Services],
   globals: [Settings, Homepage, AboutPage, ContactPage, SafarisPage, DestinationsPage, ConservationPage, PlanYourSafariPage, WhenToVisitPage, WhatToExpectPage, GalleryPage, JournalPage, FAQPage],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',

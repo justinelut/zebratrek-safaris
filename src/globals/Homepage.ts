@@ -50,6 +50,13 @@ export const Homepage: GlobalConfig = {
           ],
         },
         {
+          label: 'Services',
+          fields: [
+            { name: 'servicesHeadline', type: 'text', defaultValue: 'More Than Safaris' },
+            { name: 'servicesSubheadline', type: 'textarea', defaultValue: 'From airport pickup to beach extension — we handle your entire East Africa experience.' },
+          ],
+        },
+        {
           label: 'Wildlife',
           fields: [
             { name: 'wildlifeHeadline', type: 'text' },

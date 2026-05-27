@@ -80,6 +80,7 @@ export interface Config {
     bookings: Booking;
     availability: Availability;
     seasons: Season;
+    services: Service;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -100,6 +101,7 @@ export interface Config {
     bookings: BookingsSelect<false> | BookingsSelect<true>;
     availability: AvailabilitySelect<false> | AvailabilitySelect<true>;
     seasons: SeasonsSelect<false> | SeasonsSelect<true>;
+    services: ServicesSelect<false> | ServicesSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -199,7 +201,6 @@ export interface User {
 export interface Media {
   id: number;
   alt: string;
-  prefix?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -236,6 +237,13 @@ export interface SafariPackage {
         | 'Family Safari'
         | 'Photography Safari'
         | 'Honeymoon Safari'
+        | 'Day Safari'
+        | 'Beach Holiday'
+        | 'Airport Transfer'
+        | 'Group Transport'
+        | 'Air Safari'
+        | 'City Excursion'
+        | 'Bush Tour'
       )
     | null;
   difficulty?: ('Easy' | 'Moderate' | 'Challenging') | null;
@@ -685,6 +693,48 @@ export interface Season {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "services".
+ */
+export interface Service {
+  id: number;
+  name: string;
+  slug: string;
+  order?: number | null;
+  featured?: boolean | null;
+  /**
+   * Lucide icon name (e.g. "Plane", "Bus", "Palmtree")
+   */
+  icon?: string | null;
+  image?: (number | null) | Media;
+  shortDescription: string;
+  body?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  highlights?:
+    | {
+        text?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  ctaText?: string | null;
+  ctaLink?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -758,6 +808,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'seasons';
         value: number | Season;
+      } | null)
+    | ({
+        relationTo: 'services';
+        value: number | Service;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -829,7 +883,6 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
-  prefix?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -1177,6 +1230,30 @@ export interface SeasonsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "services_select".
+ */
+export interface ServicesSelect<T extends boolean = true> {
+  name?: T;
+  slug?: T;
+  order?: T;
+  featured?: T;
+  icon?: T;
+  image?: T;
+  shortDescription?: T;
+  body?: T;
+  highlights?:
+    | T
+    | {
+        text?: T;
+        id?: T;
+      };
+  ctaText?: T;
+  ctaLink?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv_select".
  */
 export interface PayloadKvSelect<T extends boolean = true> {
@@ -1307,6 +1384,8 @@ export interface Homepage {
     | null;
   experiencesHeadline?: string | null;
   experiencesSubheadline?: string | null;
+  servicesHeadline?: string | null;
+  servicesSubheadline?: string | null;
   wildlifeHeadline?: string | null;
   /**
    * Short paragraph above the grid (optional)
@@ -1785,6 +1864,8 @@ export interface HomepageSelect<T extends boolean = true> {
       };
   experiencesHeadline?: T;
   experiencesSubheadline?: T;
+  servicesHeadline?: T;
+  servicesSubheadline?: T;
   wildlifeHeadline?: T;
   wildlifeIntro?: T;
   animals?:

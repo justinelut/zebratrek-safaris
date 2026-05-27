@@ -20,7 +20,7 @@ export const SafariPackages: CollectionConfig = {
         { name: 'currency', type: 'select', defaultValue: 'USD', options: ['USD', 'EUR', 'GBP', 'KES'], admin: { width: '25%' } },
       ],
     },
-    { name: 'category', type: 'select', options: ['Classic Safari', 'Luxury Safari', 'Adventure Safari', 'Family Safari', 'Photography Safari', 'Honeymoon Safari'] },
+    { name: 'category', type: 'select', options: ['Classic Safari', 'Luxury Safari', 'Adventure Safari', 'Family Safari', 'Photography Safari', 'Honeymoon Safari', 'Day Safari', 'Beach Holiday', 'Airport Transfer', 'Group Transport', 'Air Safari', 'City Excursion', 'Bush Tour'] },
     { name: 'difficulty', type: 'select', options: ['Easy', 'Moderate', 'Challenging'] },
     { name: 'bestSeason', type: 'text' },
     { name: 'destinations', type: 'relationship', relationTo: 'destinations', hasMany: true },
