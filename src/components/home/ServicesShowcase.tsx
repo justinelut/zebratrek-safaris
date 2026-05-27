@@ -15,7 +15,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
 
   return (
     <section className="py-28 md:py-36 bg-[var(--bg)]">
-      <div className="mx-auto max-w-[90rem] px-6 md:px-10">
+      <div className="container-wide">
         {/* Asymmetric header: left heading, right subtitle */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 lg:mb-20">
           <motion.div

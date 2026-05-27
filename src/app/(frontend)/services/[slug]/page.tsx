@@ -48,7 +48,7 @@ export default async function ServiceDetailPage({ params }: Params) {
           <Image src={img.src} alt={img.alt} fill className="object-cover" priority sizes="100vw" />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
-        <div className="mx-auto max-w-[90rem] px-6 md:px-10 relative z-10 w-full">
+        <div className="container-wide relative z-10 w-full">
           <FadeIn>
             <span className="text-[0.6rem] tracking-[0.3em] uppercase text-[var(--fg-muted)]/70 block mb-3">
               Service · {position}
@@ -66,7 +66,7 @@ export default async function ServiceDetailPage({ params }: Params) {
 
       {/* Two-column body */}
       <section className="py-24 md:py-32 bg-[var(--bg)]">
-        <div className="mx-auto max-w-[90rem] px-6 md:px-10 grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <div className="container-wide grid grid-cols-1 lg:grid-cols-3 gap-16">
           {/* Main content */}
           <FadeIn className="lg:col-span-2">
             <div className="text-[var(--fg)]">
@@ -112,7 +112,7 @@ export default async function ServiceDetailPage({ params }: Params) {
       {/* Related services */}
       {related.length > 0 && (
         <section className="py-24 bg-[var(--bg)] border-t border-[var(--border)]/30">
-          <div className="mx-auto max-w-[90rem] px-6 md:px-10">
+          <div className="container-wide">
             <h2
               className="text-[clamp(1.4rem,2.5vw,2rem)] text-[var(--fg)] mb-12"
               style={{ fontFamily: 'var(--font-display)' }}
