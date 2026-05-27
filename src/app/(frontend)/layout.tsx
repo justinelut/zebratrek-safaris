@@ -131,7 +131,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       ? {
           '@type': 'PostalAddress',
           streetAddress: settings.officeAddress,
-          addressLocality: 'Nairobi',
+          addressLocality: 'Mombasa',
           addressCountry: 'KE',
         }
       : undefined,
