@@ -14,7 +14,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
   const total = services.length.toString().padStart(2, '0')
 
   return (
-    <section className="py-28 md:py-36 bg-[#1A1208]">
+    <section className="py-28 md:py-36 bg-[var(--bg)]">
       <div className="mx-auto max-w-[90rem] px-6 md:px-10">
         {/* Asymmetric header: left heading, right subtitle */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 lg:mb-20">
@@ -29,7 +29,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
               {total} Services
             </span>
             <h2
-              className="text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.05] text-[#eff3cf]"
+              className="text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.05] text-[var(--fg)]"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               {headline}
@@ -43,7 +43,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.15, ease }}
             >
-              <p className="text-[#C4B89A] text-[0.95rem] leading-relaxed max-w-md">{subheadline}</p>
+              <p className="text-[var(--fg-muted)] text-[0.95rem] leading-relaxed max-w-md">{subheadline}</p>
             </motion.div>
           )}
         </div>
@@ -69,7 +69,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
                 >
                   <Link
                     href={`/services/${s.slug}`}
-                    className="group relative block h-[340px] md:h-[380px] overflow-hidden rounded-sm bg-[#2C2416] border border-[#4A5240] hover:border-[#B8860B]/50 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(184,134,11,0.12)]"
+                    className="group relative block h-[340px] md:h-[380px] overflow-hidden rounded-sm bg-[var(--bg-alt)] border border-[var(--border)] hover:border-[#B8860B]/50 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(184,134,11,0.12)]"
                   >
                     {/* Background image */}
                     {imgUrl && (
@@ -85,7 +85,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1A1208] via-[#1A1208]/60 to-transparent" />
 
                     {/* Counter top-right */}
-                    <span className="absolute top-4 right-4 text-[0.6rem] tracking-[0.15em] text-[#C4B89A]/60 font-medium z-10">
+                    <span className="absolute top-4 right-4 text-[0.6rem] tracking-[0.15em] text-[var(--fg-muted)]/60 font-medium z-10">
                       {num} / {total}
                     </span>
 
@@ -93,14 +93,14 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
                     <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
                       <span className="block text-[0.65rem] tracking-[0.2em] text-[#B8860B] mb-2 font-medium">{num}</span>
                       <h3
-                        className="text-[1.2rem] md:text-[1.35rem] text-[#eff3cf] leading-tight mb-2"
+                        className="text-[1.2rem] md:text-[1.35rem] text-[var(--fg)] leading-tight mb-2"
                         style={{ fontFamily: 'var(--font-display)' }}
                       >
                         {s.name}
                       </h3>
                       {/* Gold underline that animates in on hover */}
                       <div className="h-[1px] w-0 group-hover:w-12 bg-[#B8860B] transition-all duration-500 mb-3" />
-                      <p className="text-[0.78rem] text-[#C4B89A] leading-relaxed line-clamp-2 opacity-80">
+                      <p className="text-[0.78rem] text-[var(--fg-muted)] leading-relaxed line-clamp-2 opacity-80">
                         {s.shortDescription}
                       </p>
                     </div>
@@ -128,7 +128,7 @@ export function ServicesShowcase({ headline, subheadline, services }: Props) {
         >
           <Link
             href="/services"
-            className="text-[0.65rem] tracking-[0.25em] uppercase text-[#C4B89A] hover:text-[#D4A843] transition-colors duration-300 border-b border-[#4A5240] hover:border-[#B8860B] pb-1"
+            className="text-[0.65rem] tracking-[0.25em] uppercase text-[var(--fg-muted)] hover:text-[#D4A843] transition-colors duration-300 border-b border-[var(--border)] hover:border-[#B8860B] pb-1"
           >
             All Services →
           </Link>

@@ -26,7 +26,7 @@ export default async function ServicesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[55vh] flex items-end pb-20 overflow-hidden bg-[#1A1208]">
+      <section className="relative min-h-[55vh] flex items-end pb-20 overflow-hidden bg-[var(--bg)]">
         <div className="absolute inset-0 bg-gradient-to-b from-[#1A1208] via-[#1A1208]/95 to-[#1A1208]" />
         <div className="mx-auto max-w-[90rem] px-6 md:px-10 relative z-10 w-full pt-44">
           <FadeIn>
@@ -36,14 +36,14 @@ export default async function ServicesPage() {
                   {total} Services
                 </span>
                 <h1
-                  className="text-[clamp(2.4rem,5vw,4.2rem)] leading-[1.05] text-[#eff3cf]"
+                  className="text-[clamp(2.4rem,5vw,4.2rem)] leading-[1.05] text-[var(--fg)]"
                   style={{ fontFamily: 'var(--font-display)' }}
                 >
                   Your complete East Africa travel partner
                 </h1>
               </div>
               <div className="lg:pb-2">
-                <p className="text-[1rem] text-[#C4B89A] max-w-md leading-relaxed">
+                <p className="text-[1rem] text-[var(--fg-muted)] max-w-md leading-relaxed">
                   Beyond world-class safaris, we handle every detail — from the moment you land to the moment you leave.
                 </p>
               </div>
@@ -53,7 +53,7 @@ export default async function ServicesPage() {
       </section>
 
       {/* Magazine-style asymmetric grid */}
-      <section className="py-24 md:py-32 bg-[#1A1208]">
+      <section className="py-24 md:py-32 bg-[var(--bg)]">
         <div className="mx-auto max-w-[90rem] px-6 md:px-10">
           <div className="space-y-5">
             {services.map((service, i) => {
@@ -116,21 +116,21 @@ export default async function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-28 bg-[#1A1208] border-t border-[#4A5240]/30">
+      <section className="py-28 bg-[var(--bg)] border-t border-[var(--border)]/30">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <FadeIn>
             <h2
-              className="text-[clamp(1.8rem,3.5vw,2.8rem)] text-[#eff3cf] leading-tight"
+              className="text-[clamp(1.8rem,3.5vw,2.8rem)] text-[var(--fg)] leading-tight"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Need something custom?
             </h2>
-            <p className="mt-5 text-[#C4B89A] max-w-lg mx-auto leading-relaxed">
+            <p className="mt-5 text-[var(--fg-muted)] max-w-lg mx-auto leading-relaxed">
               Every trip is different. Tell us what you need and we&apos;ll put together a tailored itinerary and quote within 24 hours.
             </p>
             <Link
               href="/contact"
-              className="inline-block mt-10 text-[0.65rem] tracking-[0.25em] uppercase px-12 py-4 border border-[#B8860B] text-[#D4A843] hover:bg-[#B8860B] hover:text-[#eff3cf] transition-all duration-300 rounded-sm"
+              className="inline-block mt-10 text-[0.65rem] tracking-[0.25em] uppercase px-12 py-4 border border-[#B8860B] text-[#D4A843] hover:bg-[#B8860B] hover:text-[var(--fg)] transition-all duration-300 rounded-sm"
             >
               Get a Quote
             </Link>
@@ -170,13 +170,13 @@ function ServiceCard({
       ) : brandPattern ? (
         <Image src={brandPattern} alt="" fill className="object-cover opacity-20" sizes="66vw" />
       ) : (
-        <div className="absolute inset-0 bg-[#2C2416]" />
+        <div className="absolute inset-0 bg-[var(--bg-alt)]" />
       )}
       {/* Scrim */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#1A1208]/90 via-[#1A1208]/40 to-[#1A1208]/10 group-hover:from-[#1A1208]/95 transition-all duration-500" />
 
       {/* Counter */}
-      <span className="absolute top-5 right-5 text-[0.6rem] tracking-[0.15em] text-[#C4B89A]/50 z-10">
+      <span className="absolute top-5 right-5 text-[0.6rem] tracking-[0.15em] text-[var(--fg-muted)]/50 z-10">
         {num} / {total}
       </span>
 
@@ -184,13 +184,13 @@ function ServiceCard({
       <div className="absolute bottom-0 left-0 right-0 p-7 z-10">
         <span className="block text-[0.6rem] tracking-[0.25em] text-[#B8860B] mb-2 font-medium">{num}</span>
         <h2
-          className="text-[clamp(1.3rem,2.5vw,1.8rem)] text-[#eff3cf] leading-tight mb-2"
+          className="text-[clamp(1.3rem,2.5vw,1.8rem)] text-[var(--fg)] leading-tight mb-2"
           style={{ fontFamily: 'var(--font-display)' }}
         >
           {service.name}
         </h2>
         <div className="h-[1px] w-0 group-hover:w-10 bg-[#B8860B] transition-all duration-500 mb-3" />
-        <p className="text-[0.8rem] text-[#C4B89A] leading-relaxed line-clamp-2 max-w-sm">
+        <p className="text-[0.8rem] text-[var(--fg-muted)] leading-relaxed line-clamp-2 max-w-sm">
           {service.shortDescription}
         </p>
       </div>

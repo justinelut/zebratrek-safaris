@@ -8,7 +8,7 @@ const ease = [0.22, 1, 0.36, 1] as const
 export function PullQuote({ quote, attribution }: Props) {
   if (!quote) return null
   return (
-    <section className="section-pad bg-[#1A1208]">
+    <section className="section-pad bg-[var(--bg)]">
       <div className="container-narrow text-center">
         <motion.blockquote
           className="text-[clamp(1.2rem,2.2vw,1.6rem)] font-light italic leading-[1.7]"

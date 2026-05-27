@@ -20,7 +20,7 @@ export function Lodge({ headline, body, image }: Props) {
 
   return (
     <Link href="/safaris" className="block group">
-      <section ref={ref} className="section-pad bg-[#1A1208] transition-all duration-300">
+      <section ref={ref} className="section-pad bg-[var(--bg)] transition-all duration-300">
         <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {img.src && (
             <div className="relative overflow-hidden order-2 lg:order-1">

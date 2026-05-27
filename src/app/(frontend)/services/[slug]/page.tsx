@@ -50,30 +50,30 @@ export default async function ServiceDetailPage({ params }: Params) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#1A1208] via-[#1A1208]/40 to-transparent" />
         <div className="mx-auto max-w-[90rem] px-6 md:px-10 relative z-10 w-full">
           <FadeIn>
-            <span className="text-[0.6rem] tracking-[0.3em] uppercase text-[#C4B89A]/70 block mb-3">
+            <span className="text-[0.6rem] tracking-[0.3em] uppercase text-[var(--fg-muted)]/70 block mb-3">
               Service · {position}
             </span>
             <h1
-              className="text-[clamp(2.4rem,5vw,4rem)] leading-[1.05] text-[#eff3cf] max-w-3xl"
+              className="text-[clamp(2.4rem,5vw,4rem)] leading-[1.05] text-[var(--fg)] max-w-3xl"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               {service.name}
             </h1>
-            <p className="mt-5 text-[#C4B89A] max-w-xl text-[1.05rem] leading-relaxed">{service.shortDescription}</p>
+            <p className="mt-5 text-[var(--fg-muted)] max-w-xl text-[1.05rem] leading-relaxed">{service.shortDescription}</p>
           </FadeIn>
         </div>
       </section>
 
       {/* Two-column body */}
-      <section className="py-24 md:py-32 bg-[#1A1208]">
+      <section className="py-24 md:py-32 bg-[var(--bg)]">
         <div className="mx-auto max-w-[90rem] px-6 md:px-10 grid grid-cols-1 lg:grid-cols-3 gap-16">
           {/* Main content */}
           <FadeIn className="lg:col-span-2">
-            <div className="text-[#eff3cf]">
+            <div className="text-[var(--fg)]">
               {service.body ? (
                 <RichText content={service.body as any} />
               ) : (
-                <p className="text-[1.1rem] leading-relaxed text-[#C4B89A]">{service.shortDescription}</p>
+                <p className="text-[1.1rem] leading-relaxed text-[var(--fg-muted)]">{service.shortDescription}</p>
               )}
             </div>
           </FadeIn>
@@ -81,13 +81,13 @@ export default async function ServiceDetailPage({ params }: Params) {
           {/* Sidebar */}
           <FadeIn delay={0.15} className="space-y-6">
             {service.highlights && service.highlights.length > 0 && (
-              <div className="p-7 bg-[#2C2416] rounded-sm border border-[#4A5240]">
+              <div className="p-7 bg-[var(--bg-alt)] rounded-sm border border-[var(--border)]">
                 <h3 className="text-[0.7rem] tracking-[0.25em] uppercase mb-5 text-[#B8860B] font-medium">
                   What&apos;s Included
                 </h3>
                 <ul className="space-y-3">
                   {service.highlights.map((h, i) => (
-                    <li key={i} className="flex items-start gap-3 text-[0.88rem] leading-relaxed text-[#eff3cf]">
+                    <li key={i} className="flex items-start gap-3 text-[0.88rem] leading-relaxed text-[var(--fg)]">
                       <Check className="w-4 h-4 text-[#D4A843] mt-0.5 shrink-0" />
                       <span>{h.text}</span>
                     </li>
@@ -96,11 +96,11 @@ export default async function ServiceDetailPage({ params }: Params) {
               </div>
             )}
 
-            <div className="p-7 bg-[#2C2416] rounded-sm border border-[#4A5240] text-center">
-              <p className="text-[#C4B89A] text-[0.88rem] mb-5">Interested in this service?</p>
+            <div className="p-7 bg-[var(--bg-alt)] rounded-sm border border-[var(--border)] text-center">
+              <p className="text-[var(--fg-muted)] text-[0.88rem] mb-5">Interested in this service?</p>
               <Link
                 href={service.ctaLink || '/contact'}
-                className="inline-block w-full text-[0.65rem] tracking-[0.2em] uppercase px-8 py-4 border border-[#B8860B] text-[#D4A843] hover:bg-[#B8860B] hover:text-[#eff3cf] transition-all duration-300 rounded-sm font-medium"
+                className="inline-block w-full text-[0.65rem] tracking-[0.2em] uppercase px-8 py-4 border border-[#B8860B] text-[#D4A843] hover:bg-[#B8860B] hover:text-[var(--fg)] transition-all duration-300 rounded-sm font-medium"
               >
                 {service.ctaText || 'Enquire Now'}
               </Link>
@@ -111,10 +111,10 @@ export default async function ServiceDetailPage({ params }: Params) {
 
       {/* Related services */}
       {related.length > 0 && (
-        <section className="py-24 bg-[#1A1208] border-t border-[#4A5240]/30">
+        <section className="py-24 bg-[var(--bg)] border-t border-[var(--border)]/30">
           <div className="mx-auto max-w-[90rem] px-6 md:px-10">
             <h2
-              className="text-[clamp(1.4rem,2.5vw,2rem)] text-[#eff3cf] mb-12"
+              className="text-[clamp(1.4rem,2.5vw,2rem)] text-[var(--fg)] mb-12"
               style={{ fontFamily: 'var(--font-display)' }}
             >
               Other Services
@@ -133,12 +133,12 @@ export default async function ServiceDetailPage({ params }: Params) {
                         sizes="(max-width: 768px) 100vw, 33vw"
                       />
                     ) : (
-                      <div className="absolute inset-0 bg-[#2C2416]" />
+                      <div className="absolute inset-0 bg-[var(--bg-alt)]" />
                     )}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1A1208]/80 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
                       <h3
-                        className="text-[1.15rem] text-[#eff3cf] leading-tight"
+                        className="text-[1.15rem] text-[var(--fg)] leading-tight"
                         style={{ fontFamily: 'var(--font-display)' }}
                       >
                         {s.name}
