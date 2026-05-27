@@ -36,7 +36,7 @@ export async function submitBookingRequest(data: BookingData): Promise<{ success
         bookingRef: ref,
         status: 'enquiry',
         source: 'website',
-        safari: data.safariId as any,
+        safari: Number(data.safariId),
         startDate: data.startDate,
         endDate: data.endDate,
         numberOfAdults: parseInt(data.numberOfAdults) || 2,
