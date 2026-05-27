@@ -1,4 +1,5 @@
 import { Resend } from 'resend'
+import { getPayload } from './payload'
 
 const FROM = process.env.EMAIL_FROM || 'ZebraTrek Safaris <bookings@zebratreksafaris.com>'
 const TEAM_EMAIL = process.env.TEAM_EMAIL || 'info@zebratreksafaris.com'
@@ -9,10 +10,23 @@ function getResend() {
   return new Resend(key)
 }
 
+/** Fetches the configured contact email from Payload Settings global to use as reply-to. */
+async function getReplyTo(): Promise<string | undefined> {
+  try {
+    const payload = await getPayload()
+    const settings = await payload.findGlobal({ slug: 'settings' })
+    return (settings as any)?.email || undefined
+  } catch {
+    return undefined
+  }
+}
+
 export async function sendEnquiryConfirmation(to: string, name: string) {
   const resend = getResend()
   if (!resend) return
+  const replyTo = await getReplyTo()
   await resend.emails.send({
+    replyTo,
     from: FROM,
     to,
     subject: 'We received your safari enquiry',
@@ -35,7 +49,9 @@ export async function sendEnquiryConfirmation(to: string, name: string) {
 export async function sendEnquiryNotification(enquiry: { name: string; email: string; phone?: string; country?: string; travelDates?: string; budget?: string; specialRequests?: string }) {
   const resend = getResend()
   if (!resend) return
+  // Admin-facing — reply-to is the customer so admin can reply directly to them
   await resend.emails.send({
+    replyTo: enquiry.email,
     from: FROM,
     to: TEAM_EMAIL,
     subject: `New enquiry from ${enquiry.name}`,
@@ -60,7 +76,9 @@ export async function sendEnquiryNotification(enquiry: { name: string; email: st
 export async function sendBookingConfirmation(to: string, name: string, ref: string, safariTitle: string) {
   const resend = getResend()
   if (!resend) return
+  const replyTo = await getReplyTo()
   await resend.emails.send({
+    replyTo,
     from: FROM,
     to,
     subject: `Booking request received — ${ref}`,
@@ -87,7 +105,9 @@ export async function sendBookingConfirmation(to: string, name: string, ref: str
 export async function sendBookingNotification(booking: { bookingRef: string; guestName: string; guestEmail: string; safariTitle: string; startDate: string; endDate: string; numberOfAdults: number; accommodation?: string }) {
   const resend = getResend()
   if (!resend) return
+  // Admin-facing — reply-to is the guest so admin can reply directly to them
   await resend.emails.send({
+    replyTo: booking.guestEmail,
     from: FROM,
     to: TEAM_EMAIL,
     subject: `New booking request: ${booking.bookingRef} — ${booking.guestName}`,
@@ -111,7 +131,9 @@ export async function sendBookingNotification(booking: { bookingRef: string; gue
 export async function sendTestimonialNotification(guestName: string, quote: string) {
   const resend = getResend()
   if (!resend) return
+  const replyTo = await getReplyTo()
   await resend.emails.send({
+    replyTo,
     from: FROM,
     to: TEAM_EMAIL,
     subject: `New testimonial from ${guestName}`,
