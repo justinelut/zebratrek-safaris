@@ -13,7 +13,7 @@ const item = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, trans
 export function DestinationsPreview({ destinations }: Props) {
   if (!destinations?.length) return null
   return (
-    <section className="section-pad bg-cream dark:bg-[var(--bg-alt)]">
+    <section className="section-pad bg-[#1A1208]">
       <div className="container-wide">
         <div className="text-center mb-12">
           <span className="eyebrow">Destinations</span>

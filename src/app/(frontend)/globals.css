@@ -60,13 +60,6 @@
     scroll-behavior: smooth;
   }
 
-  /* TT Trailers display font needs breathing room */
-  h1, h2, h3, h4, h5, h6,
-  [style*="--font-display"] {
-    letter-spacing: 0.025em;
-    word-spacing: 0.04em;
-  }
-
   /* Skip to content */
   .skip-link {
     position: absolute;
@@ -206,6 +199,12 @@
   padding-block: 10rem;
 }
 
+@utility scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+}
+
 /* ==========================================================
    Branded Rich Text (Lexical → HTML)
    Used on: destinations, safaris, journal, about, conservation, dynamic pages
@@ -229,8 +228,7 @@
   font-family: var(--font-display);
   font-weight: 600;
   color: var(--fg);
-  letter-spacing: 0.02em;
-  word-spacing: 0.05em;
+  letter-spacing: -0.01em;
   line-height: 1.2;
   margin-top: 2.5rem;
 }

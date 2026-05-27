@@ -5,8 +5,6 @@ import config from '@/payload.config'
 import { getImageProps, getImageUrl } from '@/lib/media'
 import { getSiteSettings } from '@/lib/queries'
 import { FadeIn } from '@/components/motion/FadeIn'
-import { StaggerGrid } from '@/components/motion/StaggerGrid'
-import { StaggerItem } from '@/components/motion/StaggerItem'
 import type { Media, Service } from '@/payload-types'
 
 export const metadata = {
@@ -23,113 +21,116 @@ async function getServices() {
 export default async function ServicesPage() {
   const [services, settings] = await Promise.all([getServices(), getSiteSettings()])
   const brandPattern = getImageUrl((settings as any).brandPattern)
+  const total = services.length.toString().padStart(2, '0')
 
   return (
     <>
-      {/* Hero — full-width editorial */}
-      <section className="relative min-h-[50vh] flex items-end pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-[var(--bg-alt)]" />
-        <div className="container-wide relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-end pt-40">
+      {/* Hero */}
+      <section className="relative min-h-[55vh] flex items-end pb-20 overflow-hidden bg-[#1A1208]">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#1A1208] via-[#1A1208]/95 to-[#1A1208]" />
+        <div className="mx-auto max-w-[90rem] px-6 md:px-10 relative z-10 w-full pt-44">
           <FadeIn>
-            <span className="eyebrow">What We Offer</span>
-            <h1
-              className="mt-4 text-[clamp(2.2rem,4.5vw,3.8rem)] font-light leading-[1.1]"
-              style={{ fontFamily: 'var(--font-display)' }}
-            >
-              Your complete East Africa travel partner
-            </h1>
-            <p className="mt-6 text-[1.05rem] text-[var(--fg-muted)] max-w-lg leading-relaxed font-light">
-              Beyond world-class safaris, we handle every detail of your journey — from the moment you land to the moment you leave. Airport transfers, domestic flights, beach extensions, city tours, and everything in between.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.2} className="hidden lg:block">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
-              {services[0] && getImageProps(services[0].image as Media).src ? (
-                <Image
-                  src={getImageProps(services[0].image as Media).src}
-                  alt="Safari services"
-                  fill
-                  className="object-cover"
-                  sizes="50vw"
-                  priority
-                />
-              ) : brandPattern ? (
-                <Image src={brandPattern} alt="" fill className="object-cover opacity-30" sizes="50vw" />
-              ) : (
-                <div className="w-full h-full bg-[var(--accent)]/5" />
-              )}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+              <div>
+                <span className="text-[0.6rem] tracking-[0.3em] uppercase text-[#B8860B] block mb-5">
+                  {total} Services
+                </span>
+                <h1
+                  className="text-[clamp(2.4rem,5vw,4.2rem)] leading-[1.05] text-[#eff3cf]"
+                  style={{ fontFamily: 'var(--font-display)' }}
+                >
+                  Your complete East Africa travel partner
+                </h1>
+              </div>
+              <div className="lg:pb-2">
+                <p className="text-[1rem] text-[#C4B89A] max-w-md leading-relaxed">
+                  Beyond world-class safaris, we handle every detail — from the moment you land to the moment you leave.
+                </p>
+              </div>
             </div>
           </FadeIn>
         </div>
       </section>
 
-      {/* Services grid — image-led editorial cards */}
-      <section className="section-pad">
-        <div className="container-wide">
-          <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service) => {
+      {/* Magazine-style asymmetric grid */}
+      <section className="py-24 md:py-32 bg-[#1A1208]">
+        <div className="mx-auto max-w-[90rem] px-6 md:px-10">
+          <div className="space-y-5">
+            {services.map((service, i) => {
               const img = getImageProps(service.image as Media)
-              return (
-                <StaggerItem key={service.id}>
-                  <Link href={`/services/${service.slug}`} className="group block h-full">
-                    <article className="relative flex flex-col h-full overflow-hidden rounded-sm">
-                      {/* Image area — portrait aspect */}
-                      <div className="relative aspect-[4/5] overflow-hidden">
-                        {img.src ? (
-                          <Image
-                            src={img.src}
-                            alt={img.alt || service.name}
-                            fill
-                            className="object-cover group-hover:scale-105 transition-transform duration-700"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          />
-                        ) : brandPattern ? (
-                          <Image src={brandPattern} alt="" fill className="object-cover opacity-20" sizes="33vw" />
-                        ) : (
-                          <div className="w-full h-full bg-[var(--bg-alt)]" />
-                        )}
-                        {/* Gradient overlay with title */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                        <div className="absolute bottom-0 left-0 right-0 p-6 text-ivory">
-                          <h2
-                            className="text-[clamp(1.3rem,2vw,1.6rem)] font-light leading-tight"
-                            style={{ fontFamily: 'var(--font-display)' }}
-                          >
-                            {service.name}
-                          </h2>
-                          <span className="inline-block mt-3 text-[0.65rem] tracking-[0.2em] uppercase text-ivory/70 group-hover:text-[var(--accent)] transition-colors duration-300">
-                            Explore →
-                          </span>
-                        </div>
-                      </div>
-                      {/* Description below image */}
-                      <div className="p-5 bg-[var(--bg-alt)] flex-1 border border-t-0 border-[var(--border)] group-hover:border-[var(--accent)]/30 transition-colors duration-300">
-                        <p className="text-[0.85rem] text-[var(--fg-muted)] leading-relaxed line-clamp-3">
-                          {service.shortDescription}
-                        </p>
-                      </div>
-                    </article>
-                  </Link>
-                </StaggerItem>
-              )
+              const num = (i + 1).toString().padStart(2, '0')
+              // Alternate: large left / small right, then small left / large right
+              const isLarge = i % 3 === 0
+              const rowStart = Math.floor(i / 3) * 3
+
+              if (i % 3 === 0) {
+                // Start a new row group: large card (2/3) + next card (1/3)
+                const next = services[i + 1]
+                const nextImg = next ? getImageProps(next.image as Media) : null
+                const nextNum = next ? (i + 2).toString().padStart(2, '0') : null
+                return (
+                  <div key={service.id} className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <ServiceCard
+                      service={service}
+                      img={img}
+                      num={num}
+                      total={total}
+                      className="md:col-span-2 h-[400px] md:h-[480px]"
+                      brandPattern={brandPattern}
+                    />
+                    {next && nextImg && (
+                      <ServiceCard
+                        service={next}
+                        img={nextImg}
+                        num={nextNum!}
+                        total={total}
+                        className="h-[340px] md:h-[480px]"
+                        brandPattern={brandPattern}
+                      />
+                    )}
+                  </div>
+                )
+              } else if (i % 3 === 1) {
+                // Already rendered in the group above
+                return null
+              } else {
+                // Third card in group: full width narrow
+                return (
+                  <div key={service.id} className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <ServiceCard
+                      service={service}
+                      img={img}
+                      num={num}
+                      total={total}
+                      className="md:col-span-1 h-[340px] md:h-[380px]"
+                      brandPattern={brandPattern}
+                    />
+                    {/* Empty space for asymmetry */}
+                    <div className="hidden md:block md:col-span-2" />
+                  </div>
+                )
+              }
             })}
-          </StaggerGrid>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="section-pad bg-cream dark:bg-[var(--bg-alt)]">
-        <div className="container-narrow text-center">
+      <section className="py-28 bg-[#1A1208] border-t border-[#4A5240]/30">
+        <div className="mx-auto max-w-3xl px-6 text-center">
           <FadeIn>
-            <h2 className="text-[clamp(1.6rem,3vw,2.4rem)] font-light" style={{ fontFamily: 'var(--font-display)' }}>
+            <h2
+              className="text-[clamp(1.8rem,3.5vw,2.8rem)] text-[#eff3cf] leading-tight"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
               Need something custom?
             </h2>
-            <p className="mt-4 text-[var(--fg-muted)] max-w-lg mx-auto">
+            <p className="mt-5 text-[#C4B89A] max-w-lg mx-auto leading-relaxed">
               Every trip is different. Tell us what you need and we&apos;ll put together a tailored itinerary and quote within 24 hours.
             </p>
             <Link
               href="/contact"
-              className="inline-block mt-8 text-[0.7rem] tracking-[0.25em] uppercase px-10 py-4 bg-[var(--accent)] text-ivory hover:bg-[var(--accent-hover)] transition-colors rounded-sm"
+              className="inline-block mt-10 text-[0.65rem] tracking-[0.25em] uppercase px-12 py-4 border border-[#B8860B] text-[#D4A843] hover:bg-[#B8860B] hover:text-[#eff3cf] transition-all duration-300 rounded-sm"
             >
               Get a Quote
             </Link>
@@ -137,5 +138,62 @@ export default async function ServicesPage() {
         </div>
       </section>
     </>
+  )
+}
+
+function ServiceCard({
+  service,
+  img,
+  num,
+  total,
+  className = '',
+  brandPattern,
+}: {
+  service: Service
+  img: { src: string; alt: string }
+  num: string
+  total: string
+  className?: string
+  brandPattern: string | null
+}) {
+  return (
+    <Link href={`/services/${service.slug}`} className={`group relative block overflow-hidden rounded-sm ${className}`}>
+      {/* Image */}
+      {img.src ? (
+        <Image
+          src={img.src}
+          alt={img.alt || service.name}
+          fill
+          className="object-cover group-hover:scale-[1.03] transition-transform duration-700"
+          sizes="(max-width: 768px) 100vw, 66vw"
+        />
+      ) : brandPattern ? (
+        <Image src={brandPattern} alt="" fill className="object-cover opacity-20" sizes="66vw" />
+      ) : (
+        <div className="absolute inset-0 bg-[#2C2416]" />
+      )}
+      {/* Scrim */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#1A1208]/90 via-[#1A1208]/40 to-[#1A1208]/10 group-hover:from-[#1A1208]/95 transition-all duration-500" />
+
+      {/* Counter */}
+      <span className="absolute top-5 right-5 text-[0.6rem] tracking-[0.15em] text-[#C4B89A]/50 z-10">
+        {num} / {total}
+      </span>
+
+      {/* Content */}
+      <div className="absolute bottom-0 left-0 right-0 p-7 z-10">
+        <span className="block text-[0.6rem] tracking-[0.25em] text-[#B8860B] mb-2 font-medium">{num}</span>
+        <h2
+          className="text-[clamp(1.3rem,2.5vw,1.8rem)] text-[#eff3cf] leading-tight mb-2"
+          style={{ fontFamily: 'var(--font-display)' }}
+        >
+          {service.name}
+        </h2>
+        <div className="h-[1px] w-0 group-hover:w-10 bg-[#B8860B] transition-all duration-500 mb-3" />
+        <p className="text-[0.8rem] text-[#C4B89A] leading-relaxed line-clamp-2 max-w-sm">
+          {service.shortDescription}
+        </p>
+      </div>
+    </Link>
   )
 }

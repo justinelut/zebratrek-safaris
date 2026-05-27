@@ -17,19 +17,21 @@ import './globals.css'
 
 export const dynamic = 'force-dynamic'
 
-const ttTrailers = localFont({
-  src: '../../fonts/tt-trailers-variable.ttf',
+const anakeim = localFont({
+  src: [
+    { path: '../../fonts/anakeim-display.ttf', weight: '400', style: 'normal' },
+    { path: '../../fonts/anakeim-display-italic.ttf', weight: '400', style: 'italic' },
+  ],
   variable: '--font-display',
   display: 'swap',
 })
 
-const malinton = localFont({
+const gotham = localFont({
   src: [
-    { path: '../../fonts/malinton-light.otf', weight: '300', style: 'normal' },
-    { path: '../../fonts/malinton-regular.otf', weight: '400', style: 'normal' },
-    { path: '../../fonts/malinton-medium.otf', weight: '500', style: 'normal' },
-    { path: '../../fonts/malinton-semibold.otf', weight: '600', style: 'normal' },
-    { path: '../../fonts/malinton-bold.otf', weight: '700', style: 'normal' },
+    { path: '../../fonts/gotham-light.otf', weight: '300', style: 'normal' },
+    { path: '../../fonts/gotham-regular.ttf', weight: '400', style: 'normal' },
+    { path: '../../fonts/gotham-medium.ttf', weight: '500', style: 'normal' },
+    { path: '../../fonts/gotham-bold.ttf', weight: '700', style: 'normal' },
   ],
   variable: '--font-body',
   display: 'swap',
@@ -141,7 +143,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   }
 
   return (
-    <html lang="en" className={`${ttTrailers.variable} ${malinton.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${anakeim.variable} ${gotham.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <script
           type="application/ld+json"

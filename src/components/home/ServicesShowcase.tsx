@@ -11,65 +11,128 @@ const ease = [0.22, 1, 0.36, 1] as const
 
 export function ServicesShowcase({ headline, subheadline, services }: Props) {
   if (!services?.length) return null
+  const total = services.length.toString().padStart(2, '0')
+
   return (
-    <section className="section-pad bg-cream dark:bg-[var(--bg-alt)]">
-      <div className="container-wide">
-        <div className="text-center mb-14 max-w-2xl mx-auto">
-          <span className="eyebrow">Services</span>
-          <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.8rem)] font-light" style={{ fontFamily: 'var(--font-display)' }}>
-            {headline}
-          </h2>
-          {subheadline && <p className="mt-4 text-[var(--fg-muted)] leading-relaxed">{subheadline}</p>}
+    <section className="py-28 md:py-36 bg-[#1A1208]">
+      <div className="mx-auto max-w-[90rem] px-6 md:px-10">
+        {/* Asymmetric header: left heading, right subtitle */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 lg:mb-20">
+          <motion.div
+            className="lg:col-span-5"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease }}
+          >
+            <span className="text-[0.65rem] tracking-[0.3em] uppercase text-[#B8860B] block mb-4">
+              {total} Services
+            </span>
+            <h2
+              className="text-[clamp(2.2rem,4vw,3.6rem)] leading-[1.05] text-[#eff3cf]"
+              style={{ fontFamily: 'var(--font-display)' }}
+            >
+              {headline}
+            </h2>
+          </motion.div>
+          {subheadline && (
+            <motion.div
+              className="lg:col-span-5 lg:col-start-8 flex items-end"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.15, ease }}
+            >
+              <p className="text-[#C4B89A] text-[0.95rem] leading-relaxed max-w-md">{subheadline}</p>
+            </motion.div>
+          )}
         </div>
 
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
-          variants={{ visible: { transition: { staggerChildren: 0.06 } } }}
-        >
-          {services.map((s) => {
-            const imgUrl = s.image && typeof s.image === 'object' && s.image.url ? s.image.url : null
-            return (
-              <motion.div
-                key={s.slug}
-                variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-                transition={{ duration: 0.5, ease }}
-              >
-                <Link
-                  href={`/services/${s.slug}`}
-                  className="group block rounded-sm overflow-hidden border border-[var(--border)] hover:border-[var(--accent)] bg-[var(--bg)] transition-all duration-300 h-full"
+        {/* Horizontal scroll on mobile, grid on desktop */}
+        <div className="relative">
+          <motion.div
+            className="flex gap-4 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 lg:grid-cols-4 md:overflow-visible md:pb-0 md:gap-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={{ visible: { transition: { staggerChildren: 0.07 } } }}
+          >
+            {services.map((s, i) => {
+              const imgUrl = s.image && typeof s.image === 'object' && s.image.url ? s.image.url : null
+              const num = (i + 1).toString().padStart(2, '0')
+              return (
+                <motion.div
+                  key={s.slug}
+                  className="snap-start shrink-0 w-[75vw] md:w-auto"
+                  variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+                  transition={{ duration: 0.6, ease }}
                 >
-                  {imgUrl ? (
-                    <div className="relative aspect-[4/3] overflow-hidden">
+                  <Link
+                    href={`/services/${s.slug}`}
+                    className="group relative block h-[340px] md:h-[380px] overflow-hidden rounded-sm bg-[#2C2416] border border-[#4A5240] hover:border-[#B8860B]/50 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(184,134,11,0.12)]"
+                  >
+                    {/* Background image */}
+                    {imgUrl && (
                       <Image
                         src={imgUrl}
                         alt={s.name}
                         fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-700"
-                        sizes="(max-width: 768px) 50vw, 25vw"
+                        className="object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
+                        sizes="(max-width: 768px) 75vw, 25vw"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                      <span className="absolute bottom-3 left-3 text-[0.9rem] font-medium text-ivory" style={{ fontFamily: 'var(--font-display)' }}>{s.name}</span>
-                    </div>
-                  ) : (
-                    <div className="p-5">
-                      <h3 className="text-[0.95rem] font-medium mb-2">{s.name}</h3>
-                      <p className="text-[0.8rem] text-[var(--fg-muted)] line-clamp-2 leading-relaxed">{s.shortDescription}</p>
-                    </div>
-                  )}
-                </Link>
-              </motion.div>
-            )
-          })}
-        </motion.div>
+                    )}
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1A1208] via-[#1A1208]/60 to-transparent" />
 
-        <div className="text-center mt-10">
-          <Link href="/services" className="text-[0.7rem] tracking-[0.2em] uppercase text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors">
-            View All Services →
-          </Link>
+                    {/* Counter top-right */}
+                    <span className="absolute top-4 right-4 text-[0.6rem] tracking-[0.15em] text-[#C4B89A]/60 font-medium z-10">
+                      {num} / {total}
+                    </span>
+
+                    {/* Content at bottom */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                      <span className="block text-[0.65rem] tracking-[0.2em] text-[#B8860B] mb-2 font-medium">{num}</span>
+                      <h3
+                        className="text-[1.2rem] md:text-[1.35rem] text-[#eff3cf] leading-tight mb-2"
+                        style={{ fontFamily: 'var(--font-display)' }}
+                      >
+                        {s.name}
+                      </h3>
+                      {/* Gold underline that animates in on hover */}
+                      <div className="h-[1px] w-0 group-hover:w-12 bg-[#B8860B] transition-all duration-500 mb-3" />
+                      <p className="text-[0.78rem] text-[#C4B89A] leading-relaxed line-clamp-2 opacity-80">
+                        {s.shortDescription}
+                      </p>
+                    </div>
+                  </Link>
+                </motion.div>
+              )
+            })}
+          </motion.div>
+
+          {/* Mobile scroll indicator */}
+          <div className="flex md:hidden justify-center mt-4 gap-1">
+            {services.slice(0, 5).map((_, i) => (
+              <div key={i} className="w-6 h-[2px] bg-[#4A5240] rounded-full" />
+            ))}
+          </div>
         </div>
+
+        {/* View all link */}
+        <motion.div
+          className="mt-14 flex justify-end"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+        >
+          <Link
+            href="/services"
+            className="text-[0.65rem] tracking-[0.25em] uppercase text-[#C4B89A] hover:text-[#D4A843] transition-colors duration-300 border-b border-[#4A5240] hover:border-[#B8860B] pb-1"
+          >
+            All Services →
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

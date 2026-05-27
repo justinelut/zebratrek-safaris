@@ -10,7 +10,7 @@ const item = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, trans
 export function Testimonials({ testimonials }: Props) {
   if (!testimonials?.length) return null
   return (
-    <section className="section-pad bg-cream dark:bg-[var(--bg-alt)]">
+    <section className="section-pad bg-[#1A1208]">
       <div className="container-wide">
         <div className="text-center mb-12">
           <span className="eyebrow">Guest Stories</span>
