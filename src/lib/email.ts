@@ -2,7 +2,7 @@ import { Resend } from 'resend'
 import { getPayload } from './payload'
 
 const FROM = process.env.EMAIL_FROM || 'ZebraTrek Safaris <bookings@zebratreksafaris.com>'
-const TEAM_EMAIL = process.env.TEAM_EMAIL || 'info@zebratreksafaris.com'
+const FALLBACK_TEAM_EMAIL = process.env.TEAM_EMAIL || 'info@zebratreksafaris.com'
 
 function getResend() {
   const key = process.env.RESEND_API_KEY
@@ -18,6 +18,18 @@ async function getReplyTo(): Promise<string | undefined> {
     return (settings as any)?.email || undefined
   } catch {
     return undefined
+  }
+}
+
+/** Returns email addresses of all admin users in the dashboard. */
+async function getAdminEmails(): Promise<string[]> {
+  try {
+    const payload = await getPayload()
+    const result = await payload.find({ collection: 'users', limit: 100, overrideAccess: true })
+    const emails = result.docs.map((u: any) => u.email).filter(Boolean)
+    return emails.length > 0 ? emails : [FALLBACK_TEAM_EMAIL]
+  } catch {
+    return [FALLBACK_TEAM_EMAIL]
   }
 }
 
@@ -49,11 +61,12 @@ export async function sendEnquiryConfirmation(to: string, name: string) {
 export async function sendEnquiryNotification(enquiry: { name: string; email: string; phone?: string; country?: string; travelDates?: string; budget?: string; specialRequests?: string }) {
   const resend = getResend()
   if (!resend) return
+  const adminEmails = await getAdminEmails()
   // Admin-facing — reply-to is the customer so admin can reply directly to them
   await resend.emails.send({
     replyTo: enquiry.email,
     from: FROM,
-    to: TEAM_EMAIL,
+    to: adminEmails,
     subject: `New enquiry from ${enquiry.name}`,
     html: `
       <div style="font-family: sans-serif; max-width: 600px; padding: 20px;">
@@ -105,11 +118,12 @@ export async function sendBookingConfirmation(to: string, name: string, ref: str
 export async function sendBookingNotification(booking: { bookingRef: string; guestName: string; guestEmail: string; safariTitle: string; startDate: string; endDate: string; numberOfAdults: number; accommodation?: string }) {
   const resend = getResend()
   if (!resend) return
+  const adminEmails = await getAdminEmails()
   // Admin-facing — reply-to is the guest so admin can reply directly to them
   await resend.emails.send({
     replyTo: booking.guestEmail,
     from: FROM,
-    to: TEAM_EMAIL,
+    to: adminEmails,
     subject: `New booking request: ${booking.bookingRef} — ${booking.guestName}`,
     html: `
       <div style="font-family: sans-serif; max-width: 600px; padding: 20px;">
@@ -131,11 +145,12 @@ export async function sendBookingNotification(booking: { bookingRef: string; gue
 export async function sendTestimonialNotification(guestName: string, quote: string) {
   const resend = getResend()
   if (!resend) return
+  const adminEmails = await getAdminEmails()
   const replyTo = await getReplyTo()
   await resend.emails.send({
     replyTo,
     from: FROM,
-    to: TEAM_EMAIL,
+    to: adminEmails,
     subject: `New testimonial from ${guestName}`,
     html: `
       <div style="font-family: sans-serif; max-width: 600px; padding: 20px;">

@@ -58,7 +58,16 @@ export function BookingForm({ safariId, safariSlug, safariTitle, basePrice, curr
 
   const handleSubmit = async () => {
     setSubmitting(true)
-    const res = await submitBookingRequest({ ...form, numberOfAdults: String(form.numberOfAdults), numberOfChildren: String(form.numberOfChildren), safariId })
+    const res = await submitBookingRequest({
+      ...form,
+      numberOfAdults: String(form.numberOfAdults),
+      numberOfChildren: String(form.numberOfChildren),
+      safariId,
+      basePrice: pricing.safariTotal,
+      extrasTotal: pricing.extrasTotal,
+      totalPrice: pricing.total,
+      currency,
+    })
     setResult(res)
     setSubmitting(false)
   }

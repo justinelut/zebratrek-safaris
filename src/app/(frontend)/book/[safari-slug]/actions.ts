@@ -15,6 +15,10 @@ type BookingData = {
   accommodation: string
   extras: string[]
   specialRequests: string
+  basePrice?: number
+  extrasTotal?: number
+  totalPrice?: number
+  currency?: string
 }
 
 export async function submitBookingRequest(data: BookingData): Promise<{ success: boolean; ref?: string; error?: string }> {
@@ -48,6 +52,10 @@ export async function submitBookingRequest(data: BookingData): Promise<{ success
         accommodation: data.accommodation as any,
         extras: data.extras.map((extra) => ({ extra })) as any,
         specialRequests: data.specialRequests,
+        basePrice: data.basePrice ? Math.round(data.basePrice) : undefined,
+        extrasTotal: data.extrasTotal ? Math.round(data.extrasTotal) : undefined,
+        totalPrice: data.totalPrice ? Math.round(data.totalPrice) : undefined,
+        currency: (data.currency || 'USD') as any,
         timeline: [{ date: new Date().toISOString(), event: 'Booking request submitted via website' }],
       },
     })
