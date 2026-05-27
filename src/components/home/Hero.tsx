@@ -53,7 +53,7 @@ export function Hero({ headline, subheadline, backgroundImage, ctaText, ctaLink 
           as="h1"
           delay={0.4}
           stagger={0.06}
-          className="mt-4 text-[clamp(2.5rem,6vw,5rem)] font-light leading-[1.05] max-w-4xl"
+          className="mt-4 text-[clamp(2.5rem,6vw,5rem)] font-bold leading-[1.05] max-w-4xl"
         />
 
         {subheadline && (
