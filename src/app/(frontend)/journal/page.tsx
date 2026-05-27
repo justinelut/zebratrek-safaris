@@ -61,16 +61,27 @@ export default async function JournalPage({ searchParams }: { searchParams: Prom
                 return (
                   <FadeIn className="mb-16">
                     <Link href={`/journal/${featured.slug}`} className="group block">
-                      <div className="relative aspect-[21/9] overflow-hidden rounded-sm">
+                      <div className="relative aspect-[4/5] sm:aspect-[16/10] md:aspect-[16/9] lg:aspect-[21/9] overflow-hidden rounded-sm">
                         {img.src && <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="100vw" />}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                        <div className="absolute bottom-0 left-0 p-8 text-ivory max-w-2xl">
-                          <p className="eyebrow text-ivory/60">{featured.category}</p>
-                          <h2 className="mt-2 text-[clamp(1.4rem,3vw,2.2rem)] font-light" style={{ fontFamily: 'var(--font-display)' }}>{featured.title}</h2>
-                          {featured.summary && <p className="mt-2 text-[0.9rem] text-ivory/70 line-clamp-2">{featured.summary}</p>}
-                          <div className="mt-3 flex gap-4 text-[0.75rem] text-ivory/50">
-                            {featured.publishedAt && <span>{new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).format(new Date(featured.publishedAt))}</span>}
-                            {featured.readTime && <span>{featured.readTime} min read</span>}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+                        <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 md:p-8 text-ivory">
+                          <div className="max-w-2xl">
+                            <p className="eyebrow text-ivory/70">{featured.category}</p>
+                            <h2
+                              className="mt-2 text-[clamp(1.35rem,5vw,2.2rem)] font-light leading-[1.15]"
+                              style={{ fontFamily: 'var(--font-display)' }}
+                            >
+                              {featured.title}
+                            </h2>
+                            {featured.summary && (
+                              <p className="mt-2 text-[0.85rem] sm:text-[0.9rem] text-ivory/75 line-clamp-2 sm:line-clamp-3 leading-relaxed">
+                                {featured.summary}
+                              </p>
+                            )}
+                            <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[0.7rem] sm:text-[0.75rem] text-ivory/55">
+                              {featured.publishedAt && <span>{new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).format(new Date(featured.publishedAt))}</span>}
+                              {featured.readTime && <span>{featured.readTime} min read</span>}
+                            </div>
                           </div>
                         </div>
                       </div>
