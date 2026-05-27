@@ -1,6 +1,7 @@
 'use server'
 
 import { getPayload } from '@/lib/payload'
+import { sendTestimonialNotification } from '@/lib/email'
 
 type FormState = { success: boolean; error?: string }
 
@@ -18,9 +19,18 @@ export async function submitTestimonial(_prev: FormState, formData: FormData): P
     await payload.create({
       collection: 'testimonials',
       data: { guestName, guestCountry, tripType, rating, quote, status: 'pending' },
+      overrideAccess: true,
     })
+
+    try {
+      await sendTestimonialNotification(guestName, quote)
+    } catch (emailErr) {
+      console.error('Testimonial notification email failed:', emailErr)
+    }
+
     return { success: true }
-  } catch {
+  } catch (err) {
+    console.error('Testimonial submission failed:', err)
     return { success: false, error: 'Something went wrong. Please try again.' }
   }
 }

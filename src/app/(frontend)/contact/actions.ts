@@ -32,9 +32,10 @@ export async function submitEnquiry(_prev: FormState, formData: FormData): Promi
       if (safari.docs[0]) data.interestedPackages = [safari.docs[0].id]
     }
 
-    await payload.create({ collection: 'safari-enquiries', data })
+    await payload.create({ collection: 'safari-enquiries', data, overrideAccess: true })
     return { success: true }
-  } catch {
+  } catch (err) {
+    console.error('Enquiry submission failed:', err)
     return { success: false, error: 'Something went wrong. Please try again or email us directly.' }
   }
 }

@@ -26,11 +26,12 @@ export async function submitBookingRequest(data: BookingData): Promise<{ success
     const payload = await getPayload()
 
     const year = new Date().getFullYear()
-    const count = await payload.find({ collection: 'bookings', limit: 0 })
+    const count = await payload.find({ collection: 'bookings', limit: 0, overrideAccess: true })
     const ref = `ZTS-${year}-${String(count.totalDocs + 1).padStart(3, '0')}`
 
     await payload.create({
       collection: 'bookings',
+      overrideAccess: true,
       data: {
         bookingRef: ref,
         status: 'enquiry',
@@ -52,7 +53,8 @@ export async function submitBookingRequest(data: BookingData): Promise<{ success
     })
 
     return { success: true, ref }
-  } catch {
+  } catch (err) {
+    console.error('Booking failed:', err)
     return { success: false, error: 'Something went wrong. Please try again or contact us directly.' }
   }
 }
