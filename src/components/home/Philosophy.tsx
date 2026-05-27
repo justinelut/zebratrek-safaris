@@ -2,6 +2,7 @@
 
 import { motion } from 'motion/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRef } from 'react'
 import { useScroll, useTransform } from 'motion/react'
 import { getImageProps } from '@/lib/media'
@@ -19,49 +20,53 @@ export function Philosophy({ headline, body, image }: Props) {
   if (!headline && !body) return null
 
   return (
-    <section ref={ref} className="section-pad bg-cream dark:bg-[var(--bg-alt)]">
-      <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.9, ease }}
-        >
-          <span className="eyebrow">Our Philosophy</span>
-          <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.8rem)] font-light leading-[1.2]" style={{ fontFamily: 'var(--font-display)' }}>
-            {headline}
-          </h2>
+    <Link href="/about" className="block group">
+      <section ref={ref} className="section-pad bg-cream dark:bg-[var(--bg-alt)] transition-all duration-300">
+        <div className="container-wide grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
-            initial={{ width: 0 }}
-            whileInView={{ width: 60 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.4, ease }}
-            className="h-px mt-6"
-            style={{ background: 'var(--accent-warm)' }}
-          />
-          <p className="mt-6 text-[0.95rem] font-light leading-relaxed text-[var(--fg-muted)]">{body}</p>
-        </motion.div>
-
-        {img.src && (
-          <div className="relative overflow-hidden">
-            {/* Reveal mask wipe */}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.9, ease }}
+          >
+            <span className="eyebrow">Our Philosophy</span>
+            <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.8rem)] font-light leading-[1.2]" style={{ fontFamily: 'var(--font-display)' }}>
+              {headline}
+            </h2>
             <motion.div
-              initial={{ scaleY: 1 }}
-              whileInView={{ scaleY: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{ duration: 1.1, ease: [0.76, 0, 0.24, 1] }}
-              style={{ transformOrigin: 'top' }}
-              className="absolute inset-0 z-10 bg-[var(--accent-warm)]"
+              initial={{ width: 0 }}
+              whileInView={{ width: 60 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.4, ease }}
+              className="h-px mt-6"
+              style={{ background: 'var(--accent-warm)' }}
             />
-            <motion.div
-              className="relative aspect-[4/5] overflow-hidden rounded-sm"
-              style={{ y: imageY }}
-            >
-              <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
-            </motion.div>
-          </div>
-        )}
-      </div>
-    </section>
+            <p className="mt-6 text-[0.95rem] font-light leading-relaxed text-[var(--fg-muted)]">{body}</p>
+            <span className="inline-block mt-6 text-[0.7rem] tracking-[0.2em] uppercase text-[var(--accent)] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              Read more →
+            </span>
+          </motion.div>
+
+          {img.src && (
+            <div className="relative overflow-hidden">
+              <motion.div
+                initial={{ scaleY: 1 }}
+                whileInView={{ scaleY: 0 }}
+                viewport={{ once: true, margin: '-100px' }}
+                transition={{ duration: 1.1, ease: [0.76, 0, 0.24, 1] }}
+                style={{ transformOrigin: 'top' }}
+                className="absolute inset-0 z-10 bg-[var(--accent-warm)]"
+              />
+              <motion.div
+                className="relative aspect-[4/5] overflow-hidden rounded-sm"
+                style={{ y: imageY }}
+              >
+                <Image src={img.src} alt={img.alt} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              </motion.div>
+            </div>
+          )}
+        </div>
+      </section>
+    </Link>
   )
 }

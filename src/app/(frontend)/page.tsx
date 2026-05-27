@@ -34,7 +34,7 @@ export default async function HomePage() {
 
   const imageBreaks = homepage.images || []
   const brandPattern = getImageUrl((settings as any).brandPattern) || null
-  const services = servicesResult.docs.map((s: any) => ({ name: s.name, slug: s.slug, icon: s.icon, shortDescription: s.shortDescription }))
+  const services = servicesResult.docs.map((s: any) => ({ name: s.name, slug: s.slug, icon: s.icon, shortDescription: s.shortDescription, image: s.image && typeof s.image === 'object' ? { url: s.image.url, alt: s.image.alt } : null }))
 
   return (
     <>
