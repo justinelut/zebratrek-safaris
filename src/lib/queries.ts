@@ -77,7 +77,7 @@ export async function getSafaris(opts: QueryOptions = {}): Promise<{ docs: Safar
   const where: any = { status: { equals: 'published' } }
   if (opts.featured) where.featured = { equals: true }
   if (opts.category) where.category = { equals: opts.category }
-  const result = await payload.find({ collection: 'safari-packages', where, limit: opts.limit || 12, page: opts.page || 1, depth: 1 })
+  const result = await payload.find({ collection: 'safari-packages', where, limit: opts.limit || 50, page: opts.page || 1, depth: 1 })
   return { docs: result.docs, totalPages: result.totalPages }
 }
 

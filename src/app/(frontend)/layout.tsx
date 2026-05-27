@@ -1,5 +1,5 @@
 import React from 'react'
-import { Playfair_Display, DM_Sans } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { ThemeProvider } from '@/components/ThemeProvider'
@@ -17,19 +17,22 @@ import './globals.css'
 
 export const dynamic = 'force-dynamic'
 
-const playfair = Playfair_Display({
-  subsets: ['latin'],
+const ttTrailers = localFont({
+  src: '../../fonts/tt-trailers-variable.ttf',
   variable: '--font-display',
   display: 'swap',
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
 })
 
-const dmSans = DM_Sans({
-  subsets: ['latin'],
+const malinton = localFont({
+  src: [
+    { path: '../../fonts/malinton-light.otf', weight: '300', style: 'normal' },
+    { path: '../../fonts/malinton-regular.otf', weight: '400', style: 'normal' },
+    { path: '../../fonts/malinton-medium.otf', weight: '500', style: 'normal' },
+    { path: '../../fonts/malinton-semibold.otf', weight: '600', style: 'normal' },
+    { path: '../../fonts/malinton-bold.otf', weight: '700', style: 'normal' },
+  ],
   variable: '--font-body',
   display: 'swap',
-  weight: ['400', '500', '600'],
 })
 
 export async function generateMetadata() {
@@ -58,13 +61,13 @@ export async function generateMetadata() {
       title,
       description,
       siteName: settings.companyName || 'ZebraTrek Safaris',
-      images: [{ url: `${siteUrl}/api/og`, width: 1200, height: 630, alt: title }],
+      images: [{ url: getImageUrl((settings as any).openGraphImage) || `${siteUrl}/api/og`, width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${siteUrl}/api/og`],
+      images: [getImageUrl((settings as any).openGraphImage) || `${siteUrl}/api/og`],
       creator: '@zebratrek',
     },
     robots: {
@@ -138,7 +141,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   }
 
   return (
-    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${ttTrailers.variable} ${malinton.variable}`} suppressHydrationWarning>
       <body suppressHydrationWarning>
         <script
           type="application/ld+json"

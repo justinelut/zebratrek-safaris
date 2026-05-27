@@ -13,7 +13,7 @@ export async function generateMetadata() {
   return { title: `${page.hero?.headline || 'Safaris'} — ZebraTrek Safaris` }
 }
 
-const categories = ['Classic Safari', 'Luxury Safari', 'Adventure Safari', 'Family Safari', 'Photography Safari', 'Honeymoon Safari']
+const categories = ['Day Safari', 'Classic Safari', 'Adventure Safari', 'Luxury Safari', 'Family Safari', 'Photography Safari', 'Honeymoon Safari']
 
 export default async function SafarisPage({ searchParams }: { searchParams: Promise<{ category?: string }> }) {
   const params = await searchParams
