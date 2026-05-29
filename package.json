@@ -19,6 +19,7 @@
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts"
   },
   "dependencies": {
+    "@marsidev/react-turnstile": "^1.5.2",
     "@next/third-parties": "16.2.6",
     "@payloadcms/db-postgres": "3.84.1",
     "@payloadcms/db-vercel-postgres": "3.84.1",

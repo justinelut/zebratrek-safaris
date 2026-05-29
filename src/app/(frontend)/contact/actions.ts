@@ -8,6 +8,17 @@ export async function submitEnquiry(_prev: FormState, formData: FormData): Promi
   const honeypot = formData.get('website') as string
   if (honeypot) return { success: false, error: 'Invalid submission.' }
 
+  const turnstileToken = formData.get('cf-turnstile-response') as string
+  if (!turnstileToken) return { success: false, error: 'Please complete the security check.' }
+
+  const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams({ secret: process.env.TURNSTILE_SECRET_KEY!, response: turnstileToken }),
+  })
+  const verifyData = await verifyRes.json()
+  if (!verifyData.success) return { success: false, error: 'Security check failed. Please try again.' }
+
   const name = (formData.get('name') as string)?.trim()
   const email = (formData.get('email') as string)?.trim()
   const phone = (formData.get('phone') as string)?.trim()

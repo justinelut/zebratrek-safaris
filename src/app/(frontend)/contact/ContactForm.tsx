@@ -1,14 +1,16 @@
 'use client'
 
-import { useActionState } from 'react'
+import { useActionState, useRef } from 'react'
 import { motion } from 'motion/react'
 import { Check } from 'lucide-react'
+import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
 import { submitEnquiry } from './actions'
 
 type Props = { safariSlug?: string; successMessage: string }
 
 export function ContactForm({ safariSlug, successMessage }: Props) {
   const [state, action, pending] = useActionState(submitEnquiry, { success: false })
+  const turnstileRef = useRef<TurnstileInstance>(null)
 
   if (state.success) {
     return (
@@ -94,6 +96,13 @@ export function ContactForm({ safariSlug, successMessage }: Props) {
         <label className="block text-[0.7rem] tracking-[0.15em] uppercase mb-2">Special Requests or Questions</label>
         <textarea name="specialRequests" rows={4} className="w-full border border-[var(--border)] bg-transparent px-4 py-3 text-[0.9rem] rounded-sm focus:border-[var(--accent)] outline-none transition-colors resize-none" />
       </div>
+
+      <Turnstile
+        ref={turnstileRef}
+        siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+        options={{ theme: 'light', size: 'normal' }}
+        onError={() => turnstileRef.current?.reset()}
+      />
 
       <button
         type="submit"
