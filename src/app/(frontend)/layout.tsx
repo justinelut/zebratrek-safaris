@@ -109,8 +109,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     conservationStatement: settings.conservationStatement || '',
     columns: settings.footerColumns || [],
     socialLinks: settings.socialLinks || {},    email: settings.email || '',
+    secondaryEmail: (settings as any).secondaryEmail || '',
     phone: settings.phone || '',
     officeAddress: settings.officeAddress || '',
+    postalAddress: (settings as any).postalAddress || '',
     brandPattern: getImageUrl((settings as any).brandPattern) || null,
   }
 

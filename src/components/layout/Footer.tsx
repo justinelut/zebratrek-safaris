@@ -6,14 +6,16 @@ type Props = {
   tagline: string
   conservationStatement: string
   columns: { heading: string; links?: { label: string; href: string }[] | null }[]
-  socialLinks: { instagram?: string | null; facebook?: string | null; youtube?: string | null; tripAdvisor?: string | null }
+  socialLinks: { instagram?: string | null; facebook?: string | null; x?: string | null; tiktok?: string | null; youtube?: string | null; tripAdvisor?: string | null }
   email: string
+  secondaryEmail?: string | null
   phone: string
   officeAddress: string
+  postalAddress?: string | null
   brandPattern?: string | null
 }
 
-export function Footer({ companyName, tagline, conservationStatement, columns, email, phone, officeAddress, brandPattern }: Props) {
+export function Footer({ companyName, tagline, conservationStatement, columns, email, secondaryEmail, phone, officeAddress, postalAddress, brandPattern }: Props) {
   return (
     <footer className="relative bg-deep text-ivory/70 overflow-hidden">
       {/* Subtle brand pattern background */}
@@ -67,8 +69,10 @@ export function Footer({ companyName, tagline, conservationStatement, columns, e
             <p className="text-[0.65rem] tracking-[0.3em] uppercase text-ivory/30 mb-5">Reach Us</p>
             <div className="space-y-3 text-[0.8rem] font-light text-ivory/60">
               {email && <p>{email}</p>}
+              {secondaryEmail && <p>{secondaryEmail}</p>}
               {phone && <p>{phone}</p>}
               {officeAddress && <p>{officeAddress}</p>}
+              {postalAddress && <p>{postalAddress}</p>}
             </div>
           </div>
         </div>

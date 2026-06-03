@@ -25,7 +25,9 @@ export const Settings: GlobalConfig = {
             { name: 'phone', type: 'text' },
             { name: 'whatsAppNumber', type: 'text' },
             { name: 'email', type: 'email', defaultValue: 'info@zebratrailssafari.com' },
+            { name: 'secondaryEmail', type: 'email', admin: { description: 'Secondary/transport email' } },
             { name: 'officeAddress', type: 'text', defaultValue: 'Nairobi, Kenya' },
+            { name: 'postalAddress', type: 'text', admin: { description: 'P.O. Box address' } },
           ],
         },
         {
@@ -61,6 +63,8 @@ export const Settings: GlobalConfig = {
               fields: [
                 { name: 'instagram', type: 'text' },
                 { name: 'facebook', type: 'text' },
+                { name: 'x', type: 'text', label: 'X (Twitter)' },
+                { name: 'tiktok', type: 'text', label: 'TikTok' },
                 { name: 'youtube', type: 'text' },
                 { name: 'tripAdvisor', type: 'text' },
               ],

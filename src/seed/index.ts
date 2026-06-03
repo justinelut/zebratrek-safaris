@@ -108,7 +108,9 @@ async function seed() {
       heroSubheadline: "Curated wildlife encounters across Kenya's finest conservancies. Small groups. Expert guides. Unforgettable moments.",
       socialLinks: {
         instagram: 'https://instagram.com/zebratreksafaris',
-        facebook: 'https://facebook.com/zebratreksafaris',
+        facebook: 'https://facebook.com/ZebratrekSafaris',
+        x: 'https://x.com/zebratreksafari',
+        tiktok: 'https://tiktok.com/@zebratrek.safaris',
         youtube: 'https://youtube.com/@zebratreksafaris',
         tripAdvisor: 'https://tripadvisor.com/zebratreksafaris',
       },

@@ -51,3 +51,4 @@ node_modules/
 
 # Brand source files (huge, kept out of repo)
 /brand/
+src/migrations/

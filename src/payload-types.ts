@@ -201,7 +201,6 @@ export interface User {
 export interface Media {
   id: number;
   alt: string;
-  prefix?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -884,7 +883,6 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
-  prefix?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
@@ -1322,7 +1320,15 @@ export interface Setting {
   phone?: string | null;
   whatsAppNumber?: string | null;
   email?: string | null;
+  /**
+   * Secondary/transport email
+   */
+  secondaryEmail?: string | null;
   officeAddress?: string | null;
+  /**
+   * P.O. Box address
+   */
+  postalAddress?: string | null;
   navigation?:
     | {
         label: string;
@@ -1337,6 +1343,8 @@ export interface Setting {
   socialLinks?: {
     instagram?: string | null;
     facebook?: string | null;
+    x?: string | null;
+    tiktok?: string | null;
     youtube?: string | null;
     tripAdvisor?: string | null;
   };
@@ -1800,7 +1808,9 @@ export interface SettingsSelect<T extends boolean = true> {
   phone?: T;
   whatsAppNumber?: T;
   email?: T;
+  secondaryEmail?: T;
   officeAddress?: T;
+  postalAddress?: T;
   navigation?:
     | T
     | {
@@ -1817,6 +1827,8 @@ export interface SettingsSelect<T extends boolean = true> {
     | {
         instagram?: T;
         facebook?: T;
+        x?: T;
+        tiktok?: T;
         youtube?: T;
         tripAdvisor?: T;
       };
