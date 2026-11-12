@@ -9,6 +9,19 @@ const outputMedia = path.join(outputRoot, 'api/media/file')
 const localMedia = path.join(root, 'media')
 const mediaUrl = '/api/media/file/'
 
+function isImage(file) {
+  if (!existsSync(file)) return false
+  const header = readFileSync(file).subarray(0, 12)
+  return (
+    (header[0] === 0xff && header[1] === 0xd8 && header[2] === 0xff) ||
+    header.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a])) ||
+    header.toString('ascii', 0, 6).startsWith('GIF8') ||
+    (header.toString('ascii', 0, 4) === 'RIFF' && header.toString('ascii', 8, 12) === 'WEBP') ||
+    header.toString('ascii', 4, 8) === 'ftyp' ||
+    header.toString('ascii').trimStart().startsWith('<svg')
+  )
+}
+
 function htmlFiles(dir) {
   return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     const file = path.join(dir, entry.name)
@@ -31,19 +44,18 @@ for (const file of htmlFiles(outputRoot)) {
 const missing = [...references].filter((key) => !existsSync(path.join(outputMedia, ...key.split('/'))))
 
 const fallbackAssets = new Map([
-  // The CMS references a ninth conservation hero upload, but it was never
-  // stored in R2. The local numbered variants are byte-identical.
-  ['conservation-hero-9.jpg', 'conservation-hero.jpg'],
+  // The CMS references an image that is missing from R2. Use an existing
+  // Taita Hills sanctuary image for this conservation section in the export.
+  ['conservation-hero-9.jpg', 'Taita-Hills-Wildlife-Sanctuary-Kenya.jpg'],
 ])
 const unresolved = []
 const toDownload = []
 for (const key of missing) {
   const fallback = fallbackAssets.get(key)
   const localSource = path.join(localMedia, ...key.split('/'))
-  const source = existsSync(localSource)
-    ? localSource
-    : fallback && path.join(localMedia, ...fallback.split('/'))
-  if (source && existsSync(source)) {
+  const localFallback = fallback && path.join(localMedia, ...fallback.split('/'))
+  const source = [localSource, localFallback].find((candidate) => candidate && isImage(candidate))
+  if (source) {
     const destination = path.join(outputMedia, ...key.split('/'))
     mkdirSync(path.dirname(destination), { recursive: true })
     copyFileSync(source, destination)
@@ -80,11 +92,14 @@ if (toDownload.length) {
     continuationToken = page.IsTruncated ? page.NextContinuationToken : undefined
   } while (continuationToken)
 
-  const keys = toDownload.map((key) => ({ key, objectKey: `media/${key}` }))
+  const keys = toDownload.map((key) => {
+    const sourceKey = fallbackAssets.get(key) || key
+    return { key, sourceKey, objectKey: `media/${sourceKey}` }
+  })
   const notFound = keys.filter(({ objectKey }) => !available.has(objectKey))
   if (notFound.length) {
     await client.destroy()
-    throw new Error(`R2 is missing referenced assets: ${notFound.map(({ key }) => key).join(', ')}`)
+    throw new Error(`R2 is missing referenced assets and fallback images: ${notFound.map(({ key }) => key).join(', ')}`)
   }
 
   let bytes = 0
