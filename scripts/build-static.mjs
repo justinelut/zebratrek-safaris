@@ -1,12 +1,11 @@
 import { spawnSync } from 'node:child_process'
 import { existsSync, mkdtempSync, renameSync, rmSync } from 'node:fs'
-import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const appRoot = path.join(root, 'src/app')
-const backupRoot = mkdtempSync(path.join(tmpdir(), 'zebratrek-static-build-'))
+const backupRoot = mkdtempSync(path.join(root, '.zebratrek-static-build-'))
 // There are no non-reserved Payload page slugs at present; Next's static
 // export rejects a dynamic route that generates zero paths. Keep the runtime
 // CMS route in source, but omit it while producing this fixed static snapshot.
