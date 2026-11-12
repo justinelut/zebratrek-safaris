@@ -6,6 +6,7 @@ import { FadeIn } from '@/components/motion/FadeIn'
 import { StaggerGrid } from '@/components/motion/StaggerGrid'
 import { StaggerItem } from '@/components/motion/StaggerItem'
 import type { Media } from '@/payload-types'
+import { ClientCategoryFilter } from '@/components/ClientCategoryFilter'
 
 export async function generateMetadata() {
   const page = await getJournalPage()
@@ -14,11 +15,10 @@ export async function generateMetadata() {
 
 const categories = ['Wildlife', 'Travel Tips', 'Conservation', 'Behind the Scenes', 'Guest Stories']
 
-export default async function JournalPage({ searchParams }: { searchParams: Promise<{ category?: string }> }) {
-  const params = await searchParams
+export default async function JournalPage() {
   const [page, { docs: posts }] = await Promise.all([
     getJournalPage(),
-    getJournalPosts({ category: params.category }),
+    getJournalPosts({ limit: 1000 }),
   ])
 
   const heroImg = getImageProps(page.hero?.image as Media)
@@ -41,25 +41,16 @@ export default async function JournalPage({ searchParams }: { searchParams: Prom
 
       <section className="section-pad bg-cream dark:bg-[var(--bg-alt)]">
         <div className="container-wide">
-          <div className="flex flex-wrap gap-3 mb-12">
-            <Link href="/journal" className={`text-[0.7rem] tracking-[0.15em] uppercase px-4 py-2 border rounded-sm transition-colors ${!params.category ? 'bg-[var(--fg)] text-[var(--bg)]' : 'border-[var(--border)] hover:border-[var(--fg)]'}`}>
-              All
-            </Link>
-            {categories.map((cat) => (
-              <Link key={cat} href={`/journal?category=${encodeURIComponent(cat)}`} className={`text-[0.7rem] tracking-[0.15em] uppercase px-4 py-2 border rounded-sm transition-colors ${params.category === cat ? 'bg-[var(--fg)] text-[var(--bg)]' : 'border-[var(--border)] hover:border-[var(--fg)]'}`}>
-                {cat}
-              </Link>
-            ))}
-          </div>
+          <ClientCategoryFilter categories={['All', ...categories]} group="journal" />
 
-          {posts.length === 0 ? (
-            <p className="text-center text-[var(--fg-muted)] py-20">No posts found for this category.</p>
-          ) : (
-            <>
+          <div data-filter-group="journal">
+            <p data-filter-empty hidden className="text-center text-[var(--fg-muted)] py-20">No posts found for this category.</p>
+            {posts.length > 0 && (
+              <>
               {featured && (() => {
                 const img = getImageProps(featured.heroImage as Media)
                 return (
-                  <FadeIn className="mb-16">
+                  <FadeIn className="mb-16" filterItem={featured.category || ''}>
                     <Link href={`/journal/${featured.slug}`} className="group block">
                       <div className="relative aspect-[4/5] sm:aspect-[16/10] md:aspect-[16/9] lg:aspect-[21/9] overflow-hidden rounded-sm">
                         {img.src && <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="100vw" />}
@@ -95,7 +86,7 @@ export default async function JournalPage({ searchParams }: { searchParams: Prom
                   {remaining.map((post) => {
                     const img = getImageProps(post.heroImage as Media)
                     return (
-                      <StaggerItem key={post.id}>
+                      <StaggerItem key={post.id} filterItem={post.category || ''}>
                         <Link href={`/journal/${post.slug}`} className="group block">
                           <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
                             {img.src && <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw" />}
@@ -115,8 +106,9 @@ export default async function JournalPage({ searchParams }: { searchParams: Prom
                   })}
                 </StaggerGrid>
               )}
-            </>
-          )}
+              </>
+            )}
+          </div>
         </div>
       </section>
     </>

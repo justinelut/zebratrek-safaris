@@ -12,8 +12,7 @@ export async function generateMetadata() {
   return { title: `${page.headline || 'Contact'} — ZebraTrek Safaris` }
 }
 
-export default async function ContactPage({ searchParams }: { searchParams: Promise<{ safari?: string }> }) {
-  const params = await searchParams
+export default async function ContactPage() {
   const [page, settings] = await Promise.all([getContactPage(), getSiteSettings()])
 
   const heroImg = getImageProps(page.image as Media)
@@ -34,10 +33,7 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
           <FadeIn className="lg:col-span-2">
             <h2 className="text-[1.5rem] font-light mb-2" style={{ fontFamily: 'var(--font-display)' }}>{page.formHeadline || 'Tell us about your dream safari'}</h2>
             {page.formSubheadline && <p className="text-[var(--fg-muted)] mb-8">{page.formSubheadline}</p>}
-            <ContactForm
-              safariSlug={params.safari}
-              successMessage={page.successMessage || 'Thank you! We\'ll be in touch within 24 hours.'}
-            />
+            <ContactForm whatsAppNumber={settings.whatsAppNumber || ''} />
           </FadeIn>
 
           <FadeIn delay={0.2}>

@@ -1,9 +1,12 @@
 import { TestimonialForm } from './TestimonialForm'
 import { FadeIn } from '@/components/motion/FadeIn'
+import { getSiteSettings } from '@/lib/queries'
 
 export const metadata = { title: 'Share Your Experience — ZebraTrek Safaris' }
 
-export default function ShareExperiencePage() {
+export default async function ShareExperiencePage() {
+  const settings = await getSiteSettings()
+
   return (
     <section className="pt-40 pb-20">
       <div className="container-narrow">
@@ -17,7 +20,7 @@ export default function ShareExperiencePage() {
           </p>
         </FadeIn>
         <FadeIn delay={0.2}>
-          <TestimonialForm />
+          <TestimonialForm whatsAppNumber={settings.whatsAppNumber || ''} />
         </FadeIn>
       </div>
     </section>

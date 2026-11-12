@@ -3,7 +3,7 @@
 import { motion } from 'motion/react'
 import { ReactNode } from 'react'
 
-export function FadeIn({ className, delay, children }: { className?: string; delay?: number; children: ReactNode }) {
+export function FadeIn({ className, delay, filterItem, children }: { className?: string; delay?: number; filterItem?: string; children: ReactNode }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -11,6 +11,7 @@ export function FadeIn({ className, delay, children }: { className?: string; del
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.8, delay: delay || 0, ease: [0.22, 1, 0.36, 1] as const }}
       className={className}
+      data-filter-item={filterItem}
     >
       {children}
     </motion.div>

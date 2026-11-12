@@ -2,10 +2,20 @@ import { notFound } from 'next/navigation'
 import { getPage } from '@/lib/queries'
 import { generatePageMetadata } from '@/lib/seo'
 import { RichText } from '@/components/RichText'
+import { getStaticSlugs } from '@/lib/static-params'
 
-export const dynamic = 'force-dynamic'
+export const dynamicParams = false
 
 type Params = { params: Promise<{ slug: string }> }
+
+export async function generateStaticParams() {
+  const reserved = new Set([
+    'about', 'book', 'contact', 'conservation', 'destinations', 'faq', 'gallery', 'journal',
+    'plan-your-safari', 'safaris', 'services', 'share-your-experience', 'team', 'what-to-expect', 'when-to-visit',
+  ])
+  const slugs = await getStaticSlugs('pages')
+  return slugs.filter(({ slug }) => !reserved.has(slug))
+}
 
 export async function generateMetadata({ params }: Params) {
   const { slug } = await params

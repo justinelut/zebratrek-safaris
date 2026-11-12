@@ -5,16 +5,19 @@ import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(__filename)
+const staticExport = process.env.BUILD_STATIC_SITE === '1'
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
-  allowedDevOrigins: ['3000.blyss.co.ke', '4001.blyss.co.ke'],
+  output: staticExport ? 'export' : 'standalone',
+  ...(staticExport ? { trailingSlash: true } : {}),
+  allowedDevOrigins: ['3000.onedesk.co.ke', '4001.onedesk.co.ke'],
   images: {
+    ...(staticExport ? { unoptimized: true } : {}),
     localPatterns: [
       { pathname: '/api/media/file/**' },
     ],
     remotePatterns: [
-      { protocol: 'https', hostname: '4001.blyss.co.ke' },
+      { protocol: 'https', hostname: '4001.onedesk.co.ke' },
       { protocol: 'http', hostname: 'localhost' },
       { protocol: 'https', hostname: 'images.pexels.com' },
       { protocol: 'https', hostname: 'images.unsplash.com' },
@@ -22,13 +25,13 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'pixabay.com' },
     ],
   },
-  async headers() {
+  ...(!staticExport ? { async headers() {
     return [
       // Security headers — apply to everything
       {
         source: '/(.*)',
         headers: [
-          { key: 'Content-Security-Policy', value: "frame-ancestors 'self' https://studio.blyss.co.ke https://*.vercel.app;" },
+          { key: 'Content-Security-Policy', value: "frame-ancestors 'self' https://webdesignkenya.co.ke https://studio.blyss.co.ke https://*.vercel.app;" },
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
@@ -110,7 +113,7 @@ const nextConfig: NextConfig = {
         ],
       },
     ]
-  },
+  } } : {}),
   webpack: (webpackConfig) => {
     webpackConfig.resolve.extensionAlias = {
       '.cjs': ['.cts', '.cjs'],

@@ -10,8 +10,15 @@ import { FadeIn } from '@/components/motion/FadeIn'
 import { StaggerGrid } from '@/components/motion/StaggerGrid'
 import { StaggerItem } from '@/components/motion/StaggerItem'
 import type { Media, Destination } from '@/payload-types'
+import { getStaticSlugs } from '@/lib/static-params'
 
 type Params = { params: Promise<{ slug: string }> }
+
+export const dynamicParams = false
+
+export async function generateStaticParams() {
+  return getStaticSlugs('safari-packages', { status: { equals: 'published' } })
+}
 
 export async function generateMetadata({ params }: Params) {
   const { slug } = await params

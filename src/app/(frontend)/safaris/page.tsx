@@ -7,6 +7,7 @@ import { StaggerGrid } from '@/components/motion/StaggerGrid'
 import { StaggerItem } from '@/components/motion/StaggerItem'
 import { Price } from '@/components/Price'
 import type { Media } from '@/payload-types'
+import { ClientCategoryFilter } from '@/components/ClientCategoryFilter'
 
 export async function generateMetadata() {
   const page = await getSafarisPage()
@@ -15,11 +16,10 @@ export async function generateMetadata() {
 
 const categories = ['Day Safari', 'Classic Safari', 'Adventure Safari', 'Luxury Safari', 'Family Safari', 'Photography Safari', 'Honeymoon Safari']
 
-export default async function SafarisPage({ searchParams }: { searchParams: Promise<{ category?: string }> }) {
-  const params = await searchParams
+export default async function SafarisPage() {
   const [page, { docs: safaris }] = await Promise.all([
     getSafarisPage(),
-    getSafaris({ category: params.category }),
+    getSafaris({ limit: 1000 }),
   ])
 
   const heroImg = getImageProps(page.hero?.image as Media)
@@ -39,27 +39,15 @@ export default async function SafarisPage({ searchParams }: { searchParams: Prom
 
       <section className="section-pad">
         <div className="container-wide">
-          <FadeIn delay={0.1}>
-            <div className="flex flex-wrap gap-3 mb-12">
-              <Link href="/safaris" className={`text-[0.7rem] tracking-[0.15em] uppercase px-4 py-2 border rounded-sm transition-colors ${!params.category ? 'bg-[var(--fg)] text-[var(--bg)]' : 'border-[var(--border)] hover:border-[var(--fg)]'}`}>
-                All
-              </Link>
-              {categories.map((cat) => (
-                <Link key={cat} href={`/safaris?category=${encodeURIComponent(cat)}`} className={`text-[0.7rem] tracking-[0.15em] uppercase px-4 py-2 border rounded-sm transition-colors ${params.category === cat ? 'bg-[var(--fg)] text-[var(--bg)]' : 'border-[var(--border)] hover:border-[var(--fg)]'}`}>
-                  {cat.replace(' Safari', '')}
-                </Link>
-              ))}
-            </div>
-          </FadeIn>
+          <ClientCategoryFilter categories={['All', ...categories.map((category) => category.replace(' Safari', ''))]} group="safaris" />
 
-          {safaris.length === 0 ? (
-            <p className="text-center text-[var(--fg-muted)] py-20">{page.emptyStateText || 'No safaris found for this category.'}</p>
-          ) : (
+          <div data-filter-group="safaris">
+            <p data-filter-empty hidden className="text-center text-[var(--fg-muted)] py-20">{page.emptyStateText || 'No safaris found for this category.'}</p>
             <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {safaris.map((safari) => {
                 const img = getImageProps(safari.heroImage as Media)
                 return (
-                  <StaggerItem key={safari.id}>
+                  <StaggerItem key={safari.id} filterItem={safari.category?.replace(' Safari', '') || ''}>
                     <Link href={`/safaris/${safari.slug}`} className="group">
                       <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
                         <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw" />
@@ -74,7 +62,7 @@ export default async function SafarisPage({ searchParams }: { searchParams: Prom
                 )
               })}
             </StaggerGrid>
-          )}
+          </div>
         </div>
       </section>
     </>

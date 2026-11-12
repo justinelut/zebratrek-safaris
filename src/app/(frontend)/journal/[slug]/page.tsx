@@ -7,8 +7,15 @@ import { generatePageMetadata } from '@/lib/seo'
 import { RichText } from '@/components/RichText'
 import { FadeIn } from '@/components/motion/FadeIn'
 import type { Media, User } from '@/payload-types'
+import { getStaticSlugs } from '@/lib/static-params'
 
 type Params = { params: Promise<{ slug: string }> }
+
+export const dynamicParams = false
+
+export async function generateStaticParams() {
+  return getStaticSlugs('journal-posts', { _status: { equals: 'published' } })
+}
 
 export async function generateMetadata({ params }: Params) {
   const { slug } = await params

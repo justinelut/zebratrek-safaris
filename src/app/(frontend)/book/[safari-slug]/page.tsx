@@ -1,12 +1,20 @@
 import { notFound } from 'next/navigation'
-import { getSafariBySlug } from '@/lib/queries'
+import { getSafariBySlug, getSiteSettings } from '@/lib/queries'
 import { BookingForm } from './BookingForm'
 import type { Media } from '@/payload-types'
 import { getImageProps } from '@/lib/media'
 import { Price } from '@/components/Price'
 import Image from 'next/image'
+import { getStaticSlugs } from '@/lib/static-params'
 
 type Params = { params: Promise<{ 'safari-slug': string }> }
+
+export const dynamicParams = false
+
+export async function generateStaticParams() {
+  const slugs = await getStaticSlugs('safari-packages', { status: { equals: 'published' } })
+  return slugs.map(({ slug }) => ({ 'safari-slug': slug }))
+}
 
 export async function generateMetadata({ params }: Params) {
   const { 'safari-slug': slug } = await params
@@ -17,7 +25,7 @@ export async function generateMetadata({ params }: Params) {
 
 export default async function BookingPage({ params }: Params) {
   const { 'safari-slug': slug } = await params
-  const safari = await getSafariBySlug(slug)
+  const [safari, settings] = await Promise.all([getSafariBySlug(slug), getSiteSettings()])
   if (!safari) notFound()
 
   const heroImg = getImageProps(safari.heroImage as Media)
@@ -37,12 +45,8 @@ export default async function BookingPage({ params }: Params) {
       <section className="section-pad">
         <div className="container-wide">
           <BookingForm
-            safariId={String(safari.id)}
-            safariSlug={safari.slug}
             safariTitle={safari.title}
-            basePrice={safari.priceFrom || 3000}
-            currency={safari.currency || 'USD'}
-            duration={safari.duration || ''}
+            whatsAppNumber={settings.whatsAppNumber || ''}
           />
         </div>
       </section>

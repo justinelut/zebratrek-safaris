@@ -15,8 +15,6 @@ import { getSiteSettings } from '@/lib/queries'
 import { getImageUrl } from '@/lib/media'
 import './globals.css'
 
-export const dynamic = 'force-dynamic'
-
 const anakeim = localFont({
   src: [
     { path: '../../fonts/anakeim-display.ttf', weight: '400', style: 'normal' },
@@ -42,6 +40,7 @@ export async function generateMetadata() {
   const siteUrl = process.env.NEXT_PUBLIC_SERVER_URL || 'https://zebratreksafaris.com'
   const title = settings.defaultMetaTitle || 'ZebraTrek Safaris — Luxury African Safari Experiences'
   const description = settings.defaultMetaDescription || "Intimate wildlife encounters across East Africa's most pristine wilderness."
+  const socialImage = getImageUrl((settings as any).openGraphImage) || getImageUrl((settings as any).logo)
 
   return {
     metadataBase: new URL(siteUrl),
@@ -63,13 +62,13 @@ export async function generateMetadata() {
       title,
       description,
       siteName: settings.companyName || 'ZebraTrek Safaris',
-      images: [{ url: getImageUrl((settings as any).openGraphImage) || `${siteUrl}/api/og`, width: 1200, height: 630, alt: title }],
+      ...(socialImage ? { images: [{ url: socialImage, width: 1200, height: 630, alt: title }] } : {}),
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
-      images: [getImageUrl((settings as any).openGraphImage) || `${siteUrl}/api/og`],
+      ...(socialImage ? { images: [socialImage] } : {}),
       creator: '@zebratrek',
     },
     robots: {
@@ -118,6 +117,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   const social = settings.socialLinks || {}
   const sameAs = [social.instagram, social.facebook, social.youtube, social.tripAdvisor].filter(Boolean)
+  const logoUrl = getImageUrl((settings as any).logoIcon || (settings as any).logo)
+  const socialImageUrl = getImageUrl((settings as any).openGraphImage) || logoUrl
 
   const orgJsonLd = {
     '@context': 'https://schema.org',
@@ -127,8 +128,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     legalName: settings.companyName || 'ZebraTrek Safaris',
     description: settings.defaultMetaDescription || '',
     url: siteUrl,
-    logo: { '@type': 'ImageObject', url: `${siteUrl}/api/og`, width: 1200, height: 630 },
-    image: `${siteUrl}/api/og`,
+    logo: logoUrl ? { '@type': 'ImageObject', url: logoUrl } : undefined,
+    image: socialImageUrl || undefined,
     telephone: settings.phone || undefined,
     email: settings.email || undefined,
     address: settings.officeAddress

@@ -2,8 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getPayload } from '@/lib/payload'
 
 const BASE = process.env.NEXT_PUBLIC_SERVER_URL || 'https://zebratrek.com'
-
-export const revalidate = 3600 // ISR: revalidate sitemap every hour
+export const dynamic = 'force-static'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
