@@ -87,14 +87,12 @@ export function Footer({ companyName, tagline, conservationStatement, columns, e
             </p>
           )}
           <p className="text-[0.7rem] text-ivory/30 tracking-wide">
-            Built by{' '}
+            Website by{' '}
             <a
-              href="https://currentdigital.studio"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="https://webdesignkenya.co.ke/business-websites-kenya"
               className="text-ivory/50 hover:text-[var(--accent-warm)] transition-colors duration-300 underline-offset-4 hover:underline"
             >
-              Current Digital Studios
+              Web Design Kenya
             </a>
           </p>
         </div>

@@ -152,6 +152,19 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: settings.companyName || 'ZebraTrek Safaris',
+              url: siteUrl,
+              publisher: { '@id': `${siteUrl}#organization` },
+              creator: { '@type': 'Organization', name: 'Web Design Kenya', url: 'https://webdesignkenya.co.ke/' },
+            }),
+          }}
+        />
         <ThemeProvider>
           <CurrencyProvider>
           <SmoothScroll>
