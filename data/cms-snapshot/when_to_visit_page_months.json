@@ -1,0 +1,122 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401e1",
+  "month": "January",
+  "weather": "Hot & dry",
+  "wildlife": "Calving season in Ndutu",
+  "crowds": "Low",
+  "rating": 4
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401e2",
+  "month": "February",
+  "weather": "Hot & dry",
+  "wildlife": "Newborn wildebeest, predator action",
+  "crowds": "Low",
+  "rating": 4
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401e3",
+  "month": "March",
+  "weather": "Warm, long rains begin",
+  "wildlife": "Bird migration, lush landscapes",
+  "crowds": "Very low",
+  "rating": 3
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401e4",
+  "month": "April",
+  "weather": "Rainy",
+  "wildlife": "Green season, fewer tourists",
+  "crowds": "Very low",
+  "rating": 2
+ },
+ {
+  "_order": 5,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401e5",
+  "month": "May",
+  "weather": "Rainy, cooling",
+  "wildlife": "Excellent birding",
+  "crowds": "Very low",
+  "rating": 2
+ },
+ {
+  "_order": 6,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401e6",
+  "month": "June",
+  "weather": "Dry, cool",
+  "wildlife": "Migration moves north",
+  "crowds": "Medium",
+  "rating": 4
+ },
+ {
+  "_order": 7,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401e7",
+  "month": "July",
+  "weather": "Dry, cool",
+  "wildlife": "Migration in the Mara",
+  "crowds": "High",
+  "rating": 5
+ },
+ {
+  "_order": 8,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401e8",
+  "month": "August",
+  "weather": "Dry, cool",
+  "wildlife": "River crossings peak",
+  "crowds": "High",
+  "rating": 5
+ },
+ {
+  "_order": 9,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401e9",
+  "month": "September",
+  "weather": "Dry, warming",
+  "wildlife": "River crossings continue",
+  "crowds": "High",
+  "rating": 5
+ },
+ {
+  "_order": 10,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401ea",
+  "month": "October",
+  "weather": "Dry, hot",
+  "wildlife": "Migration returns south",
+  "crowds": "Medium",
+  "rating": 4
+ },
+ {
+  "_order": 11,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401eb",
+  "month": "November",
+  "weather": "Short rains",
+  "wildlife": "Calving begins, green season",
+  "crowds": "Low",
+  "rating": 3
+ },
+ {
+  "_order": 12,
+  "_parent_id": 1,
+  "id": "6a15cdcac6c9b05aa30401ec",
+  "month": "December",
+  "weather": "Warm, rains ending",
+  "wildlife": "Festive season, good game viewing",
+  "crowds": "Medium",
+  "rating": 4
+ }
+]

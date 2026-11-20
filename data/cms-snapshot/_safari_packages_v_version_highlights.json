@@ -1,0 +1,366 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": 1,
+  "highlight": "Big Five game drives",
+  "_uuid": "6a15cd9bc6c9b05aa304013c"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": 2,
+  "highlight": "Mara River crossing (seasonal)",
+  "_uuid": "6a15cd9bc6c9b05aa304013d"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": 3,
+  "highlight": "Maasai village visit",
+  "_uuid": "6a15cd9bc6c9b05aa304013e"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": 4,
+  "highlight": "Sundowner cocktails on the savanna",
+  "_uuid": "6a15cd9bc6c9b05aa304013f"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 2,
+  "id": 5,
+  "highlight": "Kilimanjaro views at sunrise",
+  "_uuid": "6a15cd9fc6c9b05aa304014c"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 2,
+  "id": 6,
+  "highlight": "Large elephant herds",
+  "_uuid": "6a15cd9fc6c9b05aa304014d"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 2,
+  "id": 7,
+  "highlight": "Private conservancy access",
+  "_uuid": "6a15cd9fc6c9b05aa304014e"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 2,
+  "id": 8,
+  "highlight": "In-room spa treatments",
+  "_uuid": "6a15cd9fc6c9b05aa304014f"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 3,
+  "id": 9,
+  "highlight": "Wildebeest river crossings",
+  "_uuid": "6a15cda3c6c9b05aa3040161"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 3,
+  "id": 10,
+  "highlight": "Predator-prey interactions",
+  "_uuid": "6a15cda3c6c9b05aa3040162"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 3,
+  "id": 11,
+  "highlight": "Hot air balloon safari",
+  "_uuid": "6a15cda3c6c9b05aa3040163"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 3,
+  "id": 12,
+  "highlight": "Mobile camp experience",
+  "_uuid": "6a15cda3c6c9b05aa3040164"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 4,
+  "id": 13,
+  "highlight": "Child-friendly game drives",
+  "_uuid": "6a15cda6c6c9b05aa3040173"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 4,
+  "id": 14,
+  "highlight": "Junior ranger programme",
+  "_uuid": "6a15cda6c6c9b05aa3040174"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 4,
+  "id": 15,
+  "highlight": "Bush skills workshop",
+  "_uuid": "6a15cda6c6c9b05aa3040175"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 4,
+  "id": 16,
+  "highlight": "Swimming pool at lodge",
+  "_uuid": "6a15cda6c6c9b05aa3040176"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 5,
+  "id": 17,
+  "highlight": "Professional photography guide",
+  "_uuid": "6a15cdaac6c9b05aa3040187"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 5,
+  "id": 18,
+  "highlight": "Modified vehicles with camera mounts",
+  "_uuid": "6a15cdaac6c9b05aa3040188"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 5,
+  "id": 19,
+  "highlight": "Golden hour positioning",
+  "_uuid": "6a15cdaac6c9b05aa3040189"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 5,
+  "id": 20,
+  "highlight": "Post-processing workshops",
+  "_uuid": "6a15cdaac6c9b05aa304018a"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 6,
+  "id": 21,
+  "highlight": "Private game drives",
+  "_uuid": "6a15cdaec6c9b05aa304019b"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 6,
+  "id": 22,
+  "highlight": "Couples spa treatments",
+  "_uuid": "6a15cdaec6c9b05aa304019c"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 6,
+  "id": 23,
+  "highlight": "Candlelit bush dinner",
+  "_uuid": "6a15cdaec6c9b05aa304019d"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 6,
+  "id": 24,
+  "highlight": "Hot air balloon at sunrise",
+  "_uuid": "6a15cdaec6c9b05aa304019e"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 7,
+  "id": 25,
+  "highlight": "Private game drives",
+  "_uuid": "6a15cdaec6c9b05aa304019b"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 7,
+  "id": 26,
+  "highlight": "Couples spa treatments",
+  "_uuid": "6a15cdaec6c9b05aa304019c"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 7,
+  "id": 27,
+  "highlight": "Candlelit bush dinner",
+  "_uuid": "6a15cdaec6c9b05aa304019d"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 7,
+  "id": 28,
+  "highlight": "Hot air balloon at sunrise",
+  "_uuid": "6a15cdaec6c9b05aa304019e"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 8,
+  "id": 29,
+  "highlight": "Private game drives",
+  "_uuid": "6a15cdaec6c9b05aa304019b"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 8,
+  "id": 30,
+  "highlight": "Couples spa treatments",
+  "_uuid": "6a15cdaec6c9b05aa304019c"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 8,
+  "id": 31,
+  "highlight": "Candlelit bush dinner",
+  "_uuid": "6a15cdaec6c9b05aa304019d"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 8,
+  "id": 32,
+  "highlight": "Hot air balloon at sunrise",
+  "_uuid": "6a15cdaec6c9b05aa304019e"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 9,
+  "id": 33,
+  "highlight": "Child-friendly game drives",
+  "_uuid": "6a15cda6c6c9b05aa3040173"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 9,
+  "id": 34,
+  "highlight": "Junior ranger programme",
+  "_uuid": "6a15cda6c6c9b05aa3040174"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 9,
+  "id": 35,
+  "highlight": "Bush skills workshop",
+  "_uuid": "6a15cda6c6c9b05aa3040175"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 9,
+  "id": 36,
+  "highlight": "Swimming pool at lodge",
+  "_uuid": "6a15cda6c6c9b05aa3040176"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 10,
+  "id": 37,
+  "highlight": "Child-friendly game drives",
+  "_uuid": "6a15cda6c6c9b05aa3040173"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 10,
+  "id": 38,
+  "highlight": "Junior ranger programme",
+  "_uuid": "6a15cda6c6c9b05aa3040174"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 10,
+  "id": 39,
+  "highlight": "Bush skills workshop",
+  "_uuid": "6a15cda6c6c9b05aa3040175"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 10,
+  "id": 40,
+  "highlight": "Swimming pool at lodge",
+  "_uuid": "6a15cda6c6c9b05aa3040176"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 11,
+  "id": 41,
+  "highlight": "Wildebeest river crossings",
+  "_uuid": "6a15cda3c6c9b05aa3040161"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 11,
+  "id": 42,
+  "highlight": "Predator-prey interactions",
+  "_uuid": "6a15cda3c6c9b05aa3040162"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 11,
+  "id": 43,
+  "highlight": "Hot air balloon safari",
+  "_uuid": "6a15cda3c6c9b05aa3040163"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 11,
+  "id": 44,
+  "highlight": "Mobile camp experience",
+  "_uuid": "6a15cda3c6c9b05aa3040164"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 12,
+  "id": 45,
+  "highlight": "Kilimanjaro views at sunrise",
+  "_uuid": "6a15cd9fc6c9b05aa304014c"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 12,
+  "id": 46,
+  "highlight": "Large elephant herds",
+  "_uuid": "6a15cd9fc6c9b05aa304014d"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 12,
+  "id": 47,
+  "highlight": "Private conservancy access",
+  "_uuid": "6a15cd9fc6c9b05aa304014e"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 12,
+  "id": 48,
+  "highlight": "In-room spa treatments",
+  "_uuid": "6a15cd9fc6c9b05aa304014f"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 13,
+  "id": 49,
+  "highlight": "Big Five game drives",
+  "_uuid": "6a15cd9bc6c9b05aa304013c"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 13,
+  "id": 50,
+  "highlight": "Mara River crossing (seasonal)",
+  "_uuid": "6a15cd9bc6c9b05aa304013d"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 13,
+  "id": 51,
+  "highlight": "Maasai village visit",
+  "_uuid": "6a15cd9bc6c9b05aa304013e"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 13,
+  "id": 52,
+  "highlight": "Sundowner cocktails on the savanna",
+  "_uuid": "6a15cd9bc6c9b05aa304013f"
+ }
+]

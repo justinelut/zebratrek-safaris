@@ -1,0 +1,26 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cdc7c6c9b05aa30401cc",
+  "name": "Booking & Planning"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cdc7c6c9b05aa30401d0",
+  "name": "Travel & Logistics"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cdc7c6c9b05aa30401d4",
+  "name": "On Safari"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15cdc7c6c9b05aa30401d7",
+  "name": "Payment"
+ }
+]

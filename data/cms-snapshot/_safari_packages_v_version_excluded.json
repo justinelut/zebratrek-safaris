@@ -1,0 +1,1185 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": 1,
+  "item": "International flights",
+  "_uuid": "6a15cd9bc6c9b05aa3040138"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": 2,
+  "item": "Travel insurance",
+  "_uuid": "6a15cd9bc6c9b05aa3040139"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": 3,
+  "item": "Visa fees",
+  "_uuid": "6a15cd9bc6c9b05aa304013a"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": 4,
+  "item": "Tips and gratuities",
+  "_uuid": "6a15cd9bc6c9b05aa304013b"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 2,
+  "id": 5,
+  "item": "International flights",
+  "_uuid": "6a15cd9fc6c9b05aa3040149"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 2,
+  "id": 6,
+  "item": "Travel insurance",
+  "_uuid": "6a15cd9fc6c9b05aa304014a"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 2,
+  "id": 7,
+  "item": "Additional spa treatments",
+  "_uuid": "6a15cd9fc6c9b05aa304014b"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 3,
+  "id": 8,
+  "item": "International flights",
+  "_uuid": "6a15cda3c6c9b05aa304015d"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 3,
+  "id": 9,
+  "item": "Travel insurance",
+  "_uuid": "6a15cda3c6c9b05aa304015e"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 3,
+  "id": 10,
+  "item": "Visa fees",
+  "_uuid": "6a15cda3c6c9b05aa304015f"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 3,
+  "id": 11,
+  "item": "Tips",
+  "_uuid": "6a15cda3c6c9b05aa3040160"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 4,
+  "id": 12,
+  "item": "International flights",
+  "_uuid": "6a15cda6c6c9b05aa3040170"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 4,
+  "id": 13,
+  "item": "Travel insurance",
+  "_uuid": "6a15cda6c6c9b05aa3040171"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 4,
+  "id": 14,
+  "item": "Personal items",
+  "_uuid": "6a15cda6c6c9b05aa3040172"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 5,
+  "id": 15,
+  "item": "Camera equipment",
+  "_uuid": "6a15cdaac6c9b05aa3040184"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 5,
+  "id": 16,
+  "item": "International flights",
+  "_uuid": "6a15cdaac6c9b05aa3040185"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 5,
+  "id": 17,
+  "item": "Insurance",
+  "_uuid": "6a15cdaac6c9b05aa3040186"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 6,
+  "id": 18,
+  "item": "International flights",
+  "_uuid": "6a15cdaec6c9b05aa3040198"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 6,
+  "id": 19,
+  "item": "Travel insurance",
+  "_uuid": "6a15cdaec6c9b05aa3040199"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 6,
+  "id": 20,
+  "item": "Additional spa treatments",
+  "_uuid": "6a15cdaec6c9b05aa304019a"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 7,
+  "id": 21,
+  "item": "International flights",
+  "_uuid": "6a15cdaec6c9b05aa3040198"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 7,
+  "id": 22,
+  "item": "Travel insurance",
+  "_uuid": "6a15cdaec6c9b05aa3040199"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 7,
+  "id": 23,
+  "item": "Additional spa treatments",
+  "_uuid": "6a15cdaec6c9b05aa304019a"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 8,
+  "id": 24,
+  "item": "International flights",
+  "_uuid": "6a15cdaec6c9b05aa3040198"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 8,
+  "id": 25,
+  "item": "Travel insurance",
+  "_uuid": "6a15cdaec6c9b05aa3040199"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 8,
+  "id": 26,
+  "item": "Additional spa treatments",
+  "_uuid": "6a15cdaec6c9b05aa304019a"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 9,
+  "id": 27,
+  "item": "International flights",
+  "_uuid": "6a15cda6c6c9b05aa3040170"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 9,
+  "id": 28,
+  "item": "Travel insurance",
+  "_uuid": "6a15cda6c6c9b05aa3040171"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 9,
+  "id": 29,
+  "item": "Personal items",
+  "_uuid": "6a15cda6c6c9b05aa3040172"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 10,
+  "id": 30,
+  "item": "International flights",
+  "_uuid": "6a15cda6c6c9b05aa3040170"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 10,
+  "id": 31,
+  "item": "Travel insurance",
+  "_uuid": "6a15cda6c6c9b05aa3040171"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 10,
+  "id": 32,
+  "item": "Personal items",
+  "_uuid": "6a15cda6c6c9b05aa3040172"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 11,
+  "id": 33,
+  "item": "International flights",
+  "_uuid": "6a15cda3c6c9b05aa304015d"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 11,
+  "id": 34,
+  "item": "Travel insurance",
+  "_uuid": "6a15cda3c6c9b05aa304015e"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 11,
+  "id": 35,
+  "item": "Visa fees",
+  "_uuid": "6a15cda3c6c9b05aa304015f"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 11,
+  "id": 36,
+  "item": "Tips",
+  "_uuid": "6a15cda3c6c9b05aa3040160"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 12,
+  "id": 37,
+  "item": "International flights",
+  "_uuid": "6a15cd9fc6c9b05aa3040149"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 12,
+  "id": 38,
+  "item": "Travel insurance",
+  "_uuid": "6a15cd9fc6c9b05aa304014a"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 12,
+  "id": 39,
+  "item": "Additional spa treatments",
+  "_uuid": "6a15cd9fc6c9b05aa304014b"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 13,
+  "id": 40,
+  "item": "International flights",
+  "_uuid": "6a15cd9bc6c9b05aa3040138"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 13,
+  "id": 41,
+  "item": "Travel insurance",
+  "_uuid": "6a15cd9bc6c9b05aa3040139"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 13,
+  "id": 42,
+  "item": "Visa fees",
+  "_uuid": "6a15cd9bc6c9b05aa304013a"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 13,
+  "id": 43,
+  "item": "Tips and gratuities",
+  "_uuid": "6a15cd9bc6c9b05aa304013b"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 26,
+  "id": 44,
+  "item": "Travel insurance",
+  "_uuid": "6a16c53d5164fcabaffe51f4"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 26,
+  "id": 45,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c53d5164fcabaffe51f5"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 26,
+  "id": 46,
+  "item": "Personal expenses",
+  "_uuid": "6a16c53d5164fcabaffe51f6"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 26,
+  "id": 47,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c53d5164fcabaffe51f7"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 26,
+  "id": 48,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c53d5164fcabaffe51f8"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 26,
+  "id": 49,
+  "item": "Sheldrick Falls visit (optional, requires fitness)",
+  "_uuid": "6a16c53d5164fcabaffe51f9"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 27,
+  "id": 50,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5425164fcabaffe5202"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 27,
+  "id": 51,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5425164fcabaffe5203"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 27,
+  "id": 52,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5425164fcabaffe5204"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 27,
+  "id": 53,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5425164fcabaffe5205"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 27,
+  "id": 54,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5425164fcabaffe5206"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 28,
+  "id": 55,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5475164fcabaffe5210"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 28,
+  "id": 56,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5475164fcabaffe5211"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 28,
+  "id": 57,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5475164fcabaffe5212"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 28,
+  "id": 58,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5475164fcabaffe5213"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 28,
+  "id": 59,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5475164fcabaffe5214"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 29,
+  "id": 60,
+  "item": "Travel insurance",
+  "_uuid": "6a16c54c5164fcabaffe521d"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 29,
+  "id": 61,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c54c5164fcabaffe521e"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 29,
+  "id": 62,
+  "item": "Personal expenses",
+  "_uuid": "6a16c54c5164fcabaffe521f"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 29,
+  "id": 63,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c54c5164fcabaffe5220"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 29,
+  "id": 64,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c54c5164fcabaffe5221"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 30,
+  "id": 65,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5515164fcabaffe522a"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 30,
+  "id": 66,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5515164fcabaffe522b"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 30,
+  "id": 67,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5515164fcabaffe522c"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 30,
+  "id": 68,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5515164fcabaffe522d"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 30,
+  "id": 69,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5515164fcabaffe522e"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 31,
+  "id": 70,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5565164fcabaffe5237"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 31,
+  "id": 71,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5565164fcabaffe5238"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 31,
+  "id": 72,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5565164fcabaffe5239"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 31,
+  "id": 73,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5565164fcabaffe523a"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 31,
+  "id": 74,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5565164fcabaffe523b"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 32,
+  "id": 75,
+  "item": "Travel insurance",
+  "_uuid": "6a16c55a5164fcabaffe5245"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 32,
+  "id": 76,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c55a5164fcabaffe5246"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 32,
+  "id": 77,
+  "item": "Personal expenses",
+  "_uuid": "6a16c55a5164fcabaffe5247"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 32,
+  "id": 78,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c55a5164fcabaffe5248"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 32,
+  "id": 79,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c55a5164fcabaffe5249"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 33,
+  "id": 80,
+  "item": "Travel insurance",
+  "_uuid": "6a16c55f5164fcabaffe5253"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 33,
+  "id": 81,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c55f5164fcabaffe5254"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 33,
+  "id": 82,
+  "item": "Personal expenses",
+  "_uuid": "6a16c55f5164fcabaffe5255"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 33,
+  "id": 83,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c55f5164fcabaffe5256"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 33,
+  "id": 84,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c55f5164fcabaffe5257"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 34,
+  "id": 85,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5645164fcabaffe5261"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 34,
+  "id": 86,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5645164fcabaffe5262"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 34,
+  "id": 87,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5645164fcabaffe5263"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 34,
+  "id": 88,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5645164fcabaffe5264"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 34,
+  "id": 89,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5645164fcabaffe5265"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 35,
+  "id": 90,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5695164fcabaffe5270"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 35,
+  "id": 91,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5695164fcabaffe5271"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 35,
+  "id": 92,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5695164fcabaffe5272"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 35,
+  "id": 93,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5695164fcabaffe5273"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 35,
+  "id": 94,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5695164fcabaffe5274"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 35,
+  "id": 95,
+  "item": "Sheldrick Falls guide fee (optional)",
+  "_uuid": "6a16c5695164fcabaffe5275"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 36,
+  "id": 96,
+  "item": "Travel insurance",
+  "_uuid": "6a16c56e5164fcabaffe5280"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 36,
+  "id": 97,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c56e5164fcabaffe5281"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 36,
+  "id": 98,
+  "item": "Personal expenses",
+  "_uuid": "6a16c56e5164fcabaffe5282"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 36,
+  "id": 99,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c56e5164fcabaffe5283"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 36,
+  "id": 100,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c56e5164fcabaffe5284"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 37,
+  "id": 101,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5735164fcabaffe528f"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 37,
+  "id": 102,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5735164fcabaffe5290"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 37,
+  "id": 103,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5735164fcabaffe5291"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 37,
+  "id": 104,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5735164fcabaffe5292"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 37,
+  "id": 105,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5735164fcabaffe5293"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 37,
+  "id": 106,
+  "item": "Hot air balloon ride (available at extra cost)",
+  "_uuid": "6a16c5735164fcabaffe5294"
+ },
+ {
+  "_order": 7,
+  "_parent_id": 37,
+  "id": 107,
+  "item": "Domestic flights",
+  "_uuid": "6a16c5735164fcabaffe5295"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 38,
+  "id": 108,
+  "item": "Travel insurance",
+  "_uuid": "6a16c56e5164fcabaffe5280"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 38,
+  "id": 109,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c56e5164fcabaffe5281"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 38,
+  "id": 110,
+  "item": "Personal expenses",
+  "_uuid": "6a16c56e5164fcabaffe5282"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 38,
+  "id": 111,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c56e5164fcabaffe5283"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 38,
+  "id": 112,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c56e5164fcabaffe5284"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 39,
+  "id": 113,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5695164fcabaffe5270"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 39,
+  "id": 114,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5695164fcabaffe5271"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 39,
+  "id": 115,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5695164fcabaffe5272"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 39,
+  "id": 116,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5695164fcabaffe5273"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 39,
+  "id": 117,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5695164fcabaffe5274"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 39,
+  "id": 118,
+  "item": "Sheldrick Falls guide fee (optional)",
+  "_uuid": "6a16c5695164fcabaffe5275"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 40,
+  "id": 119,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5645164fcabaffe5261"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 40,
+  "id": 120,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5645164fcabaffe5262"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 40,
+  "id": 121,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5645164fcabaffe5263"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 40,
+  "id": 122,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5645164fcabaffe5264"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 40,
+  "id": 123,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5645164fcabaffe5265"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 41,
+  "id": 124,
+  "item": "Travel insurance",
+  "_uuid": "6a16c55f5164fcabaffe5253"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 41,
+  "id": 125,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c55f5164fcabaffe5254"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 41,
+  "id": 126,
+  "item": "Personal expenses",
+  "_uuid": "6a16c55f5164fcabaffe5255"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 41,
+  "id": 127,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c55f5164fcabaffe5256"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 41,
+  "id": 128,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c55f5164fcabaffe5257"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 42,
+  "id": 129,
+  "item": "Travel insurance",
+  "_uuid": "6a16c55f5164fcabaffe5253"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 42,
+  "id": 130,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c55f5164fcabaffe5254"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 42,
+  "id": 131,
+  "item": "Personal expenses",
+  "_uuid": "6a16c55f5164fcabaffe5255"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 42,
+  "id": 132,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c55f5164fcabaffe5256"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 42,
+  "id": 133,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c55f5164fcabaffe5257"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 43,
+  "id": 134,
+  "item": "Travel insurance",
+  "_uuid": "6a16c55a5164fcabaffe5245"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 43,
+  "id": 135,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c55a5164fcabaffe5246"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 43,
+  "id": 136,
+  "item": "Personal expenses",
+  "_uuid": "6a16c55a5164fcabaffe5247"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 43,
+  "id": 137,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c55a5164fcabaffe5248"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 43,
+  "id": 138,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c55a5164fcabaffe5249"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 44,
+  "id": 139,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5565164fcabaffe5237"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 44,
+  "id": 140,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5565164fcabaffe5238"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 44,
+  "id": 141,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5565164fcabaffe5239"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 44,
+  "id": 142,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5565164fcabaffe523a"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 44,
+  "id": 143,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5565164fcabaffe523b"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 45,
+  "id": 144,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5515164fcabaffe522a"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 45,
+  "id": 145,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5515164fcabaffe522b"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 45,
+  "id": 146,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5515164fcabaffe522c"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 45,
+  "id": 147,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5515164fcabaffe522d"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 45,
+  "id": 148,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5515164fcabaffe522e"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 46,
+  "id": 149,
+  "item": "Travel insurance",
+  "_uuid": "6a16c54c5164fcabaffe521d"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 46,
+  "id": 150,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c54c5164fcabaffe521e"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 46,
+  "id": 151,
+  "item": "Personal expenses",
+  "_uuid": "6a16c54c5164fcabaffe521f"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 46,
+  "id": 152,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c54c5164fcabaffe5220"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 46,
+  "id": 153,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c54c5164fcabaffe5221"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 47,
+  "id": 154,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5475164fcabaffe5210"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 47,
+  "id": 155,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5475164fcabaffe5211"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 47,
+  "id": 156,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5475164fcabaffe5212"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 47,
+  "id": 157,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5475164fcabaffe5213"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 47,
+  "id": 158,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5475164fcabaffe5214"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 48,
+  "id": 159,
+  "item": "Travel insurance",
+  "_uuid": "6a16c5425164fcabaffe5202"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 48,
+  "id": 160,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c5425164fcabaffe5203"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 48,
+  "id": 161,
+  "item": "Personal expenses",
+  "_uuid": "6a16c5425164fcabaffe5204"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 48,
+  "id": 162,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c5425164fcabaffe5205"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 48,
+  "id": 163,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c5425164fcabaffe5206"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 49,
+  "id": 164,
+  "item": "Travel insurance",
+  "_uuid": "6a16c53d5164fcabaffe51f4"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 49,
+  "id": 165,
+  "item": "Tips and gratuities",
+  "_uuid": "6a16c53d5164fcabaffe51f5"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 49,
+  "id": 166,
+  "item": "Personal expenses",
+  "_uuid": "6a16c53d5164fcabaffe51f6"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 49,
+  "id": 167,
+  "item": "Alcoholic beverages",
+  "_uuid": "6a16c53d5164fcabaffe51f7"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 49,
+  "id": 168,
+  "item": "Optional activities not mentioned",
+  "_uuid": "6a16c53d5164fcabaffe51f8"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 49,
+  "id": 169,
+  "item": "Sheldrick Falls visit (optional, requires fitness)",
+  "_uuid": "6a16c53d5164fcabaffe51f9"
+ }
+]

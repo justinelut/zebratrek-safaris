@@ -1,0 +1,68 @@
+[
+ {
+  "id": 1,
+  "name": "Green Season 2026",
+  "year": 2026,
+  "start_date": "2026-01-01T00:00:00+00:00",
+  "end_date": "2026-05-31T00:00:00+00:00",
+  "price_multiplier": 0.8,
+  "description": "Low season — lush landscapes, newborn animals, fewer crowds. Best rates.",
+  "updated_at": "2026-05-27T09:16:08.517+00:00",
+  "created_at": "2026-05-27T09:16:08.516+00:00"
+ },
+ {
+  "id": 2,
+  "name": "High Season 2026",
+  "year": 2026,
+  "start_date": "2026-06-01T00:00:00+00:00",
+  "end_date": "2026-10-31T00:00:00+00:00",
+  "price_multiplier": 1.5,
+  "description": "Peak migration season — river crossings, big cat action. Book 6-12 months ahead.",
+  "updated_at": "2026-05-27T09:16:09.557+00:00",
+  "created_at": "2026-05-27T09:16:09.557+00:00"
+ },
+ {
+  "id": 3,
+  "name": "Shoulder Season Late 2026",
+  "year": 2026,
+  "start_date": "2026-11-01T00:00:00+00:00",
+  "end_date": "2026-12-15T00:00:00+00:00",
+  "price_multiplier": 1,
+  "description": "Short rains, green returning, good game viewing with fewer vehicles.",
+  "updated_at": "2026-05-27T09:16:10.59+00:00",
+  "created_at": "2026-05-27T09:16:10.59+00:00"
+ },
+ {
+  "id": 4,
+  "name": "Festive Season 2026",
+  "year": 2026,
+  "start_date": "2026-12-16T00:00:00+00:00",
+  "end_date": "2026-12-31T00:00:00+00:00",
+  "price_multiplier": 1.4,
+  "description": "Holiday peak — family travel, warm weather, excellent game.",
+  "updated_at": "2026-05-27T09:16:11.621+00:00",
+  "created_at": "2026-05-27T09:16:11.621+00:00"
+ },
+ {
+  "id": 5,
+  "name": "Green Season 2027",
+  "year": 2027,
+  "start_date": "2027-01-01T00:00:00+00:00",
+  "end_date": "2027-05-31T00:00:00+00:00",
+  "price_multiplier": 0.8,
+  "description": "Low season — calving in Ndutu, dramatic skies, lowest prices.",
+  "updated_at": "2026-05-27T09:16:12.653+00:00",
+  "created_at": "2026-05-27T09:16:12.653+00:00"
+ },
+ {
+  "id": 6,
+  "name": "High Season 2027",
+  "year": 2027,
+  "start_date": "2027-06-01T00:00:00+00:00",
+  "end_date": "2027-10-31T00:00:00+00:00",
+  "price_multiplier": 1.5,
+  "description": "Peak migration season. The Great Migration crosses the Mara River.",
+  "updated_at": "2026-05-27T09:16:13.683+00:00",
+  "created_at": "2026-05-27T09:16:13.683+00:00"
+ }
+]

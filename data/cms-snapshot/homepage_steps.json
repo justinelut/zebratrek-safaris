@@ -1,0 +1,26 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a16c823498110e09fea6ba3",
+  "number": 1,
+  "title": "Tell us your dates",
+  "description": "Share when you're flying in, where you're staying, and how long you have. We work around your schedule."
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a16c823498110e09fea6ba4",
+  "number": 2,
+  "title": "We design the itinerary",
+  "description": "Day trip, overnight, week-long combo with beach — we tailor the route, the lodges, and the pace."
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a16c823498110e09fea6ba5",
+  "number": 3,
+  "title": "We handle everything else",
+  "description": "Pickup, drivers, park fees, lodges, meals, drop-off. You bring the curiosity. We bring the logistics."
+ }
+]

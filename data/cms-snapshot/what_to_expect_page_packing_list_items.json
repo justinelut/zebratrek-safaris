@@ -1,0 +1,74 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": "6a15cdccc6c9b05aa30401f7",
+  "id": "6a15cdccc6c9b05aa30401f3",
+  "item": "Neutral-coloured tops (khaki, olive, beige)"
+ },
+ {
+  "_order": 2,
+  "_parent_id": "6a15cdccc6c9b05aa30401f7",
+  "id": "6a15cdccc6c9b05aa30401f4",
+  "item": "Long sleeves for evenings"
+ },
+ {
+  "_order": 3,
+  "_parent_id": "6a15cdccc6c9b05aa30401f7",
+  "id": "6a15cdccc6c9b05aa30401f5",
+  "item": "Comfortable walking shoes"
+ },
+ {
+  "_order": 4,
+  "_parent_id": "6a15cdccc6c9b05aa30401f7",
+  "id": "6a15cdccc6c9b05aa30401f6",
+  "item": "Wide-brim hat"
+ },
+ {
+  "_order": 1,
+  "_parent_id": "6a15cdccc6c9b05aa30401fc",
+  "id": "6a15cdccc6c9b05aa30401f8",
+  "item": "Camera with zoom lens"
+ },
+ {
+  "_order": 2,
+  "_parent_id": "6a15cdccc6c9b05aa30401fc",
+  "id": "6a15cdccc6c9b05aa30401f9",
+  "item": "Extra batteries and memory cards"
+ },
+ {
+  "_order": 3,
+  "_parent_id": "6a15cdccc6c9b05aa30401fc",
+  "id": "6a15cdccc6c9b05aa30401fa",
+  "item": "Lens cleaning kit"
+ },
+ {
+  "_order": 4,
+  "_parent_id": "6a15cdccc6c9b05aa30401fc",
+  "id": "6a15cdccc6c9b05aa30401fb",
+  "item": "Binoculars"
+ },
+ {
+  "_order": 1,
+  "_parent_id": "6a15cdccc6c9b05aa3040201",
+  "id": "6a15cdccc6c9b05aa30401fd",
+  "item": "Sunscreen SPF 30+"
+ },
+ {
+  "_order": 2,
+  "_parent_id": "6a15cdccc6c9b05aa3040201",
+  "id": "6a15cdccc6c9b05aa30401fe",
+  "item": "Insect repellent"
+ },
+ {
+  "_order": 3,
+  "_parent_id": "6a15cdccc6c9b05aa3040201",
+  "id": "6a15cdccc6c9b05aa30401ff",
+  "item": "Reusable water bottle"
+ },
+ {
+  "_order": 4,
+  "_parent_id": "6a15cdccc6c9b05aa3040201",
+  "id": "6a15cdccc6c9b05aa3040200",
+  "item": "Travel insurance documents"
+ }
+]

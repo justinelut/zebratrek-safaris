@@ -1,0 +1,67 @@
+[
+ {
+  "id": 1,
+  "name": "Daniel Kipchoge",
+  "role": "Head Guide & Founder",
+  "bio": "Born in the Mara, Daniel grew up alongside the wildlife he now shares with guests. A certified KPSGA Silver-level guide with an uncanny ability to predict predator movements.",
+  "portrait_id": 40,
+  "speciality": "Big cat behaviour & tracking",
+  "years_experience": 18,
+  "featured": true,
+  "order": 1,
+  "updated_at": "2026-05-26T16:43:30.663+00:00",
+  "created_at": "2026-05-26T16:43:30.663+00:00"
+ },
+ {
+  "id": 2,
+  "name": "Grace Wanjiku",
+  "role": "Operations Director",
+  "bio": "Grace ensures every safari runs like clockwork — from charter flights to bush dinner setups. She knows every lodge manager, every pilot, and every secret sundowner spot in Kenya.",
+  "portrait_id": 40,
+  "speciality": "Bespoke itinerary design",
+  "years_experience": 12,
+  "featured": true,
+  "order": 2,
+  "updated_at": "2026-05-26T16:43:31.9+00:00",
+  "created_at": "2026-05-26T16:43:31.9+00:00"
+ },
+ {
+  "id": 3,
+  "name": "Joseph Oloo",
+  "role": "Senior Wildlife Guide",
+  "bio": "Joseph can identify over 400 bird species by call alone. His patience and eye for composition make him the go-to guide for photography safaris.",
+  "portrait_id": 40,
+  "speciality": "Ornithology & photography",
+  "years_experience": 15,
+  "featured": true,
+  "order": 3,
+  "updated_at": "2026-05-26T16:43:33.117+00:00",
+  "created_at": "2026-05-26T16:43:33.117+00:00"
+ },
+ {
+  "id": 4,
+  "name": "Sarah Leina",
+  "role": "Conservation Lead",
+  "bio": "Sarah bridges the gap between tourism and conservation, managing our partnerships with local communities and anti-poaching units across three conservancies.",
+  "portrait_id": 40,
+  "speciality": "Community conservation & anti-poaching",
+  "years_experience": 9,
+  "featured": false,
+  "order": 4,
+  "updated_at": "2026-05-26T16:43:34.334+00:00",
+  "created_at": "2026-05-26T16:43:34.334+00:00"
+ },
+ {
+  "id": 5,
+  "name": "Peter Mutua",
+  "role": "Guest Relations Manager",
+  "bio": "Peter handles the details that transform a safari from great to extraordinary — the surprise bush breakfast, the perfectly timed sundowner, the birthday cake in the middle of nowhere.",
+  "portrait_id": 40,
+  "speciality": "Luxury hospitality & special occasions",
+  "years_experience": 8,
+  "featured": false,
+  "order": 5,
+  "updated_at": "2026-05-26T16:43:35.551+00:00",
+  "created_at": "2026-05-26T16:43:35.551+00:00"
+ }
+]

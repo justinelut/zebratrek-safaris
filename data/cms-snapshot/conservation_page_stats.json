@@ -1,0 +1,30 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cdc5c6c9b05aa30401c2",
+  "value": "5%",
+  "label": "Of every booking funds conservation"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cdc5c6c9b05aa30401c3",
+  "value": "3",
+  "label": "Conservancies we actively support"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cdc5c6c9b05aa30401c4",
+  "value": "12",
+  "label": "Anti-poaching rangers funded"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15cdc5c6c9b05aa30401c5",
+  "value": "2,400",
+  "label": "Hectares under protection"
+ }
+]

@@ -1,0 +1,163 @@
+[
+ {
+  "id": 1,
+  "order": 1,
+  "parent_id": 1,
+  "path": "version.destinations",
+  "destinations_id": 1
+ },
+ {
+  "id": 2,
+  "order": 1,
+  "parent_id": 2,
+  "path": "version.destinations",
+  "destinations_id": 2
+ },
+ {
+  "id": 3,
+  "order": 1,
+  "parent_id": 3,
+  "path": "version.destinations",
+  "destinations_id": 1
+ },
+ {
+  "id": 4,
+  "order": 2,
+  "parent_id": 3,
+  "path": "version.destinations",
+  "destinations_id": 8
+ },
+ {
+  "id": 5,
+  "order": 1,
+  "parent_id": 4,
+  "path": "version.destinations",
+  "destinations_id": 1
+ },
+ {
+  "id": 6,
+  "order": 2,
+  "parent_id": 4,
+  "path": "version.destinations",
+  "destinations_id": 5
+ },
+ {
+  "id": 7,
+  "order": 1,
+  "parent_id": 5,
+  "path": "version.destinations",
+  "destinations_id": 1
+ },
+ {
+  "id": 8,
+  "order": 2,
+  "parent_id": 5,
+  "path": "version.destinations",
+  "destinations_id": 2
+ },
+ {
+  "id": 9,
+  "order": 3,
+  "parent_id": 5,
+  "path": "version.destinations",
+  "destinations_id": 3
+ },
+ {
+  "id": 10,
+  "order": 1,
+  "parent_id": 6,
+  "path": "version.destinations",
+  "destinations_id": 1
+ },
+ {
+  "id": 11,
+  "order": 2,
+  "parent_id": 6,
+  "path": "version.destinations",
+  "destinations_id": 2
+ },
+ {
+  "id": 12,
+  "order": 1,
+  "parent_id": 7,
+  "path": "version.destinations",
+  "destinations_id": 1
+ },
+ {
+  "id": 13,
+  "order": 2,
+  "parent_id": 7,
+  "path": "version.destinations",
+  "destinations_id": 2
+ },
+ {
+  "id": 14,
+  "order": 1,
+  "parent_id": 8,
+  "path": "version.destinations",
+  "destinations_id": 1
+ },
+ {
+  "id": 15,
+  "order": 2,
+  "parent_id": 8,
+  "path": "version.destinations",
+  "destinations_id": 2
+ },
+ {
+  "id": 16,
+  "order": 1,
+  "parent_id": 9,
+  "path": "version.destinations",
+  "destinations_id": 1
+ },
+ {
+  "id": 17,
+  "order": 2,
+  "parent_id": 9,
+  "path": "version.destinations",
+  "destinations_id": 5
+ },
+ {
+  "id": 18,
+  "order": 1,
+  "parent_id": 10,
+  "path": "version.destinations",
+  "destinations_id": 1
+ },
+ {
+  "id": 19,
+  "order": 2,
+  "parent_id": 10,
+  "path": "version.destinations",
+  "destinations_id": 5
+ },
+ {
+  "id": 20,
+  "order": 1,
+  "parent_id": 11,
+  "path": "version.destinations",
+  "destinations_id": 1
+ },
+ {
+  "id": 21,
+  "order": 2,
+  "parent_id": 11,
+  "path": "version.destinations",
+  "destinations_id": 8
+ },
+ {
+  "id": 22,
+  "order": 1,
+  "parent_id": 12,
+  "path": "version.destinations",
+  "destinations_id": 2
+ },
+ {
+  "id": 23,
+  "order": 1,
+  "parent_id": 13,
+  "path": "version.destinations",
+  "destinations_id": 1
+ }
+]

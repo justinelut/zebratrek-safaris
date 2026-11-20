@@ -1,0 +1,44 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cd89c6c9b05aa30400e3",
+  "label": "Safaris",
+  "href": "/safaris"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cd89c6c9b05aa30400e4",
+  "label": "Destinations",
+  "href": "/destinations"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cd89c6c9b05aa30400e5",
+  "label": "About",
+  "href": "/about"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15cd89c6c9b05aa30400e6",
+  "label": "Journal",
+  "href": "/journal"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 1,
+  "id": "6a15cd89c6c9b05aa30400e7",
+  "label": "Contact",
+  "href": "/contact"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 1,
+  "id": "6a16bdd15266d95910a5fdf1",
+  "label": "Services",
+  "href": "/services"
+ }
+]

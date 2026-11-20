@@ -1,0 +1,49 @@
+[
+ {
+  "id": 1,
+  "hero_headline": "Our Story",
+  "hero_subheadline": "Mombasa-based. Coast-rooted. Built around the rhythm of a different Kenya.",
+  "hero_image_id": 67,
+  "story_headline": "Our Story",
+  "story_body": {
+   "root": {
+    "type": "root",
+    "format": "",
+    "indent": 0,
+    "version": 1,
+    "children": [
+     {
+      "type": "paragraph",
+      "version": 1,
+      "children": [
+       {
+        "text": "ZebraTrek Safaris was built on the Kenyan coast, where the savanna meets the Indian Ocean. We design safaris and travel experiences that take advantage of this rare geography — short drives to wild parks, beach mornings and bush afternoons, no marathon transfers across the country. Our drivers know every gate at Tsavo. Our lodges remember our guests by name. Every itinerary is built from over a decade of running these exact roads, week after week.",
+        "type": "text",
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "version": 1,
+      "children": [
+       {
+        "text": "To make Kenya's wildest places accessible, comfortable, and unforgettable for every traveller arriving on the coast.",
+        "type": "text",
+        "version": 1
+       }
+      ]
+     }
+    ],
+    "direction": "ltr"
+   }
+  },
+  "founder_image_id": 42,
+  "cta_headline": "Ready to experience it yourself?",
+  "cta_body": "Every great safari starts with a conversation.",
+  "cta_text": "Get in Touch",
+  "cta_link": "/contact",
+  "updated_at": "2026-05-27T10:32:06.797+00:00",
+  "created_at": "2026-05-26T16:43:43.458+00:00"
+ }
+]

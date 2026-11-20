@@ -1,0 +1,34 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cdccc6c9b05aa30401ef",
+  "title": "Accommodation",
+  "body": "From luxury tented camps to lodge suites — every property handpicked for comfort and proximity to wildlife.",
+  "image_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cdccc6c9b05aa30401f0",
+  "title": "Game Drives",
+  "body": "Twice daily in custom 4x4 vehicles. Window seats guaranteed. Roof opens for unrestricted photography.",
+  "image_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cdccc6c9b05aa30401f1",
+  "title": "Meals",
+  "body": "Three meals daily prepared by camp chefs. Bush breakfasts and sundowners are part of the experience.",
+  "image_id": null
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15cdccc6c9b05aa30401f2",
+  "title": "Safety",
+  "body": "Every guide is wilderness first aid certified. Camps have 24/7 security. Travel insurance is required.",
+  "image_id": null
+ }
+]

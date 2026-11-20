@@ -1,0 +1,42 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a16b7e99474fa0bda6fe293",
+  "name": "Peak Season",
+  "months": "July — October",
+  "description": "The Great Migration fills the Masai Mara. River crossings are at their most dramatic, big cats hunt in the open, and dry conditions mean animals concentrate around water sources. This is prime time — book 6-12 months ahead.",
+  "highlights": "Wildebeest river crossings, big cat hunting action, clear skies for photography, highest game density",
+  "image_id": 81
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a16b7e99474fa0bda6fe294",
+  "name": "Green Season",
+  "months": "November — May",
+  "description": "The bush transforms into a lush emerald landscape. Newborn animals appear across the plains, migratory birds arrive, and tourist numbers drop dramatically. Rates are 20-40% lower than peak.",
+  "highlights": "Baby animals everywhere, 300+ bird species, dramatic thunderstorm skies, lower prices, fewer vehicles",
+  "image_id": 12
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a16b7e99474fa0bda6fe295",
+  "name": "Shoulder Season",
+  "months": "June & November",
+  "description": "The sweet spot between crowds and value. June sees the migration moving north into the Mara. November brings short rains, green returning, and excellent game viewing with far fewer vehicles.",
+  "highlights": "Great value, moderate crowds, migration movement, lush landscapes beginning",
+  "image_id": 16
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a16b7e99474fa0bda6fe296",
+  "name": "Festive Season",
+  "months": "Mid-December — Early January",
+  "description": "Warm weather, family-friendly conditions, and a celebratory atmosphere in camp. Popular with multi-generational groups. Book early — premium camps fill fast.",
+  "highlights": "Family travel, warm dry mornings, festive camp dinners, excellent predator sightings",
+  "image_id": 80
+ }
+]

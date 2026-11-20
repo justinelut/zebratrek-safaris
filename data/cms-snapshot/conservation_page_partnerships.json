@@ -1,0 +1,29 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cdc5c6c9b05aa30401c6",
+  "name": "Mara Conservancy",
+  "description": "Supporting anti-poaching patrols and community ranger programmes in the greater Mara ecosystem.",
+  "url": null,
+  "logo_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cdc5c6c9b05aa30401c7",
+  "name": "David Sheldrick Wildlife Trust",
+  "description": "Orphaned elephant rehabilitation and release back into the wild.",
+  "url": null,
+  "logo_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cdc5c6c9b05aa30401c8",
+  "name": "Northern Rangelands Trust",
+  "description": "Community-led conservation across 44 community conservancies in northern Kenya.",
+  "url": null,
+  "logo_id": null
+ }
+]

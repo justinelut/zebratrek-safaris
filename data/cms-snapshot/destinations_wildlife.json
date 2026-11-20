@@ -1,0 +1,306 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 12,
+  "id": "6a15cd99c6c9b05aa304012c",
+  "animal": "Mountain Gorilla",
+  "description": "Twelve habituated families across the Virunga slopes.",
+  "image_id": 54
+ },
+ {
+  "_order": 2,
+  "_parent_id": 12,
+  "id": "6a15cd99c6c9b05aa304012d",
+  "animal": "Golden Monkey",
+  "description": "Endemic to the Virunga volcanoes.",
+  "image_id": 55
+ },
+ {
+  "_order": 1,
+  "_parent_id": 11,
+  "id": "6a15cd98c6c9b05aa3040129",
+  "animal": "Mountain Gorilla",
+  "description": "Habituated families allow one hour of close observation.",
+  "image_id": 58
+ },
+ {
+  "_order": 2,
+  "_parent_id": 11,
+  "id": "6a15cd98c6c9b05aa304012a",
+  "animal": "Chimpanzee",
+  "description": "Trekking available in nearby Kibale Forest.",
+  "image_id": 59
+ },
+ {
+  "_order": 3,
+  "_parent_id": 11,
+  "id": "6a15cd98c6c9b05aa304012b",
+  "animal": "Forest Elephant",
+  "description": "Smaller subspecies found in the dense jungle.",
+  "image_id": 57
+ },
+ {
+  "_order": 1,
+  "_parent_id": 10,
+  "id": "6a15cd97c6c9b05aa3040126",
+  "animal": "Red Colobus Monkey",
+  "description": "Endemic to Zanzibar, found in Jozani Forest.",
+  "image_id": 61
+ },
+ {
+  "_order": 2,
+  "_parent_id": 10,
+  "id": "6a15cd97c6c9b05aa3040127",
+  "animal": "Dolphins",
+  "description": "Spinner dolphins encountered on boat trips.",
+  "image_id": 62
+ },
+ {
+  "_order": 3,
+  "_parent_id": 10,
+  "id": "6a15cd97c6c9b05aa3040128",
+  "animal": "Sea Turtles",
+  "description": "Nesting and rehabilitation sites along the coast.",
+  "image_id": 63
+ },
+ {
+  "_order": 1,
+  "_parent_id": 9,
+  "id": "6a15cd96c6c9b05aa3040123",
+  "animal": "Black Rhino",
+  "description": "One of the few places to reliably see black rhino.",
+  "image_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 9,
+  "id": "6a15cd96c6c9b05aa3040124",
+  "animal": "Lion",
+  "description": "Resident prides found across the crater floor.",
+  "image_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 9,
+  "id": "6a15cd96c6c9b05aa3040125",
+  "animal": "Hippo",
+  "description": "Pools at the crater base host large hippo populations.",
+  "image_id": null
+ },
+ {
+  "_order": 1,
+  "_parent_id": 7,
+  "id": "6a15cd93c6c9b05aa304011d",
+  "animal": "Bongo",
+  "description": "Critically endangered forest antelope.",
+  "image_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 7,
+  "id": "6a15cd93c6c9b05aa304011e",
+  "animal": "Elephant",
+  "description": "Forest elephants visit the salt licks.",
+  "image_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 7,
+  "id": "6a15cd93c6c9b05aa304011f",
+  "animal": "Black Leopard",
+  "description": "Rare melanistic leopard sightings reported.",
+  "image_id": null
+ },
+ {
+  "_order": 1,
+  "_parent_id": 6,
+  "id": "6a15cd92c6c9b05aa304011a",
+  "animal": "African Wild Dog",
+  "description": "Endangered packs roam the conservancies.",
+  "image_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 6,
+  "id": "6a15cd92c6c9b05aa304011b",
+  "animal": "Black Rhino",
+  "description": "Ol Pejeta hosts the last two northern white rhinos.",
+  "image_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 6,
+  "id": "6a15cd92c6c9b05aa304011c",
+  "animal": "Cheetah",
+  "description": "High densities in the open grasslands.",
+  "image_id": null
+ },
+ {
+  "_order": 1,
+  "_parent_id": 5,
+  "id": "6a15cd91c6c9b05aa3040117",
+  "animal": "Flamingo",
+  "description": "Thousands of lesser flamingos paint the lake pink.",
+  "image_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 5,
+  "id": "6a15cd91c6c9b05aa3040118",
+  "animal": "White Rhino",
+  "description": "One of the best places in Kenya to see white rhino.",
+  "image_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 5,
+  "id": "6a15cd91c6c9b05aa3040119",
+  "animal": "Rothschild Giraffe",
+  "description": "An endangered subspecies protected here.",
+  "image_id": null
+ },
+ {
+  "_order": 1,
+  "_parent_id": 4,
+  "id": "6a15cd90c6c9b05aa3040114",
+  "animal": "Red Elephant",
+  "description": "Elephants coated in Tsavo's distinctive red soil.",
+  "image_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 4,
+  "id": "6a15cd90c6c9b05aa3040115",
+  "animal": "Lion",
+  "description": "The famous maneless lions of Tsavo.",
+  "image_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 4,
+  "id": "6a15cd90c6c9b05aa3040116",
+  "animal": "Black Rhino",
+  "description": "Tsavo West hosts a rhino sanctuary.",
+  "image_id": null
+ },
+ {
+  "_order": 1,
+  "_parent_id": 3,
+  "id": "6a15cd8fc6c9b05aa3040110",
+  "animal": "Grevy's Zebra",
+  "description": "The rarest zebra species, with narrow stripes.",
+  "image_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 3,
+  "id": "6a15cd8fc6c9b05aa3040111",
+  "animal": "Reticulated Giraffe",
+  "description": "Distinctive net-like pattern unique to northern Kenya.",
+  "image_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 3,
+  "id": "6a15cd8fc6c9b05aa3040112",
+  "animal": "Gerenuk",
+  "description": "The \"giraffe gazelle\" that stands on hind legs to browse.",
+  "image_id": null
+ },
+ {
+  "_order": 4,
+  "_parent_id": 3,
+  "id": "6a15cd8fc6c9b05aa3040113",
+  "animal": "Somali Ostrich",
+  "description": "Blue-necked variant found only in this region.",
+  "image_id": null
+ },
+ {
+  "_order": 1,
+  "_parent_id": 2,
+  "id": "6a15cd8ec6c9b05aa304010d",
+  "animal": "Elephant",
+  "description": "Famous for its large-tusked elephant herds studied for over 40 years.",
+  "image_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 2,
+  "id": "6a15cd8ec6c9b05aa304010e",
+  "animal": "Giraffe",
+  "description": "Masai giraffe frequently seen against the Kilimanjaro backdrop.",
+  "image_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 2,
+  "id": "6a15cd8ec6c9b05aa304010f",
+  "animal": "Flamingo",
+  "description": "Seasonal visitors to the lake when water levels are right.",
+  "image_id": null
+ },
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cd8dc6c9b05aa3040108",
+  "animal": "Lion",
+  "description": "The Mara has one of the highest lion densities in Africa.",
+  "image_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cd8dc6c9b05aa3040109",
+  "animal": "Leopard",
+  "description": "Often spotted in the riverine forests along the Mara River.",
+  "image_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cd8dc6c9b05aa304010a",
+  "animal": "Cheetah",
+  "description": "The open plains are perfect hunting grounds.",
+  "image_id": null
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15cd8dc6c9b05aa304010b",
+  "animal": "Wildebeest",
+  "description": "Over 1.5 million cross through during the Great Migration.",
+  "image_id": null
+ },
+ {
+  "_order": 5,
+  "_parent_id": 1,
+  "id": "6a15cd8dc6c9b05aa304010c",
+  "animal": "Hippo",
+  "description": "Abundant in the Mara River pools.",
+  "image_id": null
+ },
+ {
+  "_order": 1,
+  "_parent_id": 8,
+  "id": "6a15cd94c6c9b05aa3040120",
+  "animal": "Wildebeest",
+  "description": "Over 1.5 million cross the Mara River seasonally.",
+  "image_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 8,
+  "id": "6a15cd94c6c9b05aa3040121",
+  "animal": "Lion",
+  "description": "Largest lion population in Africa.",
+  "image_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 8,
+  "id": "6a15cd94c6c9b05aa3040122",
+  "animal": "Cheetah",
+  "description": "The open plains favour high-speed hunters.",
+  "image_id": null
+ }
+]

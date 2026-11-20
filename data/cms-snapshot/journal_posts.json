@@ -1,0 +1,753 @@
+[
+ {
+  "id": 2,
+  "title": "Why We Cap Group Sizes at Six",
+  "slug": "why-six-guests",
+  "summary": "A small business decision that became our defining philosophy. The economics behind why fewer guests mean a fundamentally different safari experience.",
+  "hero_image_id": 37,
+  "body": {
+   "root": {
+    "type": "root",
+    "format": "",
+    "indent": 0,
+    "version": 1,
+    "children": [
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Most safari vehicles seat eight or nine guests. Ours seats six. The math is simple: every additional guest doubles the time spent positioning, halves the conversation depth between guide and guest, and turns the safari into a logistics exercise.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "The economics",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Six guests means we charge slightly more. Not because we want to, but because the math forces us to. What you get in return: a window seat without negotiation, a guide who learns your photography style, and the freedom to chase the unexpected.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     }
+    ],
+    "direction": "ltr"
+   }
+  },
+  "category": "Behind the Scenes",
+  "author_id": null,
+  "published_at": "2026-03-22T00:00:00+00:00",
+  "read_time": 5,
+  "featured": true,
+  "meta_title": null,
+  "meta_description": null,
+  "meta_image_id": null,
+  "updated_at": "2026-05-26T16:44:02.617+00:00",
+  "created_at": "2026-05-26T16:44:02.617+00:00",
+  "_status": "published"
+ },
+ {
+  "id": 1,
+  "title": "The Great Migration: A Photographer's Field Guide",
+  "slug": "great-migration-photography-guide",
+  "summary": "How to position yourself for the most dramatic river crossings, what gear to bring, and the small details that separate good safari photos from great ones.",
+  "hero_image_id": 69,
+  "body": {
+   "root": {
+    "type": "root",
+    "format": "",
+    "indent": 0,
+    "version": 1,
+    "children": [
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "The river is high. The wildebeest are restless. For three days they have grazed at the edge, building courage in numbers, until one — a young female, perhaps, or an old male tired of waiting — steps forward, and then they all do, and the air fills with hooves and dust and the distant splash of crocodile tails.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Position is everything",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "The Mara River has dozens of crossing points. Most safari operators stack at the famous ones, where 40 vehicles compete for the same shot. We position differently — using twelve years of crossing data and our network of guides on the ground to predict where the herds will go before they get there.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "The result: front-row access to crossings that 95% of visitors never see.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     }
+    ],
+    "direction": "ltr"
+   }
+  },
+  "category": "Wildlife",
+  "author_id": null,
+  "published_at": "2026-04-15T00:00:00+00:00",
+  "read_time": 8,
+  "featured": true,
+  "meta_title": "The Great Migration: A Photographer's Field Guide — ZebraTrek Safaris",
+  "meta_description": "How to position yourself for the most dramatic river crossings, what gear to bring, and the small details that separate good safari photos from great ones.",
+  "meta_image_id": 69,
+  "updated_at": "2026-05-27T08:21:30.234+00:00",
+  "created_at": "2026-05-26T16:44:01.188+00:00",
+  "_status": "published"
+ },
+ {
+  "id": 4,
+  "title": "Flamingos of Lake Nakuru: A Pink Spectacle",
+  "slug": "flamingos-lake-nakuru",
+  "summary": "Two million flamingos turning a lake pink is one of nature's great shows. Here's when to see it, and why the numbers fluctuate year to year.",
+  "hero_image_id": 80,
+  "body": {
+   "root": {
+    "type": "root",
+    "format": "",
+    "indent": 0,
+    "version": 1,
+    "children": [
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Lake Nakuru sits in the Rift Valley, ringed by acacia woodland and alive with alkaline-loving algae. This algae is what draws the flamingos — both lesser and greater species — in numbers that darken the shoreline from above.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Why numbers change",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Flamingos follow the algae, which follows the water chemistry. Heavy rains dilute the alkalinity and the birds shift to Lake Bogoria or Lake Natron. In drier years, Nakuru fills pink shore-to-shore. Your guide monitors water levels weekly to advise timing.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Best time",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "January to March and June to September tend to see peak concentrations. But it is never guaranteed — nature does not perform on schedule. That uncertainty is part of the magic.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     }
+    ],
+    "direction": "ltr"
+   }
+  },
+  "category": "Wildlife",
+  "author_id": null,
+  "published_at": "2026-05-10T00:00:00+00:00",
+  "read_time": 6,
+  "featured": false,
+  "meta_title": null,
+  "meta_description": null,
+  "meta_image_id": null,
+  "updated_at": "2026-05-27T09:16:16.455+00:00",
+  "created_at": "2026-05-27T09:16:16.454+00:00",
+  "_status": "published"
+ },
+ {
+  "id": 5,
+  "title": "Night Drives: What Comes Out After Dark",
+  "slug": "night-drives-after-dark",
+  "summary": "Most safari visitors miss 50% of the action. Here's what happens on a conservancy night drive — and why nocturnal species will change how you see Africa.",
+  "hero_image_id": 15,
+  "body": {
+   "root": {
+    "type": "root",
+    "format": "",
+    "indent": 0,
+    "version": 1,
+    "children": [
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "National parks close at dusk. Conservancies do not. This is one of the biggest advantages of staying in a private conservancy — after 6pm, the bush transforms.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "What you see",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Aardvarks emerge from burrows. Leopards become bolder. Genets hunt in the canopy. Porcupines rattle across the road. Bat-eared foxes listen for termites. Your guide sweeps a filtered spotlight — red light that does not disturb the animals — across the landscape.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Where we offer this",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Ol Pejeta, Naboisho, and Laikipia conservancies all permit night drives. Most of our classic itineraries include at least one night drive.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     }
+    ],
+    "direction": "ltr"
+   }
+  },
+  "category": "Wildlife",
+  "author_id": null,
+  "published_at": "2026-05-20T00:00:00+00:00",
+  "read_time": 5,
+  "featured": false,
+  "meta_title": null,
+  "meta_description": null,
+  "meta_image_id": null,
+  "updated_at": "2026-05-27T09:16:18.216+00:00",
+  "created_at": "2026-05-27T09:16:18.216+00:00",
+  "_status": "published"
+ },
+ {
+  "id": 6,
+  "title": "Travelling with Children: A Safari for Every Age",
+  "slug": "safari-with-children",
+  "summary": "The minimum age question, the attention span question, and the safety question — all answered by someone who has taken a 4-year-old on bush walks.",
+  "hero_image_id": 16,
+  "body": {
+   "root": {
+    "type": "root",
+    "format": "",
+    "indent": 0,
+    "version": 1,
+    "children": [
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Children see things adults miss. A dung beetle rolling a ball of elephant dung is the best show on earth if you are seven. A lizard doing push-ups on a rock is better than any lion, at age four.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Age considerations",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Under 5: Choose malaria-free conservancies (Laikipia, parts of Lewa). Stay in family-friendly camps with fenced pools. Short morning drives only — two hours max. Ages 6-12: Full game drives work well. Add bush walks (supervised), star talks, junior ranger programs. Teens: Treat them like adults. Add adrenaline — walking safaris, gorilla trekking, balloon rides.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Our family itineraries",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "We design multi-generational trips where grandparents, parents, and children all have independent options. Morning drives for the adults; craft and tracking with a junior guide for the children.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     }
+    ],
+    "direction": "ltr"
+   }
+  },
+  "category": "Travel Tips",
+  "author_id": null,
+  "published_at": "2026-04-28T00:00:00+00:00",
+  "read_time": 7,
+  "featured": false,
+  "meta_title": null,
+  "meta_description": null,
+  "meta_image_id": null,
+  "updated_at": "2026-05-27T09:16:19.939+00:00",
+  "created_at": "2026-05-27T09:16:19.939+00:00",
+  "_status": "published"
+ },
+ {
+  "id": 7,
+  "title": "Why We Partner with Conservancies, Not Just National Parks",
+  "slug": "conservancies-vs-parks",
+  "summary": "The conservancy model pays local Maasai landowners directly for keeping their land wild. It works better than any government scheme. Here's the evidence.",
+  "hero_image_id": 81,
+  "body": {
+   "root": {
+    "type": "root",
+    "format": "",
+    "indent": 0,
+    "version": 1,
+    "children": [
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "A national park is government-owned. A conservancy is community-owned. This difference matters enormously.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "The economic model",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "In the Mara conservancies, each Maasai landowner receives a monthly lease payment in exchange for keeping their land wild and unfenced. No cattle, no farming, no settlement. The payment comes from tourism operators — including us.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Why it works",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Before conservancies, a Maasai herder could earn $2 per acre per year from cattle. The conservancy model pays $50-100 per acre. The financial incentive for conservation is 25-50x higher than agriculture. Wildlife wins. Communities win. Guests win.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "The numbers",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "The 14 conservancies surrounding the Masai Mara protect 350,000 acres — larger than the national reserve itself. Vehicle density is capped. Night drives are permitted. Walking safaris are permitted. You see fewer vehicles and more wildlife.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     }
+    ],
+    "direction": "ltr"
+   }
+  },
+  "category": "Conservation",
+  "author_id": null,
+  "published_at": "2026-05-15T00:00:00+00:00",
+  "read_time": 8,
+  "featured": true,
+  "meta_title": null,
+  "meta_description": null,
+  "meta_image_id": null,
+  "updated_at": "2026-05-27T09:16:21.662+00:00",
+  "created_at": "2026-05-27T09:16:21.662+00:00",
+  "_status": "published"
+ },
+ {
+  "id": 8,
+  "title": "Green Season Secrets: Why Low Season Is Our Favourite",
+  "slug": "green-season-secrets",
+  "summary": "November to May is when Kenya transforms. The landscape is cinematic, the prices drop, and the animals are everywhere — without the crowds.",
+  "hero_image_id": 38,
+  "body": {
+   "root": {
+    "type": "root",
+    "format": "",
+    "indent": 0,
+    "version": 1,
+    "children": [
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "The safari industry markets July-October as \"the\" time to visit. We disagree. For experienced travellers and photographers, green season is the best-kept secret in East Africa.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Why we love it",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Dramatic skies: Every afternoon brings towering cumulonimbus — the light is extraordinary. Baby animals: Wildebeest calving happens in February. Other species give birth early in the rains. Fewer guests: Some camps run at 30% occupancy. You share sightings with one or two vehicles, not twenty.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "The price advantage",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "Lodges drop rates by 30-40%. Internal flights offer green season specials. The same 7-day itinerary that costs $7,000 in August runs $4,500 in March. Same camps, same guides, fewer people.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     },
+     {
+      "tag": "h2",
+      "type": "heading",
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "The trade-off",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "format": "",
+      "indent": 0,
+      "version": 1,
+      "children": [
+       {
+        "mode": "normal",
+        "text": "It rains. Not all day — typically a dramatic 45-minute downpour in the afternoon. Mornings are clear. And the rain brings life: the bush is emerald green, rivers flow, and the light has a quality that high season simply cannot match.",
+        "type": "text",
+        "format": 0,
+        "version": 1
+       }
+      ],
+      "direction": "ltr"
+     }
+    ],
+    "direction": "ltr"
+   }
+  },
+  "category": "Travel Tips",
+  "author_id": null,
+  "published_at": "2026-05-25T00:00:00+00:00",
+  "read_time": 6,
+  "featured": false,
+  "meta_title": null,
+  "meta_description": null,
+  "meta_image_id": null,
+  "updated_at": "2026-05-27T09:16:23.384+00:00",
+  "created_at": "2026-05-27T09:16:23.384+00:00",
+  "_status": "published"
+ }
+]

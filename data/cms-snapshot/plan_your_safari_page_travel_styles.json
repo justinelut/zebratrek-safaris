@@ -1,0 +1,38 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cdc9c6c9b05aa30401dd",
+  "name": "Classic Safari",
+  "description": "The essential East African experience. Game drives, lodges, and iconic landscapes.",
+  "image_id": null,
+  "price_range": "From $3,200 per person"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cdc9c6c9b05aa30401de",
+  "name": "Luxury Safari",
+  "description": "Private vehicles, premium lodges, and exclusive experiences for the discerning traveller.",
+  "image_id": null,
+  "price_range": "From $4,800 per person"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cdc9c6c9b05aa30401df",
+  "name": "Family Safari",
+  "description": "Kid-friendly lodges, shorter drives, and activities designed for young explorers.",
+  "image_id": null,
+  "price_range": "From $2,800 per person"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15cdc9c6c9b05aa30401e0",
+  "name": "Photography Safari",
+  "description": "Modified vehicles, expert photography guides, and itineraries built around the light.",
+  "image_id": null,
+  "price_range": "From $6,200 per person"
+ }
+]

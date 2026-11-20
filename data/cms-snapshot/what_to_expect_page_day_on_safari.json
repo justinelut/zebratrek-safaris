@@ -1,0 +1,58 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cdccc6c9b05aa3040202",
+  "time": "5:30 AM",
+  "activity": "Wake-up call",
+  "description": "Coffee and biscuits delivered to your tent."
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cdccc6c9b05aa3040203",
+  "time": "6:00 AM",
+  "activity": "Morning game drive",
+  "description": "The bush comes alive at dawn — best for predator activity."
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cdccc6c9b05aa3040204",
+  "time": "9:30 AM",
+  "activity": "Bush breakfast",
+  "description": "Hot breakfast served in the wild or back at camp."
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15cdccc6c9b05aa3040205",
+  "time": "12:00 PM",
+  "activity": "Brunch & rest",
+  "description": "Free time for pool, spa, or a nap during the heat."
+ },
+ {
+  "_order": 5,
+  "_parent_id": 1,
+  "id": "6a15cdccc6c9b05aa3040206",
+  "time": "4:00 PM",
+  "activity": "Afternoon game drive",
+  "description": "The light is golden, animals are active again."
+ },
+ {
+  "_order": 6,
+  "_parent_id": 1,
+  "id": "6a15cdccc6c9b05aa3040207",
+  "time": "7:00 PM",
+  "activity": "Sundowner",
+  "description": "Cocktails on a hilltop as the sun sets over the savanna."
+ },
+ {
+  "_order": 7,
+  "_parent_id": 1,
+  "id": "6a15cdccc6c9b05aa3040208",
+  "time": "8:00 PM",
+  "activity": "Dinner under the stars",
+  "description": "Multi-course meal at the camp dining area."
+ }
+]

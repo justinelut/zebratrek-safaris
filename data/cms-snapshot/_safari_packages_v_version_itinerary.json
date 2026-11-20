@@ -1,0 +1,1552 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": 1,
+  "day": 1,
+  "title": "Arrival in Nairobi",
+  "description": "Meet at Jomo Kenyatta International Airport. Transfer to your Nairobi hotel for an overnight stay and safari briefing.",
+  "image_id": null,
+  "_uuid": "6a15cd9bc6c9b05aa304012e"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": 2,
+  "day": 2,
+  "title": "Fly to the Mara",
+  "description": "Morning flight to the Masai Mara. Afternoon game drive through the golden grasslands. First encounters with the resident wildlife.",
+  "image_id": null,
+  "_uuid": "6a15cd9bc6c9b05aa304012f"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": 3,
+  "day": 3,
+  "title": "Full Day Game Drives",
+  "description": "Dawn and dusk drives following the big cats. Picnic lunch by the hippo pools. Optional walking safari with Maasai guides.",
+  "image_id": null,
+  "_uuid": "6a15cd9bc6c9b05aa3040130"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": 4,
+  "day": 4,
+  "title": "Mara River & Culture",
+  "description": "Morning drive to the Mara River for crocodile and hippo sightings. Afternoon visit to a Maasai village. Farewell bush dinner under the stars.",
+  "image_id": null,
+  "_uuid": "6a15cd9bc6c9b05aa3040131"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 1,
+  "id": 5,
+  "day": 5,
+  "title": "Departure",
+  "description": "Final sunrise drive. Fly back to Nairobi for your onward journey.",
+  "image_id": null,
+  "_uuid": "6a15cd9bc6c9b05aa3040132"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 2,
+  "id": 6,
+  "day": 1,
+  "title": "Nairobi to Amboseli",
+  "description": "Private charter flight. Champagne welcome at your villa. Afternoon game drive as Kilimanjaro reveals itself.",
+  "image_id": null,
+  "_uuid": "6a15cd9fc6c9b05aa3040140"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 2,
+  "id": 7,
+  "day": 2,
+  "title": "Elephant Encounters",
+  "description": "Dawn drive among the great elephant herds. Brunch at a secret bush location. Afternoon at leisure — pool, spa, or guided nature walk.",
+  "image_id": null,
+  "_uuid": "6a15cd9fc6c9b05aa3040141"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 2,
+  "id": 8,
+  "day": 3,
+  "title": "Kilimanjaro Sunrise",
+  "description": "Pre-dawn drive for the famous Kilimanjaro sunrise. Full day exploring the park. Farewell dinner under African skies.",
+  "image_id": null,
+  "_uuid": "6a15cd9fc6c9b05aa3040142"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 2,
+  "id": 9,
+  "day": 4,
+  "title": "Departure",
+  "description": "Leisurely breakfast. Charter flight back to Nairobi.",
+  "image_id": null,
+  "_uuid": "6a15cd9fc6c9b05aa3040143"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 3,
+  "id": 10,
+  "day": 1,
+  "title": "Arrival",
+  "description": "Arrive Nairobi. Transfer and overnight.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040150"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 3,
+  "id": 11,
+  "day": 2,
+  "title": "Fly to the Serengeti",
+  "description": "Charter to our mobile camp positioned near the migration herds.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040151"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 3,
+  "id": 12,
+  "day": 3,
+  "title": "Following the Herds",
+  "description": "Full day tracking the wildebeest. Witness the raw drama of predator and prey.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040152"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 3,
+  "id": 13,
+  "day": 4,
+  "title": "River Crossing Day",
+  "description": "Position at the Mara River. Wait for the crossing — one of nature's most dramatic events.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040153"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 3,
+  "id": 14,
+  "day": 5,
+  "title": "Balloon Safari",
+  "description": "Pre-dawn hot air balloon flight over the migration. Champagne breakfast on the plains.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040154"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 3,
+  "id": 15,
+  "day": 6,
+  "title": "Big Cat Country",
+  "description": "Focus on the predators — lions, cheetahs, leopards hunting the migration stragglers.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040155"
+ },
+ {
+  "_order": 7,
+  "_parent_id": 3,
+  "id": 16,
+  "day": 7,
+  "title": "Departure",
+  "description": "Final morning drive. Fly back to Nairobi.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040156"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 4,
+  "id": 17,
+  "day": 1,
+  "title": "Welcome to Kenya",
+  "description": "Airport pickup. Giraffe Centre visit — kids love hand-feeding the giraffes. Overnight Nairobi.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040165"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 4,
+  "id": 18,
+  "day": 2,
+  "title": "To the Bush",
+  "description": "Drive to the conservancy. Settle into your family suite. Afternoon nature walk with junior ranger badges.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040166"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 4,
+  "id": 19,
+  "day": 3,
+  "title": "Game Drives",
+  "description": "Morning and afternoon drives designed for young attention spans. Bush picnic lunch.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040167"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 4,
+  "id": 20,
+  "day": 4,
+  "title": "Bush Skills Day",
+  "description": "Learn tracking with Maasai warriors. Fire-making, star-gazing, and storytelling around the campfire.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040168"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 4,
+  "id": 21,
+  "day": 5,
+  "title": "Lake Nakuru",
+  "description": "Drive to Lake Nakuru for flamingos and rhinos. Kids' photography challenge.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040169"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 4,
+  "id": 22,
+  "day": 6,
+  "title": "Departure",
+  "description": "Morning at leisure. Transfer to Nairobi for departure.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa304016a"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 5,
+  "id": 23,
+  "day": 1,
+  "title": "Arrival & Gear Check",
+  "description": "Arrive Nairobi. Evening gear review and settings workshop with your photography guide.",
+  "image_id": null,
+  "_uuid": "6a15cdaac6c9b05aa3040177"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 5,
+  "id": 24,
+  "day": 2,
+  "title": "Amboseli — Elephants",
+  "description": "Fly to Amboseli. Afternoon shoot: elephants with Kilimanjaro backdrop. Golden hour magic.",
+  "image_id": null,
+  "_uuid": "6a15cdaac6c9b05aa3040178"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 5,
+  "id": 25,
+  "day": 3,
+  "title": "Amboseli — Landscapes",
+  "description": "Pre-dawn shoot at the dried lake bed. Dust-bathing elephants. Evening editing session.",
+  "image_id": null,
+  "_uuid": "6a15cdaac6c9b05aa3040179"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 5,
+  "id": 26,
+  "day": 4,
+  "title": "Transfer to Mara",
+  "description": "Fly to Masai Mara. Afternoon drive focusing on big cat behaviour.",
+  "image_id": null,
+  "_uuid": "6a15cdaac6c9b05aa304017a"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 5,
+  "id": 27,
+  "day": 5,
+  "title": "Mara — Predators",
+  "description": "Full day with the lions and cheetahs. Low-angle shots from modified vehicle.",
+  "image_id": null,
+  "_uuid": "6a15cdaac6c9b05aa304017b"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 5,
+  "id": 28,
+  "day": 6,
+  "title": "Mara — Birds & Details",
+  "description": "Macro and bird photography. Lilac-breasted rollers, secretary birds, weaver nests.",
+  "image_id": null,
+  "_uuid": "6a15cdaac6c9b05aa304017c"
+ },
+ {
+  "_order": 7,
+  "_parent_id": 5,
+  "id": 29,
+  "day": 7,
+  "title": "Mara — Final Shoot",
+  "description": "Sunrise silhouettes. Last golden hour session. Portfolio review with guide.",
+  "image_id": null,
+  "_uuid": "6a15cdaac6c9b05aa304017d"
+ },
+ {
+  "_order": 8,
+  "_parent_id": 5,
+  "id": 30,
+  "day": 8,
+  "title": "Departure",
+  "description": "Morning flight to Nairobi. Departure with a hard drive full of memories.",
+  "image_id": null,
+  "_uuid": "6a15cdaac6c9b05aa304017e"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 6,
+  "id": 31,
+  "day": 1,
+  "title": "Arrival in Paradise",
+  "description": "VIP airport meet. Champagne transfer to your Nairobi boutique hotel. Welcome dinner.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018b"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 6,
+  "id": 32,
+  "day": 2,
+  "title": "Fly to Your Private Suite",
+  "description": "Charter to the Mara. Rose petals and champagne in your suite. Sunset game drive for two.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018c"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 6,
+  "id": 33,
+  "day": 3,
+  "title": "Romance in the Wild",
+  "description": "Morning drive. Afternoon couples massage overlooking the plains. Private bush dinner under the stars.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018d"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 6,
+  "id": 34,
+  "day": 4,
+  "title": "Balloon Over Africa",
+  "description": "Pre-dawn hot air balloon. Champagne breakfast on the savanna. Afternoon at leisure.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018e"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 6,
+  "id": 35,
+  "day": 5,
+  "title": "Lake Naivasha",
+  "description": "Transfer to a lakeside retreat. Boat ride among hippos and fish eagles. Crescent Island walk.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018f"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 6,
+  "id": 36,
+  "day": 6,
+  "title": "Final Safari Day",
+  "description": "Morning game drive. Farewell sundowner at a secret viewpoint. Last night in the bush.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa3040190"
+ },
+ {
+  "_order": 7,
+  "_parent_id": 6,
+  "id": 37,
+  "day": 7,
+  "title": "Departure",
+  "description": "Leisurely breakfast. Transfer to Nairobi. Departure with memories to last a lifetime.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa3040191"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 7,
+  "id": 38,
+  "day": 1,
+  "title": "Arrival in Paradise",
+  "description": "VIP airport meet. Champagne transfer to your Nairobi boutique hotel. Welcome dinner.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018b"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 7,
+  "id": 39,
+  "day": 2,
+  "title": "Fly to Your Private Suite",
+  "description": "Charter to the Mara. Rose petals and champagne in your suite. Sunset game drive for two.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018c"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 7,
+  "id": 40,
+  "day": 3,
+  "title": "Romance in the Wild",
+  "description": "Morning drive. Afternoon couples massage overlooking the plains. Private bush dinner under the stars.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018d"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 7,
+  "id": 41,
+  "day": 4,
+  "title": "Balloon Over Africa",
+  "description": "Pre-dawn hot air balloon. Champagne breakfast on the savanna. Afternoon at leisure.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018e"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 7,
+  "id": 42,
+  "day": 5,
+  "title": "Lake Naivasha",
+  "description": "Transfer to a lakeside retreat. Boat ride among hippos and fish eagles. Crescent Island walk.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018f"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 7,
+  "id": 43,
+  "day": 6,
+  "title": "Final Safari Day",
+  "description": "Morning game drive. Farewell sundowner at a secret viewpoint. Last night in the bush.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa3040190"
+ },
+ {
+  "_order": 7,
+  "_parent_id": 7,
+  "id": 44,
+  "day": 7,
+  "title": "Departure",
+  "description": "Leisurely breakfast. Transfer to Nairobi. Departure with memories to last a lifetime.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa3040191"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 8,
+  "id": 45,
+  "day": 1,
+  "title": "Arrival in Paradise",
+  "description": "VIP airport meet. Champagne transfer to your Nairobi boutique hotel. Welcome dinner.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018b"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 8,
+  "id": 46,
+  "day": 2,
+  "title": "Fly to Your Private Suite",
+  "description": "Charter to the Mara. Rose petals and champagne in your suite. Sunset game drive for two.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018c"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 8,
+  "id": 47,
+  "day": 3,
+  "title": "Romance in the Wild",
+  "description": "Morning drive. Afternoon couples massage overlooking the plains. Private bush dinner under the stars.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018d"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 8,
+  "id": 48,
+  "day": 4,
+  "title": "Balloon Over Africa",
+  "description": "Pre-dawn hot air balloon. Champagne breakfast on the savanna. Afternoon at leisure.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018e"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 8,
+  "id": 49,
+  "day": 5,
+  "title": "Lake Naivasha",
+  "description": "Transfer to a lakeside retreat. Boat ride among hippos and fish eagles. Crescent Island walk.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa304018f"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 8,
+  "id": 50,
+  "day": 6,
+  "title": "Final Safari Day",
+  "description": "Morning game drive. Farewell sundowner at a secret viewpoint. Last night in the bush.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa3040190"
+ },
+ {
+  "_order": 7,
+  "_parent_id": 8,
+  "id": 51,
+  "day": 7,
+  "title": "Departure",
+  "description": "Leisurely breakfast. Transfer to Nairobi. Departure with memories to last a lifetime.",
+  "image_id": null,
+  "_uuid": "6a15cdaec6c9b05aa3040191"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 9,
+  "id": 52,
+  "day": 1,
+  "title": "Welcome to Kenya",
+  "description": "Airport pickup. Giraffe Centre visit — kids love hand-feeding the giraffes. Overnight Nairobi.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040165"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 9,
+  "id": 53,
+  "day": 2,
+  "title": "To the Bush",
+  "description": "Drive to the conservancy. Settle into your family suite. Afternoon nature walk with junior ranger badges.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040166"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 9,
+  "id": 54,
+  "day": 3,
+  "title": "Game Drives",
+  "description": "Morning and afternoon drives designed for young attention spans. Bush picnic lunch.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040167"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 9,
+  "id": 55,
+  "day": 4,
+  "title": "Bush Skills Day",
+  "description": "Learn tracking with Maasai warriors. Fire-making, star-gazing, and storytelling around the campfire.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040168"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 9,
+  "id": 56,
+  "day": 5,
+  "title": "Lake Nakuru",
+  "description": "Drive to Lake Nakuru for flamingos and rhinos. Kids' photography challenge.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040169"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 9,
+  "id": 57,
+  "day": 6,
+  "title": "Departure",
+  "description": "Morning at leisure. Transfer to Nairobi for departure.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa304016a"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 10,
+  "id": 58,
+  "day": 1,
+  "title": "Welcome to Kenya",
+  "description": "Airport pickup. Giraffe Centre visit — kids love hand-feeding the giraffes. Overnight Nairobi.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040165"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 10,
+  "id": 59,
+  "day": 2,
+  "title": "To the Bush",
+  "description": "Drive to the conservancy. Settle into your family suite. Afternoon nature walk with junior ranger badges.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040166"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 10,
+  "id": 60,
+  "day": 3,
+  "title": "Game Drives",
+  "description": "Morning and afternoon drives designed for young attention spans. Bush picnic lunch.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040167"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 10,
+  "id": 61,
+  "day": 4,
+  "title": "Bush Skills Day",
+  "description": "Learn tracking with Maasai warriors. Fire-making, star-gazing, and storytelling around the campfire.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040168"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 10,
+  "id": 62,
+  "day": 5,
+  "title": "Lake Nakuru",
+  "description": "Drive to Lake Nakuru for flamingos and rhinos. Kids' photography challenge.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa3040169"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 10,
+  "id": 63,
+  "day": 6,
+  "title": "Departure",
+  "description": "Morning at leisure. Transfer to Nairobi for departure.",
+  "image_id": null,
+  "_uuid": "6a15cda6c6c9b05aa304016a"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 11,
+  "id": 64,
+  "day": 1,
+  "title": "Arrival",
+  "description": "Arrive Nairobi. Transfer and overnight.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040150"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 11,
+  "id": 65,
+  "day": 2,
+  "title": "Fly to the Serengeti",
+  "description": "Charter to our mobile camp positioned near the migration herds.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040151"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 11,
+  "id": 66,
+  "day": 3,
+  "title": "Following the Herds",
+  "description": "Full day tracking the wildebeest. Witness the raw drama of predator and prey.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040152"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 11,
+  "id": 67,
+  "day": 4,
+  "title": "River Crossing Day",
+  "description": "Position at the Mara River. Wait for the crossing — one of nature's most dramatic events.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040153"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 11,
+  "id": 68,
+  "day": 5,
+  "title": "Balloon Safari",
+  "description": "Pre-dawn hot air balloon flight over the migration. Champagne breakfast on the plains.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040154"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 11,
+  "id": 69,
+  "day": 6,
+  "title": "Big Cat Country",
+  "description": "Focus on the predators — lions, cheetahs, leopards hunting the migration stragglers.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040155"
+ },
+ {
+  "_order": 7,
+  "_parent_id": 11,
+  "id": 70,
+  "day": 7,
+  "title": "Departure",
+  "description": "Final morning drive. Fly back to Nairobi.",
+  "image_id": null,
+  "_uuid": "6a15cda3c6c9b05aa3040156"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 12,
+  "id": 71,
+  "day": 1,
+  "title": "Nairobi to Amboseli",
+  "description": "Private charter flight. Champagne welcome at your villa. Afternoon game drive as Kilimanjaro reveals itself.",
+  "image_id": null,
+  "_uuid": "6a15cd9fc6c9b05aa3040140"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 12,
+  "id": 72,
+  "day": 2,
+  "title": "Elephant Encounters",
+  "description": "Dawn drive among the great elephant herds. Brunch at a secret bush location. Afternoon at leisure — pool, spa, or guided nature walk.",
+  "image_id": null,
+  "_uuid": "6a15cd9fc6c9b05aa3040141"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 12,
+  "id": 73,
+  "day": 3,
+  "title": "Kilimanjaro Sunrise",
+  "description": "Pre-dawn drive for the famous Kilimanjaro sunrise. Full day exploring the park. Farewell dinner under African skies.",
+  "image_id": null,
+  "_uuid": "6a15cd9fc6c9b05aa3040142"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 12,
+  "id": 74,
+  "day": 4,
+  "title": "Departure",
+  "description": "Leisurely breakfast. Charter flight back to Nairobi.",
+  "image_id": null,
+  "_uuid": "6a15cd9fc6c9b05aa3040143"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 13,
+  "id": 75,
+  "day": 1,
+  "title": "Arrival in Nairobi",
+  "description": "Meet at Jomo Kenyatta International Airport. Transfer to your Nairobi hotel for an overnight stay and safari briefing.",
+  "image_id": null,
+  "_uuid": "6a15cd9bc6c9b05aa304012e"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 13,
+  "id": 76,
+  "day": 2,
+  "title": "Fly to the Mara",
+  "description": "Morning flight to the Masai Mara. Afternoon game drive through the golden grasslands. First encounters with the resident wildlife.",
+  "image_id": null,
+  "_uuid": "6a15cd9bc6c9b05aa304012f"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 13,
+  "id": 77,
+  "day": 3,
+  "title": "Full Day Game Drives",
+  "description": "Dawn and dusk drives following the big cats. Picnic lunch by the hippo pools. Optional walking safari with Maasai guides.",
+  "image_id": null,
+  "_uuid": "6a15cd9bc6c9b05aa3040130"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 13,
+  "id": 78,
+  "day": 4,
+  "title": "Mara River & Culture",
+  "description": "Morning drive to the Mara River for crocodile and hippo sightings. Afternoon visit to a Maasai village. Farewell bush dinner under the stars.",
+  "image_id": null,
+  "_uuid": "6a15cd9bc6c9b05aa3040131"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 13,
+  "id": 79,
+  "day": 5,
+  "title": "Departure",
+  "description": "Final sunrise drive. Fly back to Nairobi for your onward journey.",
+  "image_id": null,
+  "_uuid": "6a15cd9bc6c9b05aa3040132"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 14,
+  "id": 80,
+  "day": 1,
+  "title": "Shimba Hills Full Day",
+  "description": "0600-0700 hotel pickup from Diani/Mombasa South Coast. Drive to Shimba Hills National Reserve. Morning game drive with optional hike to Sheldrick Falls. 1230 lunch at Shimba Green Lodge with panoramic views. 1515 afternoon game drive through the coastal rainforest. Transfer back to hotel by evening.",
+  "image_id": null,
+  "_uuid": "6a16bdb75266d95910a5fdd7"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 15,
+  "id": 81,
+  "day": 1,
+  "title": "Tsavo East Day Safari",
+  "description": "0500-0600 early pickup from Mombasa/Diani. 0600 drive along Mombasa-Nairobi highway. 0900 enter via Bachuma Gate. Game drives along Dida Plains and River Circuit — red elephants, lions, buffalo, hippos. Lunch at Ashnil Aruba Lodge. 1400 begin en-route game drive back. Return to hotel by evening.",
+  "image_id": null,
+  "_uuid": "6a16bdb95266d95910a5fdd8"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 16,
+  "id": 82,
+  "day": 1,
+  "title": "Mombasa to Taita Hills",
+  "description": "0520 pickup from Kizingo, Mombasa. 0700 drive to Taita Hills Wildlife Sanctuary. 1030 check-in and morning game drive. 1230 lunch at Taita Hills Resort. 1600 afternoon game drive through the sanctuary. Overnight at Saltlick Safari Lodge — watch elephants and buffalo from the underground bunker.",
+  "image_id": null,
+  "_uuid": "6a16bdbb5266d95910a5fdd9"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 16,
+  "id": 83,
+  "day": 2,
+  "title": "Morning Drive & Return",
+  "description": "0630 early morning game drive — best chance for predators. Return for breakfast. Checkout and transfer back to Mombasa, arriving by early afternoon.",
+  "image_id": null,
+  "_uuid": "6a16bdbb5266d95910a5fdda"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 17,
+  "id": 84,
+  "day": 1,
+  "title": "Into Tsavo East",
+  "description": "0600-0830 pickup from Mombasa hotels. 0900 drive along Mombasa-Nairobi road. 1030 enter Bachuma Gate. Game drives along Dida Plains and River Circuit — red elephants, lions, crocodiles. 1300 lunch at Ashnil Aruba Lodge. 1600 afternoon game drive. Overnight fullboard at Ashnil Aruba.",
+  "image_id": null,
+  "_uuid": "6a16bdbe5266d95910a5fddb"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 17,
+  "id": 85,
+  "day": 2,
+  "title": "Morning Drive & Return",
+  "description": "0630 early morning game drive — golden light, active predators. 0830 breakfast at the lodge. 0930 checkout and drive back to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdbe5266d95910a5fddc"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 18,
+  "id": 86,
+  "day": 1,
+  "title": "Into Tsavo East",
+  "description": "0600-0830 pickup from Mombasa hotels. Drive along Mombasa-Nairobi road. Enter via Bachuma Gate. Game drives along Dida Plains and River Circuit. Lunch en-route. 1600 afternoon game drive. Overnight at Sentrim Tsavo Camp (Tarhi area).",
+  "image_id": null,
+  "_uuid": "6a16bdc05266d95910a5fddd"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 18,
+  "id": 87,
+  "day": 2,
+  "title": "Morning Drive & Return",
+  "description": "0630 early morning game drive. Breakfast at camp. Checkout and drive back to Mombasa by midday.",
+  "image_id": null,
+  "_uuid": "6a16bdc05266d95910a5fdde"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 19,
+  "id": 88,
+  "day": 1,
+  "title": "Watamu to Taita Hills",
+  "description": "0520 pickup from Watamu. 0700 drive via Malindi/Mavueni road toward Taita Hills. 1030 check-in at Taita Hills Wildlife Sanctuary and morning game drive. 1230 lunch. 1600 afternoon game drive. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdc25266d95910a5fddf"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 19,
+  "id": 89,
+  "day": 2,
+  "title": "Ngutuni & Return",
+  "description": "0630 early morning game drive in Taita Hills. Breakfast. 0930 drive to Ngutuni Sanctuary — game drive and lunch. 1330 begin return journey to Watamu.",
+  "image_id": null,
+  "_uuid": "6a16bdc25266d95910a5fde0"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 20,
+  "id": 90,
+  "day": 1,
+  "title": "Mombasa to Taita Hills",
+  "description": "0520 pickup from Mombasa. Drive to Taita Hills Wildlife Sanctuary. 1030 check-in and morning game drive. 1230 lunch. 1600 afternoon game drive. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdc45266d95910a5fde1"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 20,
+  "id": 91,
+  "day": 2,
+  "title": "Ngutuni & Return",
+  "description": "0630 early morning game drive. Breakfast. 0930 drive to Ngutuni Sanctuary — game drive and lunch. 1330 begin return to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdc45266d95910a5fde2"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 21,
+  "id": 92,
+  "day": 1,
+  "title": "Mombasa to Taita Hills",
+  "description": "0520 pickup from Mombasa. Drive to Taita Hills Wildlife Sanctuary. Check-in and morning game drive. Lunch at Taita Hills Resort. 1600 afternoon game drive. Overnight at Taita Hills Resort.",
+  "image_id": null,
+  "_uuid": "6a16bdc65266d95910a5fde3"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 21,
+  "id": 93,
+  "day": 2,
+  "title": "Ngutuni & Return",
+  "description": "0630 morning game drive. Breakfast. Drive to Ngutuni Sanctuary — game drive and lunch. 1330 return to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdc65266d95910a5fde4"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 22,
+  "id": 94,
+  "day": 1,
+  "title": "Tsavo East to Taita Hills",
+  "description": "0500 pickup from Mombasa. Enter Tsavo East via Bachuma Gate. Game drives along Dida Plains and River Circuit. Lunch at Ashnil Aruba Lodge. 1430 continue game drive till 1700. Exit park and drive to Taita Hills. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdc85266d95910a5fde5"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 22,
+  "id": 95,
+  "day": 2,
+  "title": "Taita Hills & Return",
+  "description": "0630 early morning game drive. Breakfast. 1000 second morning drive through Taita Hills. Lunch. 1400 begin return to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdc85266d95910a5fde6"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 23,
+  "id": 96,
+  "day": 1,
+  "title": "Shimba Hills",
+  "description": "Pickup from Mombasa/Diani. Drive to Shimba Hills National Reserve. Morning game drive with optional Sheldrick Falls hike. Lunch. Afternoon game drive. Overnight at Shimba Green Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdcb5266d95910a5fde7"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 23,
+  "id": 97,
+  "day": 2,
+  "title": "Taita Hills & Saltlick",
+  "description": "Drive to Taita Hills Wildlife Sanctuary via Kinango. Game drives through the sanctuary. Lunch. Afternoon game drive. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdcb5266d95910a5fde8"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 23,
+  "id": 98,
+  "day": 3,
+  "title": "Ngutuni & Return",
+  "description": "Early morning game drive. Breakfast. Drive to Ngutuni Sanctuary — game drive and lunch. Return to Mombasa by late afternoon.",
+  "image_id": null,
+  "_uuid": "6a16bdcb5266d95910a5fde9"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 24,
+  "id": 99,
+  "day": 1,
+  "title": "Tsavo East",
+  "description": "Enter Tsavo East via Bachuma Gate. Full day game drives — Dida Plains, River Circuit, Aruba Dam. Lunch at Ashnil Aruba Lodge. Afternoon game drive. Overnight at Taita Hills Resort.",
+  "image_id": null,
+  "_uuid": "6a16bdcd5266d95910a5fdea"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 24,
+  "id": 100,
+  "day": 2,
+  "title": "Taita Hills & Saltlick",
+  "description": "Morning game drive in Taita Hills. Lunch at the resort. Transfer to Saltlick Safari Lodge. Afternoon game drive. NIGHT GAME DRIVE — spot nocturnal predators. Overnight at Saltlick.",
+  "image_id": null,
+  "_uuid": "6a16bdcd5266d95910a5fdeb"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 24,
+  "id": 101,
+  "day": 3,
+  "title": "Morning Drive & Return",
+  "description": "0600 early morning game drive. Breakfast. Checkout. Drive back to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdcd5266d95910a5fdec"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 25,
+  "id": 102,
+  "day": 1,
+  "title": "Tsavo East",
+  "description": "Pickup from North/South Coast or Mombasa Airport. Enter Tsavo East via Bachuma Gate. Game drives through the park. Overnight at Ashnil Aruba Lodge (fullboard).",
+  "image_id": null,
+  "_uuid": "6a16bdcf5266d95910a5fded"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 25,
+  "id": 103,
+  "day": 2,
+  "title": "Amboseli",
+  "description": "Drive to Amboseli National Park. Game drive with Kilimanjaro views. Pool time at the lodge. Afternoon game drive. Overnight at Sentrim Amboseli.",
+  "image_id": null,
+  "_uuid": "6a16bdcf5266d95910a5fdee"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 25,
+  "id": 104,
+  "day": 3,
+  "title": "Taita Hills & Night Drive",
+  "description": "Drive south via Loitokitok and Rombo to Taita Hills Wildlife Sanctuary. Afternoon game drive. NIGHT GAME DRIVE — leopards, hyenas, genets. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdcf5266d95910a5fdef"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 25,
+  "id": 105,
+  "day": 4,
+  "title": "Morning Drive & Return",
+  "description": "Morning game drive. Lunch at the lodge. Drive back to Mombasa. Drop off at hotel or airport.",
+  "image_id": null,
+  "_uuid": "6a16bdcf5266d95910a5fdf0"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 26,
+  "id": 106,
+  "day": 1,
+  "title": "Shimba Hills Full Day",
+  "description": "0600-0700 hotel pickup from Diani/Mombasa South Coast. Drive to Shimba Hills National Reserve. Morning game drive with optional hike to Sheldrick Falls. 1230 lunch at Shimba Green Lodge with panoramic views. 1515 afternoon game drive through the coastal rainforest. Transfer back to hotel by evening.",
+  "image_id": null,
+  "_uuid": "6a16bdb75266d95910a5fdd7"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 27,
+  "id": 107,
+  "day": 1,
+  "title": "Tsavo East Day Safari",
+  "description": "0500-0600 early pickup from Mombasa/Diani. 0600 drive along Mombasa-Nairobi highway. 0900 enter via Bachuma Gate. Game drives along Dida Plains and River Circuit — red elephants, lions, buffalo, hippos. Lunch at Ashnil Aruba Lodge. 1400 begin en-route game drive back. Return to hotel by evening.",
+  "image_id": null,
+  "_uuid": "6a16bdb95266d95910a5fdd8"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 28,
+  "id": 108,
+  "day": 1,
+  "title": "Mombasa to Taita Hills",
+  "description": "0520 pickup from Kizingo, Mombasa. 0700 drive to Taita Hills Wildlife Sanctuary. 1030 check-in and morning game drive. 1230 lunch at Taita Hills Resort. 1600 afternoon game drive through the sanctuary. Overnight at Saltlick Safari Lodge — watch elephants and buffalo from the underground bunker.",
+  "image_id": null,
+  "_uuid": "6a16bdbb5266d95910a5fdd9"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 28,
+  "id": 109,
+  "day": 2,
+  "title": "Morning Drive & Return",
+  "description": "0630 early morning game drive — best chance for predators. Return for breakfast. Checkout and transfer back to Mombasa, arriving by early afternoon.",
+  "image_id": null,
+  "_uuid": "6a16bdbb5266d95910a5fdda"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 29,
+  "id": 110,
+  "day": 1,
+  "title": "Into Tsavo East",
+  "description": "0600-0830 pickup from Mombasa hotels. 0900 drive along Mombasa-Nairobi road. 1030 enter Bachuma Gate. Game drives along Dida Plains and River Circuit — red elephants, lions, crocodiles. 1300 lunch at Ashnil Aruba Lodge. 1600 afternoon game drive. Overnight fullboard at Ashnil Aruba.",
+  "image_id": null,
+  "_uuid": "6a16bdbe5266d95910a5fddb"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 29,
+  "id": 111,
+  "day": 2,
+  "title": "Morning Drive & Return",
+  "description": "0630 early morning game drive — golden light, active predators. 0830 breakfast at the lodge. 0930 checkout and drive back to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdbe5266d95910a5fddc"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 30,
+  "id": 112,
+  "day": 1,
+  "title": "Into Tsavo East",
+  "description": "0600-0830 pickup from Mombasa hotels. Drive along Mombasa-Nairobi road. Enter via Bachuma Gate. Game drives along Dida Plains and River Circuit. Lunch en-route. 1600 afternoon game drive. Overnight at Sentrim Tsavo Camp (Tarhi area).",
+  "image_id": null,
+  "_uuid": "6a16bdc05266d95910a5fddd"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 30,
+  "id": 113,
+  "day": 2,
+  "title": "Morning Drive & Return",
+  "description": "0630 early morning game drive. Breakfast at camp. Checkout and drive back to Mombasa by midday.",
+  "image_id": null,
+  "_uuid": "6a16bdc05266d95910a5fdde"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 31,
+  "id": 114,
+  "day": 1,
+  "title": "Watamu to Taita Hills",
+  "description": "0520 pickup from Watamu. 0700 drive via Malindi/Mavueni road toward Taita Hills. 1030 check-in at Taita Hills Wildlife Sanctuary and morning game drive. 1230 lunch. 1600 afternoon game drive. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdc25266d95910a5fddf"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 31,
+  "id": 115,
+  "day": 2,
+  "title": "Ngutuni & Return",
+  "description": "0630 early morning game drive in Taita Hills. Breakfast. 0930 drive to Ngutuni Sanctuary — game drive and lunch. 1330 begin return journey to Watamu.",
+  "image_id": null,
+  "_uuid": "6a16bdc25266d95910a5fde0"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 32,
+  "id": 116,
+  "day": 1,
+  "title": "Mombasa to Taita Hills",
+  "description": "0520 pickup from Mombasa. Drive to Taita Hills Wildlife Sanctuary. 1030 check-in and morning game drive. 1230 lunch. 1600 afternoon game drive. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdc45266d95910a5fde1"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 32,
+  "id": 117,
+  "day": 2,
+  "title": "Ngutuni & Return",
+  "description": "0630 early morning game drive. Breakfast. 0930 drive to Ngutuni Sanctuary — game drive and lunch. 1330 begin return to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdc45266d95910a5fde2"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 33,
+  "id": 118,
+  "day": 1,
+  "title": "Mombasa to Taita Hills",
+  "description": "0520 pickup from Mombasa. Drive to Taita Hills Wildlife Sanctuary. Check-in and morning game drive. Lunch at Taita Hills Resort. 1600 afternoon game drive. Overnight at Taita Hills Resort.",
+  "image_id": null,
+  "_uuid": "6a16bdc65266d95910a5fde3"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 33,
+  "id": 119,
+  "day": 2,
+  "title": "Ngutuni & Return",
+  "description": "0630 morning game drive. Breakfast. Drive to Ngutuni Sanctuary — game drive and lunch. 1330 return to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdc65266d95910a5fde4"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 34,
+  "id": 120,
+  "day": 1,
+  "title": "Tsavo East to Taita Hills",
+  "description": "0500 pickup from Mombasa. Enter Tsavo East via Bachuma Gate. Game drives along Dida Plains and River Circuit. Lunch at Ashnil Aruba Lodge. 1430 continue game drive till 1700. Exit park and drive to Taita Hills. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdc85266d95910a5fde5"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 34,
+  "id": 121,
+  "day": 2,
+  "title": "Taita Hills & Return",
+  "description": "0630 early morning game drive. Breakfast. 1000 second morning drive through Taita Hills. Lunch. 1400 begin return to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdc85266d95910a5fde6"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 35,
+  "id": 122,
+  "day": 1,
+  "title": "Shimba Hills",
+  "description": "Pickup from Mombasa/Diani. Drive to Shimba Hills National Reserve. Morning game drive with optional Sheldrick Falls hike. Lunch. Afternoon game drive. Overnight at Shimba Green Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdcb5266d95910a5fde7"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 35,
+  "id": 123,
+  "day": 2,
+  "title": "Taita Hills & Saltlick",
+  "description": "Drive to Taita Hills Wildlife Sanctuary via Kinango. Game drives through the sanctuary. Lunch. Afternoon game drive. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdcb5266d95910a5fde8"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 35,
+  "id": 124,
+  "day": 3,
+  "title": "Ngutuni & Return",
+  "description": "Early morning game drive. Breakfast. Drive to Ngutuni Sanctuary — game drive and lunch. Return to Mombasa by late afternoon.",
+  "image_id": null,
+  "_uuid": "6a16bdcb5266d95910a5fde9"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 36,
+  "id": 125,
+  "day": 1,
+  "title": "Tsavo East",
+  "description": "Enter Tsavo East via Bachuma Gate. Full day game drives — Dida Plains, River Circuit, Aruba Dam. Lunch at Ashnil Aruba Lodge. Afternoon game drive. Overnight at Taita Hills Resort.",
+  "image_id": null,
+  "_uuid": "6a16bdcd5266d95910a5fdea"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 36,
+  "id": 126,
+  "day": 2,
+  "title": "Taita Hills & Saltlick",
+  "description": "Morning game drive in Taita Hills. Lunch at the resort. Transfer to Saltlick Safari Lodge. Afternoon game drive. NIGHT GAME DRIVE — spot nocturnal predators. Overnight at Saltlick.",
+  "image_id": null,
+  "_uuid": "6a16bdcd5266d95910a5fdeb"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 36,
+  "id": 127,
+  "day": 3,
+  "title": "Morning Drive & Return",
+  "description": "0600 early morning game drive. Breakfast. Checkout. Drive back to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdcd5266d95910a5fdec"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 37,
+  "id": 128,
+  "day": 1,
+  "title": "Tsavo East",
+  "description": "Pickup from North/South Coast or Mombasa Airport. Enter Tsavo East via Bachuma Gate. Game drives through the park. Overnight at Ashnil Aruba Lodge (fullboard).",
+  "image_id": null,
+  "_uuid": "6a16bdcf5266d95910a5fded"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 37,
+  "id": 129,
+  "day": 2,
+  "title": "Amboseli",
+  "description": "Drive to Amboseli National Park. Game drive with Kilimanjaro views. Pool time at the lodge. Afternoon game drive. Overnight at Sentrim Amboseli.",
+  "image_id": null,
+  "_uuid": "6a16bdcf5266d95910a5fdee"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 37,
+  "id": 130,
+  "day": 3,
+  "title": "Taita Hills & Night Drive",
+  "description": "Drive south via Loitokitok and Rombo to Taita Hills Wildlife Sanctuary. Afternoon game drive. NIGHT GAME DRIVE — leopards, hyenas, genets. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdcf5266d95910a5fdef"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 37,
+  "id": 131,
+  "day": 4,
+  "title": "Morning Drive & Return",
+  "description": "Morning game drive. Lunch at the lodge. Drive back to Mombasa. Drop off at hotel or airport.",
+  "image_id": null,
+  "_uuid": "6a16bdcf5266d95910a5fdf0"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 38,
+  "id": 132,
+  "day": 1,
+  "title": "Tsavo East",
+  "description": "Enter Tsavo East via Bachuma Gate. Full day game drives — Dida Plains, River Circuit, Aruba Dam. Lunch at Ashnil Aruba Lodge. Afternoon game drive. Overnight at Taita Hills Resort.",
+  "image_id": null,
+  "_uuid": "6a16bdcd5266d95910a5fdea"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 38,
+  "id": 133,
+  "day": 2,
+  "title": "Taita Hills & Saltlick",
+  "description": "Morning game drive in Taita Hills. Lunch at the resort. Transfer to Saltlick Safari Lodge. Afternoon game drive. NIGHT GAME DRIVE — spot nocturnal predators. Overnight at Saltlick.",
+  "image_id": null,
+  "_uuid": "6a16bdcd5266d95910a5fdeb"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 38,
+  "id": 134,
+  "day": 3,
+  "title": "Morning Drive & Return",
+  "description": "0600 early morning game drive. Breakfast. Checkout. Drive back to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdcd5266d95910a5fdec"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 39,
+  "id": 135,
+  "day": 1,
+  "title": "Shimba Hills",
+  "description": "Pickup from Mombasa/Diani. Drive to Shimba Hills National Reserve. Morning game drive with optional Sheldrick Falls hike. Lunch. Afternoon game drive. Overnight at Shimba Green Lodge.",
+  "image_id": 92,
+  "_uuid": "6a16bdcb5266d95910a5fde7"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 39,
+  "id": 136,
+  "day": 2,
+  "title": "Taita Hills & Saltlick",
+  "description": "Drive to Taita Hills Wildlife Sanctuary via Kinango. Game drives through the sanctuary. Lunch. Afternoon game drive. Overnight at Saltlick Safari Lodge.",
+  "image_id": 93,
+  "_uuid": "6a16bdcb5266d95910a5fde8"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 39,
+  "id": 137,
+  "day": 3,
+  "title": "Ngutuni & Return",
+  "description": "Early morning game drive. Breakfast. Drive to Ngutuni Sanctuary — game drive and lunch. Return to Mombasa by late afternoon.",
+  "image_id": 94,
+  "_uuid": "6a16bdcb5266d95910a5fde9"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 40,
+  "id": 138,
+  "day": 1,
+  "title": "Tsavo East to Taita Hills",
+  "description": "0500 pickup from Mombasa. Enter Tsavo East via Bachuma Gate. Game drives along Dida Plains and River Circuit. Lunch at Ashnil Aruba Lodge. 1430 continue game drive till 1700. Exit park and drive to Taita Hills. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdc85266d95910a5fde5"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 40,
+  "id": 139,
+  "day": 2,
+  "title": "Taita Hills & Return",
+  "description": "0630 early morning game drive. Breakfast. 1000 second morning drive through Taita Hills. Lunch. 1400 begin return to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdc85266d95910a5fde6"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 41,
+  "id": 140,
+  "day": 1,
+  "title": "Mombasa to Taita Hills",
+  "description": "0520 pickup from Mombasa. Drive to Taita Hills Wildlife Sanctuary. Check-in and morning game drive. Lunch at Taita Hills Resort. 1600 afternoon game drive. Overnight at Taita Hills Resort.",
+  "image_id": null,
+  "_uuid": "6a16bdc65266d95910a5fde3"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 41,
+  "id": 141,
+  "day": 2,
+  "title": "Ngutuni & Return",
+  "description": "0630 morning game drive. Breakfast. Drive to Ngutuni Sanctuary — game drive and lunch. 1330 return to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdc65266d95910a5fde4"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 42,
+  "id": 142,
+  "day": 1,
+  "title": "Mombasa to Taita Hills",
+  "description": "0520 pickup from Mombasa. Drive to Taita Hills Wildlife Sanctuary. Check-in and morning game drive. Lunch at Taita Hills Resort. 1600 afternoon game drive. Overnight at Taita Hills Resort.",
+  "image_id": null,
+  "_uuid": "6a16bdc65266d95910a5fde3"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 42,
+  "id": 143,
+  "day": 2,
+  "title": "Ngutuni & Return",
+  "description": "0630 morning game drive. Breakfast. Drive to Ngutuni Sanctuary — game drive and lunch. 1330 return to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdc65266d95910a5fde4"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 43,
+  "id": 144,
+  "day": 1,
+  "title": "Mombasa to Taita Hills",
+  "description": "0520 pickup from Mombasa. Drive to Taita Hills Wildlife Sanctuary. 1030 check-in and morning game drive. 1230 lunch. 1600 afternoon game drive. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdc45266d95910a5fde1"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 43,
+  "id": 145,
+  "day": 2,
+  "title": "Ngutuni & Return",
+  "description": "0630 early morning game drive. Breakfast. 0930 drive to Ngutuni Sanctuary — game drive and lunch. 1330 begin return to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdc45266d95910a5fde2"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 44,
+  "id": 146,
+  "day": 1,
+  "title": "Watamu to Taita Hills",
+  "description": "0520 pickup from Watamu. 0700 drive via Malindi/Mavueni road toward Taita Hills. 1030 check-in at Taita Hills Wildlife Sanctuary and morning game drive. 1230 lunch. 1600 afternoon game drive. Overnight at Saltlick Safari Lodge.",
+  "image_id": null,
+  "_uuid": "6a16bdc25266d95910a5fddf"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 44,
+  "id": 147,
+  "day": 2,
+  "title": "Ngutuni & Return",
+  "description": "0630 early morning game drive in Taita Hills. Breakfast. 0930 drive to Ngutuni Sanctuary — game drive and lunch. 1330 begin return journey to Watamu.",
+  "image_id": null,
+  "_uuid": "6a16bdc25266d95910a5fde0"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 45,
+  "id": 148,
+  "day": 1,
+  "title": "Into Tsavo East",
+  "description": "0600-0830 pickup from Mombasa hotels. Drive along Mombasa-Nairobi road. Enter via Bachuma Gate. Game drives along Dida Plains and River Circuit. Lunch en-route. 1600 afternoon game drive. Overnight at Sentrim Tsavo Camp (Tarhi area).",
+  "image_id": null,
+  "_uuid": "6a16bdc05266d95910a5fddd"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 45,
+  "id": 149,
+  "day": 2,
+  "title": "Morning Drive & Return",
+  "description": "0630 early morning game drive. Breakfast at camp. Checkout and drive back to Mombasa by midday.",
+  "image_id": null,
+  "_uuid": "6a16bdc05266d95910a5fdde"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 46,
+  "id": 150,
+  "day": 1,
+  "title": "Into Tsavo East",
+  "description": "0600-0830 pickup from Mombasa hotels. 0900 drive along Mombasa-Nairobi road. 1030 enter Bachuma Gate. Game drives along Dida Plains and River Circuit — red elephants, lions, crocodiles. 1300 lunch at Ashnil Aruba Lodge. 1600 afternoon game drive. Overnight fullboard at Ashnil Aruba.",
+  "image_id": null,
+  "_uuid": "6a16bdbe5266d95910a5fddb"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 46,
+  "id": 151,
+  "day": 2,
+  "title": "Morning Drive & Return",
+  "description": "0630 early morning game drive — golden light, active predators. 0830 breakfast at the lodge. 0930 checkout and drive back to Mombasa.",
+  "image_id": null,
+  "_uuid": "6a16bdbe5266d95910a5fddc"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 47,
+  "id": 152,
+  "day": 1,
+  "title": "Mombasa to Taita Hills",
+  "description": "0520 pickup from Kizingo, Mombasa. 0700 drive to Taita Hills Wildlife Sanctuary. 1030 check-in and morning game drive. 1230 lunch at Taita Hills Resort. 1600 afternoon game drive through the sanctuary. Overnight at Saltlick Safari Lodge — watch elephants and buffalo from the underground bunker.",
+  "image_id": null,
+  "_uuid": "6a16bdbb5266d95910a5fdd9"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 47,
+  "id": 153,
+  "day": 2,
+  "title": "Morning Drive & Return",
+  "description": "0630 early morning game drive — best chance for predators. Return for breakfast. Checkout and transfer back to Mombasa, arriving by early afternoon.",
+  "image_id": null,
+  "_uuid": "6a16bdbb5266d95910a5fdda"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 48,
+  "id": 154,
+  "day": 1,
+  "title": "Tsavo East Day Safari",
+  "description": "0500-0600 early pickup from Mombasa/Diani. 0600 drive along Mombasa-Nairobi highway. 0900 enter via Bachuma Gate. Game drives along Dida Plains and River Circuit — red elephants, lions, buffalo, hippos. Lunch at Ashnil Aruba Lodge. 1400 begin en-route game drive back. Return to hotel by evening.",
+  "image_id": null,
+  "_uuid": "6a16bdb95266d95910a5fdd8"
+ },
+ {
+  "_order": 1,
+  "_parent_id": 49,
+  "id": 155,
+  "day": 1,
+  "title": "Shimba Hills Full Day",
+  "description": "0600-0700 hotel pickup from Diani/Mombasa South Coast. Drive to Shimba Hills National Reserve. Morning game drive with optional hike to Sheldrick Falls. 1230 lunch at Shimba Green Lodge with panoramic views. 1515 afternoon game drive through the coastal rainforest. Transfer back to hotel by evening.",
+  "image_id": null,
+  "_uuid": "6a16bdb75266d95910a5fdd7"
+ }
+]

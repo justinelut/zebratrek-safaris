@@ -1,0 +1,79 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": "6a15cdc7c6c9b05aa30401cc",
+  "id": "6a15cdc7c6c9b05aa30401c9",
+  "question": "How far in advance should I book?",
+  "answer": "We recommend 3-6 months for peak season (July-October). Off-peak safaris can often be arranged with 4-6 weeks notice."
+ },
+ {
+  "_order": 2,
+  "_parent_id": "6a15cdc7c6c9b05aa30401cc",
+  "id": "6a15cdc7c6c9b05aa30401ca",
+  "question": "What deposit is required?",
+  "answer": "A 30% deposit secures your booking. The balance is due 60 days before departure."
+ },
+ {
+  "_order": 3,
+  "_parent_id": "6a15cdc7c6c9b05aa30401cc",
+  "id": "6a15cdc7c6c9b05aa30401cb",
+  "question": "Can I customise my itinerary?",
+  "answer": "Absolutely. Every safari is bespoke. We'll design it around your interests, fitness level, and budget."
+ },
+ {
+  "_order": 1,
+  "_parent_id": "6a15cdc7c6c9b05aa30401d0",
+  "id": "6a15cdc7c6c9b05aa30401cd",
+  "question": "Do I need a visa for Kenya?",
+  "answer": "Most nationalities need an eTA (Electronic Travel Authorization). We'll guide you through the process."
+ },
+ {
+  "_order": 2,
+  "_parent_id": "6a15cdc7c6c9b05aa30401d0",
+  "id": "6a15cdc7c6c9b05aa30401ce",
+  "question": "What vaccinations are required?",
+  "answer": "Yellow fever is required if arriving from an endemic country. We recommend consulting a travel clinic 6-8 weeks before departure."
+ },
+ {
+  "_order": 3,
+  "_parent_id": "6a15cdc7c6c9b05aa30401d0",
+  "id": "6a15cdc7c6c9b05aa30401cf",
+  "question": "How do I get to the safari camps?",
+  "answer": "We arrange all internal transfers — typically light aircraft flights from Nairobi's Wilson Airport directly to airstrips near your camp."
+ },
+ {
+  "_order": 1,
+  "_parent_id": "6a15cdc7c6c9b05aa30401d4",
+  "id": "6a15cdc7c6c9b05aa30401d1",
+  "question": "What should I pack?",
+  "answer": "Neutral-coloured clothing, layers for cool mornings, a good hat, sunscreen, binoculars, and a camera. We send a detailed packing list after booking."
+ },
+ {
+  "_order": 2,
+  "_parent_id": "6a15cdc7c6c9b05aa30401d4",
+  "id": "6a15cdc7c6c9b05aa30401d2",
+  "question": "Is it safe?",
+  "answer": "Kenya is a well-established safari destination. Our guides are trained in wilderness first aid, and camps have 24-hour security. You're in expert hands."
+ },
+ {
+  "_order": 3,
+  "_parent_id": "6a15cdc7c6c9b05aa30401d4",
+  "id": "6a15cdc7c6c9b05aa30401d3",
+  "question": "Will I see the Big Five?",
+  "answer": "In the Tsavo East, sightings of lion, elephant, buffalo, and leopard are very likely. Rhino sightings depend on the conservancy. We never guarantee, but our guides know where to look."
+ },
+ {
+  "_order": 1,
+  "_parent_id": "6a15cdc7c6c9b05aa30401d7",
+  "id": "6a15cdc7c6c9b05aa30401d5",
+  "question": "What payment methods do you accept?",
+  "answer": "Bank transfer (USD, EUR, GBP), credit card (3% surcharge), and PayPal."
+ },
+ {
+  "_order": 2,
+  "_parent_id": "6a15cdc7c6c9b05aa30401d7",
+  "id": "6a15cdc7c6c9b05aa30401d6",
+  "question": "What's included in the price?",
+  "answer": "All accommodation, meals, game drives, park fees, internal flights, and transfers. International flights, visa, insurance, and tips are excluded."
+ }
+]

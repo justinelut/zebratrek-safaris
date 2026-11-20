@@ -1,0 +1,47 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cdc9c6c9b05aa30401d8",
+  "number": 1,
+  "title": "Tell Us Your Vision",
+  "description": "Share your dates, interests, budget, and who's travelling. No detail is too small.",
+  "image_id": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cdc9c6c9b05aa30401d9",
+  "number": 2,
+  "title": "Receive Your Bespoke Itinerary",
+  "description": "Within 48 hours, we'll send a detailed proposal with accommodation options, routing, and pricing.",
+  "image_id": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cdc9c6c9b05aa30401da",
+  "number": 3,
+  "title": "Refine & Confirm",
+  "description": "We adjust until it's perfect. Once you're happy, a 30% deposit secures everything.",
+  "image_id": null
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15cdc9c6c9b05aa30401db",
+  "number": 4,
+  "title": "Pre-Trip Preparation",
+  "description": "We send packing lists, visa guidance, and a final itinerary. Your guide calls to introduce themselves.",
+  "image_id": null
+ },
+ {
+  "_order": 5,
+  "_parent_id": 1,
+  "id": "6a15cdc9c6c9b05aa30401dc",
+  "number": 5,
+  "title": "Experience Africa",
+  "description": "From airport pickup to final farewell, every moment is handled. You just need to be present.",
+  "image_id": null
+ }
+]

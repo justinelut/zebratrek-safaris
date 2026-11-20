@@ -1,0 +1,30 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cdc1c6c9b05aa30401be",
+  "title": "24-Hour Response",
+  "description": "Every enquiry gets a personal reply within one business day."
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cdc1c6c9b05aa30401bf",
+  "title": "No Deposits Until You're Ready",
+  "description": "We send a detailed quote first. You only pay when you're certain."
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cdc1c6c9b05aa30401c0",
+  "title": "KPSGA Certified Guides",
+  "description": "Every guide holds professional certification from the Kenya Professional Safari Guides Association."
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15cdc1c6c9b05aa30401c1",
+  "title": "5% Conservation Pledge",
+  "description": "A portion of every booking directly funds wildlife protection."
+ }
+]

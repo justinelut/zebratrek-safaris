@@ -1,0 +1,26 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a16c826498110e09fea6ba6",
+  "title": "Coast-based, ground-true",
+  "description": "We don't outsource. Our drivers, our vehicles, our knowledge — all from the coast. We know every shortcut, every viewpoint, every lodge.",
+  "icon": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a16c826498110e09fea6ba7",
+  "title": "Whole-trip, not just safari",
+  "description": "Airport transfers, beach stays, city tours, group transport, air ticketing — we are a destination management company, not just a tour operator.",
+  "icon": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a16c826498110e09fea6ba8",
+  "title": "Real wildlife, real conservation",
+  "description": "Park fees, conservancy levies, and lodge stays directly fund the rangers and communities that protect Kenya's wildlife. We travel with that purpose.",
+  "icon": null
+ }
+]

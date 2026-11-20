@@ -1,0 +1,82 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15de11c2bfd1104d433c91",
+  "name": "Lion",
+  "scientific_name": "Panthera leo",
+  "description": "Africa's apex predator. Watch prides at dawn and listen for the territorial roar that carries 8km across the plains.",
+  "link_type": "safaris",
+  "custom_url": null
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15de11c2bfd1104d433c93",
+  "name": "Elephant",
+  "scientific_name": "Loxodonta africana",
+  "description": "The world's largest land mammal. Amboseli holds some of the most magnificent tuskers left on the continent.",
+  "link_type": "destinations",
+  "custom_url": null
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15de11c2bfd1104d433c95",
+  "name": "Leopard",
+  "scientific_name": "Panthera pardus",
+  "description": "Solitary, secretive, and stunningly beautiful. The Mara and Samburu offer your best chance to spot one in the wild.",
+  "link_type": "safaris",
+  "custom_url": null
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15de11c2bfd1104d433c97",
+  "name": "Buffalo",
+  "scientific_name": "Syncerus caffer",
+  "description": "Hardy and unpredictable, the Cape buffalo is one of Africa's most respected and resilient herd animals.",
+  "link_type": "safaris",
+  "custom_url": null
+ },
+ {
+  "_order": 5,
+  "_parent_id": 1,
+  "id": "6a15de11c2bfd1104d433c99",
+  "name": "Rhino",
+  "scientific_name": "Diceros bicornis",
+  "description": "A conservation triumph in progress. Ol Pejeta and Lewa protect Kenya's rebounding black and white rhino populations.",
+  "link_type": "destinations",
+  "custom_url": null
+ },
+ {
+  "_order": 6,
+  "_parent_id": 1,
+  "id": "6a15de11c2bfd1104d433c9b",
+  "name": "Cheetah",
+  "scientific_name": "Acinonyx jubatus",
+  "description": "The fastest land animal on earth. Catch a hunt at full sprint across the open Mara plains.",
+  "link_type": "safaris",
+  "custom_url": null
+ },
+ {
+  "_order": 7,
+  "_parent_id": 1,
+  "id": "6a15de11c2bfd1104d433c9d",
+  "name": "Giraffe",
+  "scientific_name": "Giraffa camelopardalis",
+  "description": "Tallest creature on the savanna. Three subspecies inhabit East Africa — the reticulated being the most striking.",
+  "link_type": "safaris",
+  "custom_url": null
+ },
+ {
+  "_order": 8,
+  "_parent_id": 1,
+  "id": "6a15de11c2bfd1104d433c9f",
+  "name": "Zebra",
+  "scientific_name": "Equus quagga",
+  "description": "Each pattern is unique as a fingerprint. Watch hundreds of thousands cross the Mara River during the Great Migration.",
+  "link_type": "safaris",
+  "custom_url": null
+ }
+]

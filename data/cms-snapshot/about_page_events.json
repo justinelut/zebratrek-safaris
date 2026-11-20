@@ -1,0 +1,44 @@
+[
+ {
+  "_order": 1,
+  "_parent_id": 1,
+  "id": "6a15cdbfc6c9b05aa30401b8",
+  "year": "2012",
+  "event": "Daniel leads his first private safari in the Masai Mara"
+ },
+ {
+  "_order": 2,
+  "_parent_id": 1,
+  "id": "6a15cdbfc6c9b05aa30401b9",
+  "year": "2015",
+  "event": "ZebraTrek Safaris officially founded in Nairobi"
+ },
+ {
+  "_order": 3,
+  "_parent_id": 1,
+  "id": "6a15cdbfc6c9b05aa30401ba",
+  "year": "2017",
+  "event": "Conservation partnership with Mara Conservancy established"
+ },
+ {
+  "_order": 4,
+  "_parent_id": 1,
+  "id": "6a15cdbfc6c9b05aa30401bb",
+  "year": "2019",
+  "event": "100th guest milestone — 98% satisfaction rate"
+ },
+ {
+  "_order": 5,
+  "_parent_id": 1,
+  "id": "6a15cdbfc6c9b05aa30401bc",
+  "year": "2022",
+  "event": "Expanded to Amboseli, Samburu, and Tsavo circuits"
+ },
+ {
+  "_order": 6,
+  "_parent_id": 1,
+  "id": "6a15cdbfc6c9b05aa30401bd",
+  "year": "2024",
+  "event": "500+ guests hosted, photography safari programme launched"
+ }
+]
